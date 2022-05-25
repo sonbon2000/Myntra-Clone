@@ -1,4 +1,4 @@
-﻿[
+﻿let MYNTRA_PRODUCTS = [
   {
     "uniq_id": "cc51c3dd925d9d84e2fb28c7918dbbc3",
     "crawl_timestamp": "2019-08-11 05:49:46 +0000",
@@ -28000,3 +28000,5 @@
     "": ""
   }
 ]
+
+export default MYNTRA_PRODUCTS;
