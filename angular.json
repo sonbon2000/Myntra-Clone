@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Myntra-Clone"
+    }
+  },
+  "defaultProject": "Myntra-Clone",
+  "cli": {
+    "analytics": false
+  }
 }
