@@ -1,0 +1,47 @@
+<div class="container p-3">
+  <div class="row justify-content-center my-5">
+    <div class="d-flex text-center">
+      <h5 (click)="changeViewMode('bestSeller')">Best Sellers</h5>
+      <h5 (click)="changeViewMode('newArrival')" class="mx-5">New Arrivals</h5>
+      <h5 (click)="changeViewMode('topSeller')">Hot Sales</h5>
+    </div>
+  </div>
+  <div class="item_list" *ngIf="viewMode == 'bestSeller'">
+    <div class="card" *ngFor="let prodBestSeller of productsBestSeller">
+      <img
+        class="card-img-top"
+        [src]="prodBestSeller.images"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <p class="card-title">{{ prodBestSeller.title }}</p>
+        <p class="card-text">
+          {{ prodBestSeller.variant_price | currency: "USD" }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem" *ngIf="viewMode == 'newArrival'">
+    <img class="card-img-top" src="..." alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem" *ngIf="viewMode == 'topSeller'">
+    <img class="card-img-top" src="..." alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { MenComponent } from './shared/components/men/men.component';
 import { CarouselComponent } from './shared/components/men/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductListComponent } from './shared/components/men/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     MenComponent,
     CarouselComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
