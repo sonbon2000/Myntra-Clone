@@ -1,0 +1,26 @@
+<app-carousel></app-carousel>
+<div class="container p-3">
+  <div class="row justify-content-center my-5">
+    <div class="d-flex text-center">
+      <h5>Best Sellers</h5>
+      <h5 class="mx-5">New Arrivals</h5>
+      <h5>Hot Sales</h5>
+    </div>
+  </div>
+  <div class="item_list">
+    <div class="card" *ngFor="let prodBestSeller of productsBestSeller">
+      <img
+        class="card-img-top"
+        [src]="prodBestSeller.images"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ prodBestSeller.title }}</h5>
+        <p class="card-text">
+          {{ prodBestSeller.body }}
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
