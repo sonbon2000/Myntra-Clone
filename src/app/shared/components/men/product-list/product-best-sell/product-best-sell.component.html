@@ -1,0 +1,15 @@
+<div class="item_list">
+  <div class="card" *ngFor="let prodBestSeller of productsBestSeller">
+    <img
+      class="card-img-top"
+      [src]="prodBestSeller.images"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <p class="card-title">{{ prodBestSeller.title }}</p>
+      <p class="card-text">
+        {{ prodBestSeller.variant_price | currency: "USD" }}
+      </p>
+    </div>
+  </div>
+</div>

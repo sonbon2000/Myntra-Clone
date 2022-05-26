@@ -1,0 +1,14 @@
+<div class="item_list">
+  <div class="card" *ngFor="let prodNewArr of productsNewArrival">
+    <img class="card-img-top" [src]="prodNewArr.images" alt="Card image cap" />
+    <div class="card-body">
+      <p class="card-title">{{ prodNewArr.title }}</p>
+      <p class="card-text">
+        {{ prodNewArr.variant_price | currency: "USD" }}
+      </p>
+      <p class="card-text">
+        Release date: {{ prodNewArr.crawl_timestamp | date: "dd/MM/yyyy" }}
+      </p>
+    </div>
+  </div>
+</div>

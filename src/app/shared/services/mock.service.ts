@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import products from '../../../assets/data/myntra-products';
+import { ProductService } from './product.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -9,8 +10,11 @@ export class MockService {
   unisexProducts = products.filter((item) => item.ideal_for == 'Unisex');
   boysProducts = products.filter((item) => item.ideal_for == 'Boys');
   girlsProducts = products.filter((item) => item.ideal_for == 'Girls');
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
+  getAllProducts() {
+    return products;
+  }
   getProductsByMen() {
     return this.menProducts;
   }
