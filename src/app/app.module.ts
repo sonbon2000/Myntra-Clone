@@ -14,6 +14,8 @@ import { ProductListComponent } from './shared/components/men/product-list/produ
 import { ProductBestSellComponent } from './shared/components/men/product-list/product-best-sell/product-best-sell.component';
 import { ProductnewArrivalComponent } from './shared/components/men/product-list/productnew-arrival/productnew-arrival.component';
 import { ProductTopSaleComponent } from './shared/components/men/product-list/product-top-sale/product-top-sale.component';
+import { CategoriesComponent } from './shared/components/men/categories/categories.component';
+import { InstagramComponent } from './shared/components/men/instagram/instagram.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ProductTopSaleComponent } from './shared/components/men/product-list/pr
     ProductBestSellComponent,
     ProductnewArrivalComponent,
     ProductTopSaleComponent,
+    CategoriesComponent,
+    InstagramComponent,
   ],
   imports: [
     BrowserModule,
