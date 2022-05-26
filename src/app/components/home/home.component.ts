@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { MockService } from '../../services/mock.service';
+import { MockService } from 'src/app/shared/services/mock.service';
 
 @Component({
-  selector: 'app-men',
-  templateUrl: './men.component.html',
-  styleUrls: ['./men.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class MenComponent implements OnInit {
+export class HomeComponent implements OnInit {
   productsByMen: any[] = [];
   productsBestSeller = [];
+  
   constructor(private mockService: MockService) {}
 
   ngOnInit(): void {

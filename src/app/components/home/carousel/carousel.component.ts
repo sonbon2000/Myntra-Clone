@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
-  images = [
-    '../../../.././../assets/images/men-1.jpg',
-    '../../../.././../assets/images/men-2.jpg',
+  public carouselImages = [
+    '../../../.././../assets/images/carousel/men-1.jpg',
+    '../../../.././../assets/images/carousel/men-2.jpg',
   ];
+
   constructor() {}
 
   ngOnInit(): void {}

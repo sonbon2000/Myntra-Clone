@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-/* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.css'
-
-=======
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
->>>>>>> 6102d8f2fa699ea31b373baa2b2a1fb1d19c211d
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

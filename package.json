@@ -20,12 +20,8 @@
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-free": "^6.1.1",
-    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
-=======
     "@fortawesome/fontawesome-free": "^5.15.4",
->>>>>>> 6102d8f2fa699ea31b373baa2b2a1fb1d19c211d
+    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "bootstrap": "^4.6.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

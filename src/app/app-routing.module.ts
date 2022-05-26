@@ -5,17 +5,17 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenComponent } from './shared/components/men/men.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/men',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
-    path: 'men',
-    component: MenComponent,
+    path: 'home',
+    component: HomeComponent,    
   },
 ];
 

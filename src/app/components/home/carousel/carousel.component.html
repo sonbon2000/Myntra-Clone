@@ -1,7 +1,7 @@
-<ngb-carousel *ngIf="images" class="position-relative">
-  <ng-template ngbSlide>
+<ngb-carousel *ngIf="carouselImages" class="position-relative">
+  <ng-template ngbSlide *ngFor="let image of carouselImages">
     <div class="picsum-img-wrapper">
-      <img [src]="images[0]" alt="Random first slide" />
+      <img [src]="image" />
     </div>
     <div class="slider_content">
       <h5 class="text-danger">SUMMER COLLECTION</h5>
@@ -14,7 +14,7 @@
     </div>
   </ng-template>
 
-  <ng-template ngbSlide>
+  <!-- <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img [src]="images[1]" alt="Random second slide" />
     </div>
@@ -27,5 +27,5 @@
       </p>
       <button class="btn btn-dark slider_btn">SHOP NOW</button>
     </div>
-  </ng-template>
+  </ng-template> -->
 </ngb-carousel>
