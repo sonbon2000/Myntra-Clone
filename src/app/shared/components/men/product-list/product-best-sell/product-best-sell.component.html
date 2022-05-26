@@ -6,7 +6,7 @@
       alt="Card image cap"
     />
     <div class="card-body">
-      <p class="card-title">{{ prodBestSeller.title }}</p>
+      <p class="card-title">{{ prodBestSeller.title | summary: 30 }}</p>
       <p class="card-text">
         {{ prodBestSeller.variant_price | currency: "USD" }}
       </p>

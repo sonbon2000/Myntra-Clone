@@ -2,7 +2,7 @@
   <div class="card shadow-lg" *ngFor="let prodTopSale of productsTopSale">
     <img class="card-img-top" [src]="prodTopSale.images" alt="Card image cap" />
     <div class="card-body">
-      <p class="card-title">{{ prodTopSale.title }}</p>
+      <p class="card-title">{{ prodTopSale.title | summary: 30 }}</p>
       <p class="card-text">
         {{ prodTopSale.variant_price | currency: "USD" }}
       </p>
