@@ -16,10 +16,16 @@
     "@angular/compiler": "~9.1.13",
     "@angular/core": "~9.1.13",
     "@angular/forms": "~9.1.13",
+    "@angular/localize": "~9.1.13",
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",
+<<<<<<< HEAD
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
+=======
     "@fortawesome/fontawesome-free": "^5.15.4",
+>>>>>>> 6102d8f2fa699ea31b373baa2b2a1fb1d19c211d
     "bootstrap": "^4.6.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
@@ -29,9 +35,9 @@
     "@angular-devkit/build-angular": "~0.901.15",
     "@angular/cli": "~9.1.15",
     "@angular/compiler-cli": "~9.1.13",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",

@@ -1,16 +1,33 @@
 import { Injectable } from '@angular/core';
-import MYNTRA_PRODUCTS from 'src/assets/data/myntra-products';
-import { Product } from '../models/product.model';
-
+import products from '../../../assets/data/myntra-products';
 @Injectable({
   providedIn: 'root',
 })
 export class MockService {
-  public allProducts: Product[] = MYNTRA_PRODUCTS;
-
+  menProducts = products.filter((item) => item.ideal_for == 'Men');
+  womenProducts = products.filter((item) => item.ideal_for == 'Women');
+  unisexProducts = products.filter((item) => item.ideal_for == 'Unisex');
+  boysProducts = products.filter((item) => item.ideal_for == 'Boys');
+  girlsProducts = products.filter((item) => item.ideal_for == 'Girls');
   constructor() {}
 
-  getAllProducts(): Product[] {
-    return this.allProducts;
+  getProductsByMen() {
+    return this.menProducts;
+  }
+
+  getProductByWomen() {
+    return this.womenProducts;
+  }
+
+  getProductByUnisex() {
+    return this.unisexProducts;
+  }
+
+  getProductsByBoys() {
+    return this.boysProducts;
+  }
+
+  getProductByGirls() {
+    return this.girlsProducts;
   }
 }
