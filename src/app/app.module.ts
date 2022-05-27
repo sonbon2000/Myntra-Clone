@@ -17,6 +17,7 @@ import { ProductTopSaleComponent } from './shared/components/men/product-list/pr
 import { CategoriesComponent } from './shared/components/men/categories/categories.component';
 import { InstagramComponent } from './shared/components/men/instagram/instagram.component';
 import { SummaryPipe } from './shared/pipes/summary.pipe';
+import { AboutComponent } from './shared/components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SummaryPipe } from './shared/pipes/summary.pipe';
     CategoriesComponent,
     InstagramComponent,
     SummaryPipe,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
