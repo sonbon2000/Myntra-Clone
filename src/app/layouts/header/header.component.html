@@ -1,39 +1,44 @@
-<div class="container-fluid p-3 shadow-lg">
-  <div class="row">
-    <div class="col-lg-1">
-      <img src="../../../assets/images/mintra logo.png" alt="" />
-    </div>
-    <div
-      class="col-lg-4 d-flex align-items-center dropdown"
-      [class.show]="showDropDown"
-    >
-      <ul class="mb-0 d-flex pl-0" (click)="showDropDown = !showDropDown">
-        <li routerLink="/men">MEN</li>
-        <li>WOMEN</li>
-        <li>BOYS</li>
-        <li>GIRLS</li>
-        <li>UNISEX</li>
-      </ul>
-
-      <div class="dropdown-menu" [class.show]="showDropDown">
-        <a class="dropdown-item" *ngFor="let menProd of menProductType">{{
-          menProd
-        }}</a>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <div class="header__logo">
+          <img
+            src="../../../assets/images/male header logo.jpg"
+            alt=""
+            routerLink="/men"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <nav class="header__menu mobile-menu">
+          <ul>
+            <li class="active"><a routerLink="/men">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li>
+              <a routerLink="/about">Pages</a>
+              <ul class="dropdown">
+                <li><a routerLink="/about">About Us</a></li>
+                <li><a href="#">Shop Details</a></li>
+                <li><a href="#">Shopping Cart</a></li>
+                <li><a href="#">Check Out</a></li>
+                <li><a href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="header__nav__option">
+          <a href="#" class="search-switch"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <span class="font-weight-bold">$0.00</span>
+        </div>
       </div>
     </div>
-    <div class="col-lg-4 d-flex align-items-center">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search for products, brands and more"
-      />
-    </div>
-    <div class="col-lg-3 d-flex align-items-center">
-      <ul class="d-flex mb-0">
-        <li><i class="fas fa-user"></i><small>Profile</small></li>
-        <li><i class="fas fa-heart"></i><small>Wishlist</small></li>
-        <li><i class="fas fa-shopping-bag"></i><small>Bag</small></li>
-      </ul>
-    </div>
+    <div class="canvas__open"><i class="fa fa-bars"></i></div>
   </div>
-</div>
+</header>

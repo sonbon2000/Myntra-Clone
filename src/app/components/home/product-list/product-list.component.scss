@@ -1,16 +1,26 @@
-.item_list {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-}
-
-
-img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-
 h5 {
   cursor: pointer;
 }
+$heading-color: #111111;
+
+.filter__controls {
+  li {
+    color: #b7b7b7;
+    font-size: 24px;
+    font-weight: 700;
+    list-style: none;
+    display: inline-block;
+    margin-right: 88px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: $heading-color;
+    }
+  }
+}
+
+
