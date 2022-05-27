@@ -1,0 +1,39 @@
+<div class="container-fluid p-3 shadow-lg">
+  <div class="row">
+    <div class="col-lg-1">
+      <img src="../../../assets/images/mintra logo.png" alt="" />
+    </div>
+    <div
+      class="col-lg-4 d-flex align-items-center dropdown"
+      [class.show]="showDropDown"
+    >
+      <ul class="mb-0 d-flex pl-0" (click)="showDropDown = !showDropDown">
+        <li routerLink="/men">MEN</li>
+        <li>WOMEN</li>
+        <li>BOYS</li>
+        <li>GIRLS</li>
+        <li>UNISEX</li>
+      </ul>
+
+      <div class="dropdown-menu" [class.show]="showDropDown">
+        <a class="dropdown-item" *ngFor="let menProd of menProductType">{{
+          menProd
+        }}</a>
+      </div>
+    </div>
+    <div class="col-lg-4 d-flex align-items-center">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search for products, brands and more"
+      />
+    </div>
+    <div class="col-lg-3 d-flex align-items-center">
+      <ul class="d-flex mb-0">
+        <li><i class="fas fa-user"></i><small>Profile</small></li>
+        <li><i class="fas fa-heart"></i><small>Wishlist</small></li>
+        <li><i class="fas fa-shopping-bag"></i><small>Bag</small></li>
+      </ul>
+    </div>
+  </div>
+</div>
