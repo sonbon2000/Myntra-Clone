@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './shared/components/about/about.component';
-import { MenComponent } from './shared/components/men/men.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/men',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
-    path: 'men',
-    component: MenComponent,
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: 'about',
