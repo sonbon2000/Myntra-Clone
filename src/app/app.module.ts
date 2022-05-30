@@ -19,6 +19,9 @@ import { ProductnewArrivalComponent } from './components/home/product-list/produ
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { InstagramComponent } from './components/home/instagram/instagram.compon
     SummaryPipe,
     AboutComponent,
     HomeComponent,
+    BlogComponent,
+    ContactComponent,
+    BlogDetailComponent,
   ],
   imports: [
     BrowserModule,
