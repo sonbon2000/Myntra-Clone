@@ -19,6 +19,7 @@ import { ProductnewArrivalComponent } from './components/home/product-list/produ
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
+import { InterleavedBannerComponent } from './components/home/interleaved-banner/interleaved-banner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { InstagramComponent } from './components/home/instagram/instagram.compon
     SummaryPipe,
     AboutComponent,
     HomeComponent,
+    InterleavedBannerComponent,
   ],
   imports: [
     BrowserModule,
