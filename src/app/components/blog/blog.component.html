@@ -12,11 +12,13 @@
         class="col-lg-4 col-md-6 col-sm-6"
         *ngFor="let blog of blogsArr; let i = index"
       >
-        <div class="blog__item">
+
+        <div class="blog__item" [routerLink]="['/blog', blog._id]">
           <div class="blog__item__text">
             <img [src]="imageURL[i]" alt="" />
             <h5>{{ blog.headline.main }}</h5>
-            <a [routerLink]="['/blog', blog._id]">Read More</a>
+            <a>Read More</a>
+
           </div>
         </div>
       </div>
