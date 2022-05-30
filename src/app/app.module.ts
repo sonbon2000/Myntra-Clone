@@ -1,3 +1,4 @@
+import { ShopComponent } from './components/shop/shop.component';
 import { Product } from './shared/models/product.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,7 +20,9 @@ import { ProductnewArrivalComponent } from './components/home/product-list/produ
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
-import { ShopComponent } from './components/shop/shop.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ShopComponent } from './components/shop/shop.component';
     SummaryPipe,
     AboutComponent,
     HomeComponent,
-    ShopComponent,
+    BlogComponent,
+    ContactComponent,
+    BlogDetailComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
