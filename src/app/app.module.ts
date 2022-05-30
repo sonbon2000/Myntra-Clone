@@ -20,6 +20,9 @@ import { ProductTopSaleComponent } from './components/home/product-list/product-
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
 import { InterleavedBannerComponent } from './components/home/interleaved-banner/interleaved-banner.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { InterleavedBannerComponent } from './components/home/interleaved-banner
     AboutComponent,
     HomeComponent,
     InterleavedBannerComponent,
+    BlogComponent,
+    ContactComponent,
+    BlogDetailComponent,
   ],
   imports: [
     BrowserModule,
