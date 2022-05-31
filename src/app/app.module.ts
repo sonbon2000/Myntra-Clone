@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+=======
+import { CountdownModule } from 'ngx-countdown';
+import { NgModule } from '@angular/core';
+>>>>>>> master
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +23,7 @@ import { ProductnewArrivalComponent } from './components/home/product-list/produ
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
+import { InterleavedBannerComponent } from './components/home/interleaved-banner/interleaved-banner.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
@@ -38,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SummaryPipe,
     AboutComponent,
     HomeComponent,
+    InterleavedBannerComponent,
     BlogComponent,
     ContactComponent,
     BlogDetailComponent,
@@ -49,9 +56,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
+<<<<<<< HEAD
     NgxSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
+=======
+    CountdownModule,
+>>>>>>> master
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

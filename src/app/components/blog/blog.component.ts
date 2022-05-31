@@ -28,11 +28,13 @@ export class BlogComponent implements OnInit {
             'https://assets.teenvogue.com/photos/5b3cead4cd6b096ecd587a3a/4:3/w_824,h_618,c_limit/how-to-be-a-fashion-blogger-keiko-lynn-tout.jpg'
           );
         } else {
+
           // for (let i = 0; i < multimedia.length; i++) {
           //   this.imageURL.push(`https://www.nytimes.com/` + multimedia[i].url);
           //   break;
           // }
           this.imageURL.push(`https://www.nytimes.com/` + multimedia[0].url);
+
         }
       }
     });
