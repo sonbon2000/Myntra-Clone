@@ -1,5 +1,6 @@
 import { Product } from './shared/models/product.model';
 import { BrowserModule } from '@angular/platform-browser';
+import { CountdownModule } from 'ngx-countdown';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { ProductnewArrivalComponent } from './components/home/product-list/produ
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
+import { InterleavedBannerComponent } from './components/home/interleaved-banner/interleaved-banner.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
@@ -38,6 +40,7 @@ import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.c
     SummaryPipe,
     AboutComponent,
     HomeComponent,
+    InterleavedBannerComponent,
     BlogComponent,
     ContactComponent,
     BlogDetailComponent,
@@ -48,6 +51,7 @@ import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.c
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
+    CountdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
