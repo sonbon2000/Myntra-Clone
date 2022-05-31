@@ -22,6 +22,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     NgbModule,
     HttpClientModule,
     NgxSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -9,16 +9,6 @@ $heading-color: #111111;
   -o-transition: $args;
   transition: $args;
 }
-.menu {
-  height: 40px;
-  line-height: 40px;
-}
-.menu__list {
-  list-style-type: none;
-  li {
-    cursor: pointer;
-  }
-}
 
 .header {
   background: $white-color;

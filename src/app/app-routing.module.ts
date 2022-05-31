@@ -33,10 +33,6 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
   },
-  {
-    path: 'sign-in',
-    component: SignInComponent,
-  },
 ];
 
 @NgModule({

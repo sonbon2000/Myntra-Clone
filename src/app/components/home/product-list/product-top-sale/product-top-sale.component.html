@@ -5,8 +5,8 @@
       <img [src]="prodTopSale.images" alt="" />
     </div>
     <h5 class="card__title mt-3">{{ prodTopSale.title | summary: 30 }}</h5>
-    <p class="card__price">
-      {{ prodTopSale.variant_price | currency: "USD" }}
+    <p class="card__price mt-4">
+      Price: {{ prodTopSale.variant_price | currency: "USD" }}
     </p>
     <div class="card__action text-center">
       <button class="btn btn-success">Add to cart</button>

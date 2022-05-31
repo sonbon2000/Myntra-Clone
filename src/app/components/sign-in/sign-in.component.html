@@ -1,16 +1,60 @@
-<div class="modal hide">
-  <div class="modal-inner">
-    <h3>Sign In</h3>
-    <form>
+<div class="menu bg-dark text-white">
+  <div class="container d-flex justify-content-between">
+    <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
+    <ul class="menu__list d-flex m-0 pr-0">
+      <li (click)="open(content)">Sign In</li>
+    </ul>
+  </div>
+</div>
+<ng-template #content let-modal>
+  <div class="p-5">
+    <h3 class="text-center">Sign In</h3>
+    <form [formGroup]="signInForm">
       <div class="form-group">
         <label>User name</label>
-        <input type="text" class="form-control" placeholder="Enter user-name" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter username"
+          [(ngModel)]="user.userName"
+          formControlName="userName"
+        />
+        <div
+          class="alert alert-danger mt-3"
+          role="alert"
+          *ngIf="userName.touched && userName.errors"
+        >
+          <ng-container *ngIf="userName.errors.required"
+            >First name is required.</ng-container
+          >
+        </div>
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input type="password" class="form-control" />
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="user.password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <div
+          class="alert alert-danger mt-3"
+          role="alert"
+          *ngIf="password.touched && password.errors"
+        >
+          <ng-container *ngIf="password.errors.required"
+            >Password is required.</ng-container
+          >
+          <ng-container *ngIf="password.errors.pattern"
+            >Must contain at least one number and one uppercase and lowercase
+            letter, and at least 8 or more characters</ng-container
+          >
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary">Sign In</button>
+      <button type="submit" class="btn btn-primary" (click)="onLogin()">
+        Submit
+      </button>
     </form>
   </div>
-</div>
+</ng-template>
