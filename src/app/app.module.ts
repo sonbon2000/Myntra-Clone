@@ -1,5 +1,6 @@
 import { Product } from './shared/models/product.model';
 import { BrowserModule } from '@angular/platform-browser';
+import { CountdownModule } from 'ngx-countdown';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -50,6 +51,7 @@ import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.c
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
+    CountdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

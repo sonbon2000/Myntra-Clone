@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "std-hn22-fr-angular01-a85ba": {
+      "hosting": {
+        "Myntra-Clone": [
+          "std-hn22-fr-angular01-a85ba"
+        ]
+      }
+    }
+  }
+}
