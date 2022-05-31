@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sonthongdung-hn22-fr-angular01": {
+      "hosting": {
+        "Myntra-Clone": [
+          "sonthongdung-hn22-fr-angular01"
+        ]
+      }
+    }
+  }
+}

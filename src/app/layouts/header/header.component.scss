@@ -9,6 +9,16 @@ $heading-color: #111111;
   -o-transition: $args;
   transition: $args;
 }
+.menu {
+  height: 40px;
+  line-height: 40px;
+}
+.menu__list {
+  list-style-type: none;
+  li {
+    cursor: pointer;
+  }
+}
 
 .header {
   background: $white-color;
@@ -20,7 +30,6 @@ $heading-color: #111111;
 }
 
 .header__top__left {
-
   p {
       color: $white-color;
       margin-bottom: 0;
@@ -105,6 +114,9 @@ $heading-color: #111111;
   a {
       display: inline-block;
   }
+  img {
+    cursor: pointer
+  }
 }
 
 .header__menu {
@@ -112,7 +124,6 @@ $heading-color: #111111;
   padding: 26px 0 25px;
 
   ul {
-
       li {
           list-style: none;
           display: inline-block;
@@ -120,10 +131,7 @@ $heading-color: #111111;
           position: relative;
 
           &.active {
-
               a {
-
-
                   &:after {
                       transform: scale(1);
                   }

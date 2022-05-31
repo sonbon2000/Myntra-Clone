@@ -1,3 +1,11 @@
+<div class="menu bg-dark text-white">
+  <div class="container d-flex justify-content-between">
+    <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
+    <ul class="menu__list d-flex m-0 pr-0">
+      <li routerlink="sign-in">SIGN IN</li>
+    </ul>
+  </div>
+</div>
 <header class="header">
   <div class="container">
     <div class="row">
@@ -13,9 +21,11 @@
       <div class="col-lg-6 col-md-6">
         <nav class="header__menu mobile-menu">
           <ul>
-            <li class="active"><a routerLink="/home">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li>
+            <li class="active" routerLinkActive="active">
+              <a routerLink="/home">Home</a>
+            </li>
+            <li routerLinkActive="active"><a href="#">Shop</a></li>
+            <li routerLinkActive="active">
               <a routerLink="/about">Pages</a>
               <ul class="dropdown">
                 <li><a routerLink="/about">About Us</a></li>
@@ -23,8 +33,10 @@
                 <li><a href="#">Check Out</a></li>
               </ul>
             </li>
-            <li><a routerLink="/blog">Blog</a></li>
-            <li><a routerLink="/contact">Contacts</a></li>
+            <li routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
+            <li routerLinkActive="active">
+              <a routerLink="/contact">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Doc, RootObject } from 'src/app/shared/models/blog.model';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -15,7 +16,8 @@ export class BlogDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit(): void {
@@ -38,6 +40,10 @@ export class BlogDetailComponent implements OnInit {
           }
         });
     });
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000);
   }
 
   onNavigate() {

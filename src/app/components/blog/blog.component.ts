@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Doc } from 'src/app/shared/models/blog.model';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -11,7 +12,10 @@ export class BlogComponent implements OnInit {
   blogsArr: Doc[] = [];
   imageURL = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.productService.getAllBlogs().subscribe((data) => {
@@ -32,5 +36,10 @@ export class BlogComponent implements OnInit {
         }
       }
     });
+
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1500);
   }
 }

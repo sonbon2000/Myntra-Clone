@@ -1,11 +1,15 @@
 <div class="item_list">
-  <div class="card shadow-lg" *ngFor="let prodTopSale of productsTopSale">
-    <img class="card-img-top" [src]="prodTopSale.images" alt="Card image cap" />
-    <div class="card-body">
-      <p class="card-title">{{ prodTopSale.title | summary: 30 }}</p>
-      <p class="card-text">
-        {{ prodTopSale.variant_price | currency: "USD" }}
-      </p>
+  <div class="card" *ngFor="let prodTopSale of productsTopSale">
+    <span class="like"><i class="fas fa-heart"></i></span>
+    <div class="card__img">
+      <img [src]="prodTopSale.images" alt="" />
+    </div>
+    <h5 class="card__title mt-3">{{ prodTopSale.title | summary: 30 }}</h5>
+    <p class="card__price">
+      {{ prodTopSale.variant_price | currency: "USD" }}
+    </p>
+    <div class="card__action text-center">
+      <button class="btn btn-success">Add to cart</button>
     </div>
   </div>
 </div>
