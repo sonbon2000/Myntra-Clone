@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myntra-clone-hn22-angular-01": {
+      "hosting": {
+        "Myntra-Clone": [
+          "myntra-clone-hn22-angular-01"
+        ]
+      }
+    }
+  }
+}
