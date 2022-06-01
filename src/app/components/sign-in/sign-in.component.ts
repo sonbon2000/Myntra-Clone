@@ -11,34 +11,30 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class SignInComponent implements OnInit {
   user = {
-    userName: 'janet.weaver@reqres.in',
-    password: 'abc1234',
+    email: '',
+    password: '',
   };
   signInForm = new FormGroup({
-    userName: new FormControl('', [Validators.required]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.pattern('(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}'),
-    ]),
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
-  constructor(
-    private modalService: NgbModal,
-    private router: Router,
-    private authService: AuthService
-  ) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {}
 
-  open(content) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
-  }
-
-  get userName() {
-    return this.signInForm.get('userName');
+  get email() {
+    return this.signInForm.get('email');
   }
 
   get password() {
     return this.signInForm.get('password');
+  }
+
+  onDemo() {
+    this.user = {
+      email: 'eve.holt@reqres.in',
+      password: 'cityslicka',
+    };
   }
 
   onLogin() {

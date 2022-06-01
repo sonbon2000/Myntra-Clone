@@ -1,0 +1,21 @@
+<div class="w-50 mx-auto shadow-lg border p-4 my-5">
+  <h3 class="text-center">User info</h3>
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="text" class="form-control" [(ngModel)]="user.email" />
+  </div>
+  <div class="form-group">
+    <label>First name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.first_name" />
+  </div>
+  <div class="form-group">
+    <label>Last name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.last_name" />
+  </div>
+  <div class="form-group">
+    <label>Avatar URL</label>
+    <input type="text" class="form-control" [(ngModel)]="user.avatar" />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+</div>

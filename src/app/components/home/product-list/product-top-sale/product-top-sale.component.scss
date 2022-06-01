@@ -19,6 +19,28 @@
 	cursor: pointer;
 	z-index: 2;
 }
+.card__img {
+  .icon_list {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  i {
+    font-size: 16px;
+    padding: 8px;
+    opacity: 0;
+	  visibility: hidden;
+	  transition: 0.5s;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+}
+
+.card:hover i {
+	transition-delay: 0.2s;
+	opacity: 1;
+	visibility: visible;
+}
 
 img {
 	width: 100%;
@@ -47,7 +69,7 @@ img {
 }
 
 .card:hover .card__action {
-  margin-top: -15px;
+  margin-top: -10px;
 	transition-delay: 0.2s;
 	opacity: 1;
 	visibility: visible;

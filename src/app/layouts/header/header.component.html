@@ -1,4 +1,49 @@
-<app-sign-in></app-sign-in>
+<div class="menu bg-dark text-white">
+  <div class="container d-flex justify-content-between">
+    <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
+    <ul class="menu__list d-flex m-0 pr-0">
+      <li *ngIf="!authService.isLoggedIn(); else avatar">
+        <a routerLink="/sign-in" class="mr-3">Sign In</a>
+        <a routerLink="/sign-up">Sign up</a>
+      </li>
+
+      <ng-template #avatar>
+        <li>
+          <div class="dropdown user-dropdown">
+            <span
+              class="dropdown-toggle cursor-pointer d-inline-block"
+              (click)="show = !show"
+            >
+              Hi, {{ authService.user.name }}
+              <img
+                [src]="authService.user.avatar"
+                alt="User avatar"
+                class="user-avatar"
+              />
+            </span>
+
+            <div class="dropdown-menu" [class.show]="show">
+              <span
+                class="dropdown-item cursor-pointer"
+                (click)="goToMyProfile()"
+                >My profile</span
+              >
+              <span
+                class="dropdown-item cursor-pointer"
+                (click)="goToAdminPage()"
+                *ngIf="authService.isAdmin()"
+                >Go to admin page</span
+              >
+              <span class="dropdown-item cursor-pointer" (click)="logout()"
+                ><i class="fas fa-sign-out-alt"></i>Log out</span
+              >
+            </div>
+          </div>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</div>
 <header class="header">
   <div class="container">
     <div class="row">
@@ -19,12 +64,7 @@
             </li>
             <li routerLinkActive="active"><a href="#">Shop</a></li>
             <li routerLinkActive="active">
-              <a routerLink="/about">Pages</a>
-              <ul class="dropdown">
-                <li><a routerLink="/about">About Us</a></li>
-                <li><a href="#">Shopping Cart</a></li>
-                <li><a href="#">Check Out</a></li>
-              </ul>
+              <a routerLink="/about">About</a>
             </li>
             <li routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
             <li routerLinkActive="active">
@@ -35,9 +75,11 @@
       </div>
       <div class="col-lg-3 col-md-3">
         <div class="header__nav__option">
-          <a class="search-switch"><i class="fas fa-search"></i></a>
+          <a class="search-switch"></a>
           <a><i class="fas fa-heart"></i></a>
-          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#">
+            <i class="fas fa-shopping-bag shopping__icon"> </i>
+          </a>
           <span class="font-weight-bold">$0.00</span>
         </div>
       </div>

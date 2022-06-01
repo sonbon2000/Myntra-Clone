@@ -1,10 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-=======
 import { CountdownModule } from 'ngx-countdown';
-import { NgModule } from '@angular/core';
->>>>>>> master
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,6 +25,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { NoAccessComponent } from './components/no-access/no-access.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +48,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     BlogDetailComponent,
     SignInComponent,
+    MyProfileComponent,
+    NoAccessComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,13 +58,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
-<<<<<<< HEAD
     NgxSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-=======
     CountdownModule,
->>>>>>> master
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
