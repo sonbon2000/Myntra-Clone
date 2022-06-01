@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Doc } from 'src/app/shared/models/blog.model';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -11,7 +12,10 @@ export class BlogComponent implements OnInit {
   blogsArr: Doc[] = [];
   imageURL = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.productService.getAllBlogs().subscribe((data) => {
@@ -24,15 +28,14 @@ export class BlogComponent implements OnInit {
             'https://assets.teenvogue.com/photos/5b3cead4cd6b096ecd587a3a/4:3/w_824,h_618,c_limit/how-to-be-a-fashion-blogger-keiko-lynn-tout.jpg'
           );
         } else {
-
-          // for (let i = 0; i < multimedia.length; i++) {
-          //   this.imageURL.push(`https://www.nytimes.com/` + multimedia[i].url);
-          //   break;
-          // }
           this.imageURL.push(`https://www.nytimes.com/` + multimedia[0].url);
-
         }
       }
     });
+
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1500);
   }
 }

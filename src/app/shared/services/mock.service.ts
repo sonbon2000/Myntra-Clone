@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { BehaviorSubject } from 'rxjs';
 import products from '../../../assets/data/myntra-products';
 import { Doc } from '../models/blog.model';
 import { ProductService } from './product.service';
@@ -18,5 +17,9 @@ export class MockService {
 
   getProductsByPage(x = 0, y = this.productService.limit) {
     return products.slice(x, y);
+  }
+  
+  deleteProduct(index) {
+    return products.splice(index, 1);
   }
 }

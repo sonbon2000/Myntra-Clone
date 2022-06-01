@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-about',
@@ -14,8 +15,7 @@ export class AboutComponent implements OnInit {
   totalCategoriesCountStop: any;
   countryCountStop: any;
   happyCountStop: any;
-
-  constructor() {}
+  constructor(private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -45,5 +45,9 @@ export class AboutComponent implements OnInit {
         }
       }, 25);
     }, 2000);
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000);
   }
 }

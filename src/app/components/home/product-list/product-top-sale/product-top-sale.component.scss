@@ -1,15 +1,79 @@
-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .item_list {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 20px;
 }
-
-.card-text {
-  font-weight: bold;
+.card {
+	height: 400px;
+	background-color: #272d40;
+	border-radius: 15px;
+	padding: 40px 20px;
+	color: white;
+	position: relative;
 }
+.like {
+	font-size: 16px;
+	position: absolute;
+  left: 10px;
+  top: 10px;
+	cursor: pointer;
+	z-index: 2;
+}
+.card__img {
+  .icon_list {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  i {
+    font-size: 16px;
+    padding: 8px;
+    opacity: 0;
+	  visibility: hidden;
+	  transition: 0.5s;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+}
+
+.card:hover i {
+	transition-delay: 0.2s;
+	opacity: 1;
+	visibility: visible;
+}
+
+img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+  border-radius: 5px;
+	object-position: center;
+}
+
+.card__title {
+	color: var(--primary-color);
+	text-align: center;
+  min-height: 30px;
+}
+
+.card__price {
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+}
+
+.card__action {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+}
+
+.card:hover .card__action {
+  margin-top: -10px;
+	transition-delay: 0.2s;
+	opacity: 1;
+	visibility: visible;
+}
+
+
+

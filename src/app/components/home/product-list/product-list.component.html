@@ -2,18 +2,23 @@
   <div class="row justify-content-center mb-4">
     <div class="col-lg-12 text-center">
       <ul class="filter__controls">
-        <li (click)="changeViewMode('bestSeller')">Best Sellers</li>
-        <li (click)="changeViewMode('newArrival')">New Arrivals</li>
-        <li (click)="changeViewMode('topSeller')">Hot Sales</li>
+        <li
+          (click)="changeViewMode('newArrival')"
+          class="active"
+          [class.active]="viewMode == 'newArrival'"
+        >
+          New Arrivals
+        </li>
+        <li
+          (click)="changeViewMode('topSeller')"
+          [class.active]="viewMode == 'topSeller'"
+        >
+          Hot Sales
+        </li>
       </ul>
     </div>
   </div>
   <div class="row product__filter">
-    <app-product-best-sell
-      *ngIf="viewMode === 'bestSeller'"
-      [productsBestSeller]="productsBestSeller"
-    ></app-product-best-sell>
-
     <app-productnew-arrival
       *ngIf="viewMode === 'newArrival'"
       [productsNewArrival]="productsNewArrival"
