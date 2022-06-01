@@ -15,6 +15,7 @@
     text-overflow: clip;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    text-decoration: none;
 }
 
 .banner__item:hover .banner__item__text a:after {
@@ -69,6 +70,7 @@
     text-transform: uppercase;
     padding: 3px 0;
     position: relative;
+    text-decoration: none;
 }
 
 .banner__item__text a:after {
