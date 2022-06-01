@@ -22,6 +22,7 @@ import { ProductTopSaleComponent } from './components/home/product-list/product-
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
 import { InterleavedBannerComponent } from './components/home/interleaved-banner/interleaved-banner.component';
+import { NewTrendComponent } from './components/home/new-trend/new-trend.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
@@ -45,7 +46,8 @@ import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.c
     BlogComponent,
     ContactComponent,
     BlogDetailComponent,
-    ShopComponent
+    ShopComponent,
+    NewTrendComponent,
   ],
   imports: [
     BrowserModule,
