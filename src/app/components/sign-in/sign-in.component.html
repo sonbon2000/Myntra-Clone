@@ -1,0 +1,50 @@
+<div class="form__sign-in p-5 shadow-lg">
+  <h3 class="text-center">Sign In</h3>
+  <form [formGroup]="signInForm">
+    <div class="form-group">
+      <label>User name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter username"
+        [(ngModel)]="user.email"
+        formControlName="email"
+      />
+      <div
+        class="alert alert-danger mt-3"
+        role="alert"
+        *ngIf="email.touched && email.errors"
+      >
+        <ng-container *ngIf="email.errors.required"
+          >First name is required.</ng-container
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="user.password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <div
+        class="alert alert-danger mt-3"
+        role="alert"
+        *ngIf="password.touched && password.errors"
+      >
+        <ng-container *ngIf="password.errors.required"
+          >Password is required.</ng-container
+        >
+      </div>
+    </div>
+    <a routerLink="/sign-up" class="d-block mb-3"
+      >Don't have account? Sign up now!</a
+    >
+    <button type="submit" class="btn btn-primary" (click)="onLogin()">
+      Submit
+    </button>
+    <button class="ml-3 btn btn-primary" (click)="onDemo()">Demo</button>
+  </form>
+</div>

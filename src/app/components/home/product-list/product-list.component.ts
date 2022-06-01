@@ -10,13 +10,13 @@ export class ProductListComponent implements OnInit {
   productsBestSeller = [];
   productsNewArrival = [];
   productsTopSale = [];
-  viewMode: string = 'bestSeller';
+  viewMode: string = 'newArrival';
   constructor(private mockService: MockService) {}
 
   ngOnInit(): void {
     this.productsAll = this.mockService.getAllProducts();
-    this.productsAll.sort((a, b) => b.is_in_stock - a.is_in_stock);
-    this.productsBestSeller = this.productsAll.slice(0, 8);
+    // this.productsAll.sort((a, b) => b.is_in_stock - a.is_in_stock);
+    // this.productsBestSeller = this.productsAll.slice(0, 8);
     this.productsAll.sort(
       (a, b) => Date.parse(a.crawl_timestamp) - Date.parse(b.crawl_timestamp)
     );
