@@ -11,7 +11,6 @@ import { MockService } from 'src/app/shared/services/mock.service';
 export class DashboardComponent implements OnInit {
   allProducts: Product[] = [];
   filterProducts = [];
-  totalLength: any;
   page: number = 1;
 
   constructor(
@@ -21,7 +20,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.allProducts = this.filterProducts = this.mockService.getAllProducts();
-    this.totalLength = this.allProducts.length;
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
@@ -34,7 +32,8 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  onDelete(i) {
-    this.mockService.deleteProduct(i);
+  onDelete(prod) {
+    const index = this.filterProducts.indexOf(prod);
+    this.filterProducts.splice(index, 1);
   }
 }
