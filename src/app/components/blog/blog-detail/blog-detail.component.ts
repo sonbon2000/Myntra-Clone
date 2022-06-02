@@ -22,6 +22,10 @@ export class BlogDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
+      function backToTop() {
+        window.scroll({ top: 50, left: 0, behavior: 'smooth' });
+      }
+      backToTop();
       this.id = params['id'];
       this.productService
         .getSingleBlog(this.id)
