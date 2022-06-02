@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { CartService } from 'src/app/shared/services/cart.service';
+import { WishListService } from 'src/app/shared/services/wish-list.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,7 +11,12 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class HeaderComponent implements OnInit {
   showDropDown = false;
   show: boolean = false;
-  constructor(public authService: AuthService, private router: Router) {}
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    public cartService: CartService,
+    public wishList: WishListService
+  ) {}
 
   ngOnInit(): void {}
 

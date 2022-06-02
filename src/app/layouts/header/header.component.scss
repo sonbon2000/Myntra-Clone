@@ -9,6 +9,7 @@ $heading-color: #111111;
   -o-transition: $args;
   transition: $args;
 }
+
 .menu {
   height: 50px;
   line-height: 50px;
@@ -140,7 +141,6 @@ $heading-color: #111111;
                   }
               }
           }
-
           &:hover {
               a {
                 text-decoration: none;
@@ -211,7 +211,6 @@ $heading-color: #111111;
       }
   }
 }
-
 .header__nav__option {
   text-align: right;
   padding: 30px 0;
@@ -254,11 +253,8 @@ $heading-color: #111111;
     left: auto;
   }
 }
-
-.offcanvas-menu-wrapper {
-  display: none;
-}
-
-.canvas__open {
-  display: none;
+.cart-quantity {
+  position: relative;
+  top: -8px;
+  margin-left: 3px;
 }

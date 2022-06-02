@@ -3,7 +3,10 @@
     <div class="card__img">
       <img [src]="prodNewArr.images" alt="" />
       <div class="icon_list">
-        <i class="fas fa-heart text-danger"></i>
+        <i
+          class="fas fa-heart text-danger"
+          (click)="onAddWishList(prodNewArr)"
+        ></i>
       </div>
     </div>
     <h5 class="card__title mt-3">
@@ -12,9 +15,35 @@
     <p class="card__price mt-4">
       Price: {{ prodNewArr.variant_price | currency: "USD" }}
     </p>
-
     <div class="card__action text-center">
-      <button class="btn btn-success">Add to cart</button>
+      <button
+        class="btn btn-success"
+        (click)="onAddProduct(prodNewArr)"
+        *ngIf="
+          cartService.getItemQuantity(prodNewArr) === 0;
+          else updateQuantity
+        "
+      >
+        Add to cart <i class="fas fa-shopping-cart"></i>
+      </button>
+
+      <ng-template #updateQuantity>
+        <div class="d-flex justify-content-between align-items-center">
+          <button
+            class="btn btn-danger"
+            (click)="cartService.removeItem(prodNewArr)"
+          >
+            <i class="fas fa-minus"></i>
+          </button>
+          <span>{{ cartService.getItemQuantity(prodNewArr) }}</span>
+          <button
+            class="btn btn-primary"
+            (click)="cartService.addItem(prodNewArr)"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>

@@ -1,16 +1,19 @@
 <div class="menu bg-dark text-white">
-    <div class="container d-flex justify-content-between">
-        <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
-        <ul class="menu__list d-flex m-0 pr-0">
-            <li *ngIf="!authService.isLoggedIn(); else avatar">
-                <a routerLink="/sign-in" class="mr-3">Sign In</a>
-                <a routerLink="/sign-up">Sign up</a>
-            </li>
+  <div class="container d-flex justify-content-between">
+    <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
+    <ul class="menu__list d-flex m-0 pr-0">
+      <li *ngIf="!authService.isLoggedIn(); else avatar">
+        <a routerLink="/sign-in" class="mr-3">Sign In</a>
+        <a routerLink="/sign-up">Sign up</a>
+      </li>
 
-            <ng-template #avatar>
-                <li>
-                    <div class="dropdown user-dropdown">
-                        <span class="dropdown-toggle cursor-pointer d-inline-block" (click)="show = !show">
+      <ng-template #avatar>
+        <li>
+          <div class="dropdown user-dropdown">
+            <span
+              class="dropdown-toggle cursor-pointer d-inline-block"
+              (click)="show = !show"
+            >
               Hi, {{ authService.user.name }}
               <img
                 [src]="authService.user.avatar"
@@ -19,8 +22,11 @@
               />
             </span>
 
-                        <div class="dropdown-menu" [class.show]="show">
-                            <span class="dropdown-item cursor-pointer" (click)="goToMyProfile()">My profile</span
+            <div class="dropdown-menu" [class.show]="show">
+              <span
+                class="dropdown-item cursor-pointer"
+                (click)="goToMyProfile()"
+                ><i class="fas fa-user mr-1"></i>My profile</span
               >
               <span
                 class="dropdown-item cursor-pointer"
@@ -29,7 +35,7 @@
                 >Go to admin page</span
               >
               <span class="dropdown-item cursor-pointer" (click)="logout()"
-                ><i class="fas fa-sign-out-alt"></i>Log out</span
+                ><i class="fas fa-sign-out-alt mr-1"></i>Log out</span
               >
             </div>
           </div>
@@ -38,7 +44,7 @@
     </ul>
   </div>
 </div>
-<header class="header">
+<header class="header border-bottom">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-3">
@@ -52,12 +58,12 @@
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
-        <nav class="header__menu mobile-menu">
+        <nav class="header__menu">
           <ul>
             <li class="active" routerLinkActive="active">
               <a routerLink="/home">Home</a>
             </li>
-            <li routerLinkActive="active"><a href="#">Shop</a></li>
+            <li routerLinkActive="active"><a>Shop</a></li>
             <li routerLinkActive="active">
               <a routerLink="/about">About</a>
             </li>
@@ -71,14 +77,20 @@
       <div class="col-lg-3 col-md-3">
         <div class="header__nav__option">
           <a class="search-switch"></a>
-          <a><i class="fas fa-heart"></i></a>
-          <a href="#">
-            <i class="fas fa-shopping-bag shopping__icon"> </i>
+          <a routerLink="product-wish-list">
+            <i class="fas fa-heart"></i>
+            <span class="cart-quantity text-danger font-weight-bold">
+              {{ wishList.getWishListQuantity() }}
+            </span>
           </a>
-          <span class="font-weight-bold">$0.00</span>
-                        </div>
-                    </div>
+          <a routerLink="/product-cart">
+            <i class="fas fa-shopping-bag shopping__icon"></i>
+            <span class="cart-quantity text-warning font-weight-bold">{{
+              cartService.getCartQuantity()
+            }}</span>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="canvas__open"><i class="fa fa-bars"></i></div>
-</div>
+  </div>
 </header>
