@@ -11,17 +11,16 @@
     <div class="row mx-auto">
       <div
         *ngFor="let image of dataResponse"
-        class="col-lg-4 col-md-6 col-sm-6"
+        class="col-sm-4 p-0"
         [routerLink]="['/blog', image._id]"
       >
         <div class="blog__item">
-          <div class="blog__item__pic"></div>
           <div class="blog__item__text">
             <span>
               <img
                 *ngIf="image.multimedia; else noImage"
                 [src]="'https://www.nytimes.com/' + image?.multimedia[0].url"
-                class="rounded"
+                class="blog__item__pic rounded"
                 alt=""
               />
               <ng-template #noImage>
