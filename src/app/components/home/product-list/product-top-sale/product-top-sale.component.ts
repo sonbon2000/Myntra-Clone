@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
-
+import { CartService } from 'src/app/shared/services/cart.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-product-top-sale',
   templateUrl: './product-top-sale.component.html',
@@ -9,13 +10,20 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class ProductTopSaleComponent implements OnInit {
   @Input() productsTopSale;
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    public cartService: CartService
+  ) {}
 
   ngOnInit(): void {}
 
-  onConfirm() {
-    if (!this.authService.isLoggedIn()) {
-      alert('Please sign in to buy the product');
+  onAddItem(prod) {
+    if (this.authService.isLoggedIn()) {
+      Swal.fire('Success', 'You have added item to the cart', 'success');
+      this.cartService.addItem(prod);
+    } else {
+      Swal.fire('Oops', 'You have to login first', 'error');
       this.router.navigateByUrl('/sign-in');
     }
   }

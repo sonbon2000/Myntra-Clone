@@ -1,0 +1,78 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="default"
+  color="#fff"
+  type="ball-climbing-dot"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="shopping__header">
+  <div class="container">
+    <h3>Shopping Cart</h3>
+    <div>
+      <a routerLink="/home">Home ></a>
+      <a routerLink="/shop" class="mx-2">Shop ></a>
+      <a class="text-muted">Shopping Cart</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row py-5" *ngIf="cartService.getCartQuantity() !== 0">
+    <div class="col-lg-8">
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Images</th>
+            <th scope="col">Product</th>
+            <th scope="col" class="text-center">Quantity</th>
+            <th scope="col" class="text-center">Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of cartArr">
+            <td><img [src]="cart.images" alt="" /></td>
+            <td>{{ cart.title }}</td>
+            <td class="text-center">
+              <span (click)="cartService.removeItem(cart)"><</span>
+              <span class="mx-3">{{ cartService.getItemQuantity(cart) }}</span>
+              <span (click)="cartService.addItem(cart)">></span>
+            </td>
+            <td class="text-center">
+              {{ getTotalItem(cart) | currency: "USD" }}
+            </td>
+            <td (click)="removeItem(cart)"><i class="fas fa-trash"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-dark">< Continue Shopping</button>
+    </div>
+    <div class="col-lg-4">
+      <div class="p-5 cart__checkout">
+        <h5>CART TOTAL</h5>
+        <div class="d-flex justify-content-between">
+          <p>Total</p>
+          <p>{{ cartService.getCartTotalPrice() | currency: "USD" }}</p>
+        </div>
+
+        <button class="btn btn-dark" (click)="onCheckOut()">
+          Proceed to checkout
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row py-5" *ngIf="cartService.getCartQuantity() === 0">
+    <div class="cart__empty text-center">
+      <img
+        src="https://i5.walmartimages.com/dfw/63fd9f59-e0d6/65ab57af-59d6-423a-9500-1fa5ab36d1c7/v1/empty-cart.svg?odnHeight=240&odnWidth=200&odnBg=ffffff"
+        alt=""
+      />
+      <p class="font-weight-bold">Time to start shopping</p>
+      <p class="cart__emtpy paragraph">Your cart is empty!</p>
+      <button class="btn btn-dark"> < Continue Shopping</button>
+    </div>
+  </div>
+</div>

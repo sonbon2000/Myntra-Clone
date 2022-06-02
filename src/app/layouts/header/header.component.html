@@ -26,7 +26,7 @@
               <span
                 class="dropdown-item cursor-pointer"
                 (click)="goToMyProfile()"
-                >My profile</span
+                ><i class="fas fa-user mr-1"></i>My profile</span
               >
               <span
                 class="dropdown-item cursor-pointer"
@@ -35,7 +35,7 @@
                 >Go to admin page</span
               >
               <span class="dropdown-item cursor-pointer" (click)="logout()"
-                ><i class="fas fa-sign-out-alt"></i>Log out</span
+                ><i class="fas fa-sign-out-alt mr-1"></i>Log out</span
               >
             </div>
           </div>
@@ -44,20 +44,21 @@
     </ul>
   </div>
 </div>
-<header class="header">
+<header class="header border-bottom">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-3">
         <div class="header__logo">
           <img
-            src="../../../assets/images/male header logo.jpg"
+            src="https://minimog.thememove.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png?fbclid=IwAR2HmBI5dzFc7fEG7xPtyQv_eddBVqCMDTA3ev-SKhp7AXENAPhYIFw0yew"
             alt=""
             routerLink="/home"
+            class="w-75"
           />
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
-        <nav class="header__menu mobile-menu">
+        <nav class="header__menu">
           <ul>
             <li class="active" routerLinkActive="active">
               <a routerLink="/home">Home</a>
@@ -76,14 +77,20 @@
       <div class="col-lg-3 col-md-3">
         <div class="header__nav__option">
           <a class="search-switch"></a>
-          <a><i class="fas fa-heart"></i></a>
-          <a href="#">
-            <i class="fas fa-shopping-bag shopping__icon"> </i>
+          <a routerLink="product-wish-list">
+            <i class="fas fa-heart"></i>
+            <span class="cart-quantity text-danger font-weight-bold">
+              {{ wishList.getWishListQuantity() }}
+            </span>
           </a>
-          <span class="font-weight-bold">$0.00</span>
+          <a routerLink="/product-cart">
+            <i class="fas fa-shopping-bag shopping__icon"></i>
+            <span class="cart-quantity text-warning font-weight-bold">{{
+              cartService.getCartQuantity()
+            }}</span>
+          </a>
         </div>
       </div>
     </div>
-    <div class="canvas__open"><i class="fa fa-bars"></i></div>
   </div>
 </header>

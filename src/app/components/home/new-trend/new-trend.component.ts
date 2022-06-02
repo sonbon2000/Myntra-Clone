@@ -22,7 +22,6 @@ export class NewTrendComponent implements OnInit {
     this.newTrendService.getDataFromApi().subscribe(
       (res) => {
         this.dataResponse = res.response.docs.slice(0, 3);
-        // console.log(this.dataResponse);
       },
       (err) => {
         console.warn('Server Error');

@@ -1,12 +1,21 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="default"
+  color="#fff"
+  type="ball-climbing-dot"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
 <div class="form__sign-in p-5 shadow-lg">
   <h3 class="text-center">Sign In</h3>
   <form [formGroup]="signInForm">
     <div class="form-group">
-      <label>User name</label>
+      <label>Email</label>
       <input
         type="text"
         class="form-control"
-        placeholder="Enter username"
+        placeholder="Enter email"
         [(ngModel)]="user.email"
         formControlName="email"
       />
@@ -16,8 +25,11 @@
         *ngIf="email.touched && email.errors"
       >
         <ng-container *ngIf="email.errors.required"
-          >First name is required.</ng-container
+          >Email is required.</ng-container
         >
+        <ng-container *ngIf="email.errors.pattern">
+          Email is not correct
+        </ng-container>
       </div>
     </div>
     <div class="form-group">
@@ -26,7 +38,7 @@
         type="password"
         class="form-control"
         [(ngModel)]="user.password"
-        placeholder="Password"
+        placeholder="Enter password"
         formControlName="password"
       />
       <div
@@ -42,9 +54,14 @@
     <a routerLink="/sign-up" class="d-block mb-3"
       >Don't have account? Sign up now!</a
     >
-    <button type="submit" class="btn btn-primary" (click)="onLogin()">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="onLogin()"
+      [disabled]="signInForm.invalid"
+    >
       Submit
     </button>
-    <button class="ml-3 btn btn-primary" (click)="onDemo()">Demo</button>
+    <button class="ml-3 btn btn-success" (click)="onDemo()">Demo</button>
   </form>
 </div>

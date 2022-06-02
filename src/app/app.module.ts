@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -32,6 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { NoAccessComponent } from './components/no-access/no-access.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ProductCartComponent } from './components/product-cart/product-cart.component';
+import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +60,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     NoAccessComponent,
     SignUpComponent,
     NewTrendComponent,
+    ProductCartComponent,
+    ProductWishlistComponent,
   ],
   imports: [
     BrowserModule,
