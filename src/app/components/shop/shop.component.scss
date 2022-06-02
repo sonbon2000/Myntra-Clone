@@ -1,31 +1,65 @@
-.card-body {
-  // height: 200px;
-  overflow: auto;
-}
-
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
   -ms-transition: $args;
   -o-transition: $args;
   transition: $args;
-}   
+}
 
-.product__item__color,
-.color-demo {
+html {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h6 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.color-option,
+.product__item__color {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.color-option {
   height: 30px;
   width: 30px;
 }
 
-.color-demo {
-  display: inline-block;
-  margin-right: 4px;
-  border-radius: 50%;
-  border: 1px solid #000
+.product {
+  &__item {
+    height: 100%;
+    &__color {
+      height: 20px;
+      width: 20px;
+    }
+    &__text {
+      height: 144px;
+    }
+  }
 }
+
+// .add-btn:hover {
+//   background-color: #000
+// }
 
 .shop__sidebar {
   padding-right: 20px;
+  ul {
+    padding-left: 0;
+    overflow: auto;
+  }
+  li {
+    cursor: pointer;
+  }
 }
 
 .shop__sidebar__search {
@@ -70,30 +104,31 @@
 
 .shop__sidebar__genders {
   ul {
-    height: 225px;
+    height: 140px;
+    margin-bottom: 0;
 
     li {
       list-style: none;
-
-      a {
-        color: #b7b7b7;
-        font-size: 15px;
-        line-height: 32px;
-        @include transition(all, 0.3s);
-
-        &:hover {
-          color: var(--heading-color);
-        }
+      color: #b7b7b7;
+      font-size: 15px;
+      line-height: 32px;
+      &:hover {
+        color: var(--heading-color);
       }
+
+      // a {
+      //   @include transition(all, 0.3s);
+
+      // }
     }
   }
 }
 
-.shop__sidebar__brand {
+.shop__sidebar__products  {
   @extend .shop__sidebar__genders;
 
   ul {
-    height: auto;
+    height: 400px;
   }
 }
 .shop__sidebar__price {
@@ -104,7 +139,6 @@
   }
 }
 
-
 // .shop__product__option {
 //   margin-bottom: 45px;
 
@@ -114,42 +148,42 @@
 //   }
 // }
 
-// .shop__product__option__right {
-//   text-align: right;
+.shop__product__option__right {
+  text-align: right;
 
-//   p {
-//     display: inline-block;
-//     margin-bottom: 0;
-//   }
+  p {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 
-//   .nice-select {
-//     float: none;
-//     display: inline-block;
-//     padding: 0;
-//     line-height: 26px;
-//     height: auto;
-//     border: none;
-//     padding-right: 28px;
+  .nice-select {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    line-height: 26px;
+    height: auto;
+    border: none;
+    padding-right: 28px;
 
-//     &:after {
-//       border-bottom: 1.5px solid #111111;
-//       border-right: 1.5px solid #111111;
-//       height: 8px;
-//       right: 12px;
-//       width: 8px;
-//     }
+    &:after {
+      border-bottom: 1.5px solid #111111;
+      border-right: 1.5px solid #111111;
+      height: 8px;
+      right: 12px;
+      width: 8px;
+    }
 
-//     span {
-//       color: var(--heading-color);
-//       font-size: 15px;
-//       font-weight: 700;
-//     }
+    span {
+      color: var(--heading-color);
+      font-size: 15px;
+      font-weight: 700;
+    }
 
-//     .list {
-//       border-radius: 0;
-//     }
-//   }
-// }
+    .list {
+      border-radius: 0;
+    }
+  }
+}
 
 // .product__pagination {
 //   padding-top: 25px;
@@ -185,3 +219,7 @@
 //     padding-right: 15px;
 //   }
 // }
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: red;
+}

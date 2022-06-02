@@ -8,12 +8,6 @@ import { MockService } from 'src/app/shared/services/mock.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-<<<<<<< HEAD
-  
-  constructor(private mockService: MockService) {}
-
-  ngOnInit(): void {}
-=======
   constructor(private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
@@ -22,5 +16,4 @@ export class HomeComponent implements OnInit {
       this.spinner.hide();
     }, 1000);
   }
->>>>>>> master
 }

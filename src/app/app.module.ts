@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -67,6 +68,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FormsModule,
     ReactiveFormsModule,
     CountdownModule,
+    NgxPaginationModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

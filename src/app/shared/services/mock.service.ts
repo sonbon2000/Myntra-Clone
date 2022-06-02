@@ -12,13 +12,13 @@ export class MockService {
   constructor(private productService: ProductService) {}
 
   getAllProducts() {
-    return products;
+    return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }
 
   getProductsByPage(x = 0, y = this.productService.limit) {
     return products.slice(x, y);
   }
-  
+
   deleteProduct(index) {
     return products.splice(index, 1);
   }
