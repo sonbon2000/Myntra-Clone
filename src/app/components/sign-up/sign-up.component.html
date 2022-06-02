@@ -1,24 +1,95 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="default"
+  color="#fff"
+  type="ball-climbing-dot"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
 <div class="form__sign-up p-5 shadow-lg">
   <h3 class="text-center">Sign Up</h3>
   <form [formGroup]="signUpForm">
+    <!-- First name -->
     <div class="form-group">
-      <label>User name</label>
+      <label>First name</label>
+      <input
+        type="text"
+        formControlName="first_name"
+        class="form-control"
+        placeholder="Enter first-name "
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="first_name.touched && first_name.errors"
+      >
+        <ng-container *ngIf="first_name.errors.required"
+          >First name is required.</ng-container
+        >
+        <ng-container *ngIf="first_name.errors.minlength"
+          >First name must have at least
+          {{ first_name.errors.minlength.requiredLength }}
+          characters.</ng-container
+        >
+        <ng-container *ngIf="first_name.errors.maxlength"
+          >First name can only contain
+          {{ first_name.errors.maxlength.requiredLength }}
+          characters.</ng-container
+        >
+      </div>
+    </div>
+
+    <!-- Last name -->
+    <div class="form-group">
+      <label>Last name</label>
+      <input
+        type="text"
+        formControlName="last_name"
+        class="form-control"
+        placeholder="Enter lastname"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="last_name.touched && last_name.errors"
+      >
+        <ng-container *ngIf="last_name.errors.required"
+          >Last name is required.</ng-container
+        >
+        <ng-container *ngIf="last_name.errors.minlength"
+          >Last name must have at least
+          {{ last_name.errors.minlength.requiredLength }}
+          characters.</ng-container
+        >
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label>Email</label>
       <input
         type="text"
         class="form-control"
-        placeholder="Enter username"
+        placeholder="Enter email"
         formControlName="email"
       />
       <div
-        class="alert alert-danger mt-3"
+        class="alert alert-danger"
         role="alert"
         *ngIf="email.touched && email.errors"
       >
         <ng-container *ngIf="email.errors.required"
-          >First name is required.</ng-container
+          >Email is required.</ng-container
+        >
+        <ng-container *ngIf="email.errors.pattern"
+          >Email is not correct.</ng-container
         >
       </div>
     </div>
+
+    <!-- Password -->
     <div class="form-group">
       <label>Password</label>
       <input
@@ -37,6 +108,13 @@
         >
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="signUpForm.invalid"
+      (click)="onNavigate()"
+    >
+      Sign Up
+    </button>
   </form>
 </div>
