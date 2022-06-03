@@ -45,10 +45,12 @@
   </div>
 </div>
 <header class="header border-bottom">
-  <div class="container">
+  <div class="container p-2">
     <div class="row">
-      <div class="col-lg-3 col-md-3">
-        <div class="header__logo">
+      <div class="col-lg-3 col-md-3 header__logo__container">
+        <div
+          class="header__logo d-flex justify-content-center align-items-center"
+        >
           <img
             src="https://minimog.thememove.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png?fbclid=IwAR2HmBI5dzFc7fEG7xPtyQv_eddBVqCMDTA3ev-SKhp7AXENAPhYIFw0yew"
             alt=""
@@ -59,24 +61,25 @@
       </div>
       <div class="col-lg-6 col-md-6">
         <nav class="header__menu">
-          <ul>
-            <li class="active" routerLinkActive="active">
+          <ul class="m-0 d-flex align-items-center">
+            <li routerLinkActive="active">
               <a routerLink="/home">Home</a>
             </li>
             <li routerLinkActive="active"><a routerLink="/shop">Shop</a></li>
-            <li routerLinkActive="active">
-              <a routerLink="/about">About</a>
-            </li>
             <li routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
             <li routerLinkActive="active">
               <a routerLink="/contact">Contacts</a>
+            </li>
+            <li routerLinkActive="active">
+              <a routerLink="/about">About Us</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="col-lg-3 col-md-3">
-        <div class="header__nav__option">
-          <a class="search-switch"></a>
+        <div
+          class="header__nav__option d-flex align-items-center justify-content-end"
+        >
           <a routerLink="product-wish-list">
             <i class="fas fa-heart"></i>
             <span class="cart-quantity text-danger font-weight-bold">

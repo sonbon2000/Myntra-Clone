@@ -14,6 +14,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminGuard } from './shared/guards/admin.guard';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { EditGuard } from './shared/guards/edit.guard';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'shop',
     component: ShopComponent
+  },
+  {
+    path: 'shop/:id',
+    component: ProductDetailComponent
   },
   {
     path: 'about',

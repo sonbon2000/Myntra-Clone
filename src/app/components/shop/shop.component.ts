@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Mock } from 'protractor/built/driverProviders';
 import { Product } from 'src/app/shared/models/product.model';
+import { CartService } from 'src/app/shared/services/cart.service';
 import { MockService } from 'src/app/shared/services/mock.service';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -12,19 +13,15 @@ import { ProductService } from 'src/app/shared/services/product.service';
 })
 export class ShopComponent implements OnInit {
   public allProducts: Product[] = [];
-  public products: Product[] = [];
+  // public products: Product[] = [];
   public filteredProducts: Product[] = [];
 
   @ViewChild('search') searchInput: ElementRef;
 
-
-  // public total_pages = [];
   public total_pages: number;
   public paginationLength: number;
   public currentPage: number = 1;
   public limit: number;
-  private categoryClicked = false;
-  private searchTouched = false;
 
   public allGenders = new Set();
   public allProductTypes = new Set();
@@ -35,6 +32,7 @@ export class ShopComponent implements OnInit {
   constructor(
     private mockService: MockService,
     private productService: ProductService,
+    public cartService: CartService,
     private spinner: NgxSpinnerService
   ) {}
 
@@ -116,7 +114,7 @@ export class ShopComponent implements OnInit {
 
   backToTop() {
     this.searchInput.nativeElement.value = '';
-    window.scroll({ top: 320, left: 0, behavior: 'smooth' });
+    window.scroll({ top: 300, left: 0, behavior: 'smooth' });
 
     // Spinner
     this.spinner.show();

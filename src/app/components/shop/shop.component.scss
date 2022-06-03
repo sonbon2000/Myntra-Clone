@@ -14,10 +14,24 @@ h6 {
   margin-top: 10px;
   font-size: 15px;
   font-weight: normal;
+  cursor: pointer;
 }
 
 h5 {
   font-size: 18px;
+}
+
+select, li {
+  cursor: pointer;
+}
+
+.product__item__pic {
+  cursor: pointer;
+}
+
+.add-btn {
+  border: none;
+  background-color: #343A40;
 }
 
 .color-option,
@@ -47,18 +61,11 @@ h5 {
   }
 }
 
-// .add-btn:hover {
-//   background-color: #000
-// }
-
 .shop__sidebar {
   padding-right: 20px;
   ul {
     padding-left: 0;
     overflow: auto;
-  }
-  li {
-    cursor: pointer;
   }
 }
 
@@ -115,11 +122,6 @@ h5 {
       &:hover {
         color: var(--heading-color);
       }
-
-      // a {
-      //   @include transition(all, 0.3s);
-
-      // }
     }
   }
 }
@@ -139,87 +141,6 @@ h5 {
   }
 }
 
-// .shop__product__option {
-//   margin-bottom: 45px;
-
-//   p {
-//     color: var(--heading-color);
-//     margin-bottom: 0;
-//   }
-// }
-
-.shop__product__option__right {
-  text-align: right;
-
-  p {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-
-  .nice-select {
-    float: none;
-    display: inline-block;
-    padding: 0;
-    line-height: 26px;
-    height: auto;
-    border: none;
-    padding-right: 28px;
-
-    &:after {
-      border-bottom: 1.5px solid #111111;
-      border-right: 1.5px solid #111111;
-      height: 8px;
-      right: 12px;
-      width: 8px;
-    }
-
-    span {
-      color: var(--heading-color);
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .list {
-      border-radius: 0;
-    }
-  }
-}
-
-// .product__pagination {
-//   padding-top: 25px;
-//   text-align: center;
-
-//   a {
-//     display: inline-block;
-//     font-size: 16px;
-//     font-weight: 700;
-//     color: var(--heading-color);
-//     height: 30px;
-//     width: 30px;
-//     border: 1px solid transparent;
-//     border-radius: 50%;
-//     line-height: 30px;
-//     text-align: center;
-
-//     &.active {
-//       border-color: var(--heading-color);
-//     }
-
-//     &:hover {
-//       border-color: var(--heading-color);
-//     }
-//   }
-
-//   span {
-//     display: inline-block;
-//     font-size: 16px;
-//     font-weight: 700;
-//     color: var(--heading-color);
-//     padding-left: 10px;
-//     padding-right: 15px;
-//   }
-// }
-
 .my-pagination ::ng-deep .ngx-pagination .current {
-  background: red;
+  background: #343A40;
 }

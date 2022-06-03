@@ -35,6 +35,7 @@ import { NoAccessComponent } from './components/no-access/no-access.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { ProductWishlistComponent } from './components/product-wishlist/product-
     NewTrendComponent,
     ProductCartComponent,
     ProductWishlistComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,

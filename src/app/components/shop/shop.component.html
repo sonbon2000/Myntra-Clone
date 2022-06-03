@@ -1,9 +1,9 @@
 <!-- Spinner -->
 <ngx-spinner
   bdColor="rgba(0, 0, 0, 0.8)"
-  size="default"
+  size="medium"
   color="#fff"
-  type="ball-climbing-dot"
+  type="line-spin-clockwise-fade"
   [fullScreen]="true"
 >
   <p style="color: white">Loading...</p>
@@ -187,7 +187,10 @@
             "
           >
             <div class="product__item">
-              <div class="product__item__pic">
+              <div
+                class="product__item__pic"
+                [routerLink]="['/shop', product.product_id]"
+              >
                 <img
                   [src]="product.images.split('|')[0]"
                   class="w-100"
@@ -197,7 +200,9 @@
               <div
                 class="product__item__text d-flex flex-column justify-content-between"
               >
-                <h6>{{ product.title }}</h6>
+                <h6 [routerLink]="['/shop', product.product_id]">
+                  {{ product.title }}
+                </h6>
                 <div>
                   <div class="d-flex justify-content-between">
                     <h5 class="m-0">₹{{ product.variant_price }}</h5>
@@ -209,12 +214,37 @@
                       ></li>
                     </ul>
                   </div>
+
+                  <!-- Add button -->
                   <button
-                    href="#"
-                    class="add-btn w-100 bg-primary text-center text-white rounded py-2"
+                    class="add-btn w-100 text-center text-white rounded py-2"
+                    (click)="cartService.addItem(product)"
+                    *ngIf="
+                      cartService.getItemQuantity(product) === 0;
+                      else updateQuantity
+                    "
                   >
-                    + Add To Cart
+                    Add To Cart <i class="fas fa-cart-plus"></i>
                   </button>
+                  <ng-template #updateQuantity>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button
+                        class="btn btn-danger"
+                        (click)="cartService.removeItem(product)"
+                      >
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <span>{{ cartService.getItemQuantity(product) }}</span>
+                      <button
+                        class="btn btn-primary"
+                        (click)="cartService.addItem(product)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </ng-template>
                 </div>
               </div>
             </div>
