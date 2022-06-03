@@ -1,74 +1,80 @@
 <!-- Footer Section Begin -->
 <footer class="footer container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="footer__about">
-                    <div class="footer__logo">
-                        <a href="#"><img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/281942464_688709642388674_7613307562014032430_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Y_7bPSKR9CgAX_KtgCp&_nc_ht=scontent.fhan2-3.fna&oh=03_AVLw4NjCtfIGuw8T_SsbRAdYkBcYAoS9KE7UXASovWnFLQ&oe=62BF6D5E"
-                                alt="" /></a>
-                    </div>
-                    <p>
-                        The customer is at the heart of our unique business model, which includes design.
-                    </p>
-                    <a href="#"><img src="../../../assets/images/payment.jpg" alt="" /></a>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="footer__widget">
-                    <h6>Shopping</h6>
-                    <ul>
-                        <li><a href="#">Man</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Boys</a></li>
-                        <li><a href="#">Girls</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="footer__widget">
-                    <h6>Useful Links</h6>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">T&C</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Return & Exchanges</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="footer__widget">
-                    <h6>NewLetter</h6>
-                    <div class="footer__newslatter">
-                        <p>
-                            Be the first to know about new arrivals, look books, sales & promos!
-                        </p>
-                        <form action="#">
-                            <input type="text" class="inputEmail" />
-                            <button type="submit"><i class="far fa-envelope"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="footer__about">
+          <div class="footer__logo m-0">
+            <a href="#"
+              ><img
+                src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.15752-9/281942464_688709642388674_7613307562014032430_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Y_7bPSKR9CgAX_KtgCp&_nc_ht=scontent.fhan2-3.fna&oh=03_AVLw4NjCtfIGuw8T_SsbRAdYkBcYAoS9KE7UXASovWnFLQ&oe=62BF6D5E"
+                alt=""
+            /></a>
+          </div>
+          <p>
+            The customer is at the heart of our unique business model, which
+            includes design.
+          </p>
+          <a href="#"
+            ><img src="../../../assets/images/payment.jpg" alt=""
+          /></a>
         </div>
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="footer__copyright__text">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    <p>
-                        Copyright ©
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        2020 All rights reserved | This template is made with
-                        <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                        <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    </p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </div>
-            </div>
+      </div>
+      <div class="col-2">
+        <div class="footer__widget">
+          <h6>Shopping</h6>
+          <ul>
+            <li *ngFor="let gender of allGenders">
+              <a href="#">{{ gender }}</a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="col-2">
+        <div class="footer__widget">
+          <h6>Useful Links</h6>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">T&C</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return & Exchanges</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__widget">
+          <h6>NewLetter</h6>
+          <div class="footer__newslatter">
+            <p>
+              Be the first to know about new arrivals, look books, sales &
+              promos!
+            </p>
+            <form action="#">
+              <input type="text" class="inputEmail px-2" />
+              <button type="submit"><i class="far fa-envelope"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="footer__copyright__text">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <p>
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            2020 All rights reserved | This template is made with
+            <i class="fa fa-heart-o" aria-hidden="true"></i> by
+            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          </p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- Footer Section End -->
