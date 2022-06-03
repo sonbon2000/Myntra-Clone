@@ -1,0 +1,146 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+html {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h6 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+select, li {
+  cursor: pointer;
+}
+
+.product__item__pic {
+  cursor: pointer;
+}
+
+.add-btn {
+  border: none;
+  background-color: #343A40;
+}
+
+.color-option,
+.product__item__color {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.color-option {
+  height: 30px;
+  width: 30px;
+}
+
+.product {
+  &__item {
+    height: 100%;
+    &__color {
+      height: 20px;
+      width: 20px;
+    }
+    &__text {
+      height: 144px;
+    }
+  }
+}
+
+.shop__sidebar {
+  padding-right: 20px;
+  ul {
+    padding-left: 0;
+    overflow: auto;
+  }
+}
+
+.shop__sidebar__search {
+  margin-bottom: 40px;
+}
+
+.shop__sidebar__accordion {
+  .card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .card-body {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .card-heading {
+    cursor: pointer;
+
+    a {
+      color: var(--heading-color);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+}
+
+.shop__sidebar__genders {
+  ul {
+    height: 140px;
+    margin-bottom: 0;
+
+    li {
+      list-style: none;
+      color: #b7b7b7;
+      font-size: 15px;
+      line-height: 32px;
+      &:hover {
+        color: var(--heading-color);
+      }
+    }
+  }
+}
+
+.shop__sidebar__products  {
+  @extend .shop__sidebar__genders;
+
+  ul {
+    height: 400px;
+  }
+}
+.shop__sidebar__price {
+  @extend .shop__sidebar__genders;
+
+  ul {
+    height: auto;
+  }
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #343A40;
+}

@@ -5,6 +5,7 @@ import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.c
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/shop/shop.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { NoAccessComponent } from './components/no-access/no-access.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
@@ -13,6 +14,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminGuard } from './shared/guards/admin.guard';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { EditGuard } from './shared/guards/edit.guard';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'shop',
+    component: ShopComponent
+  },
+  {
+    path: 'shop/:id',
+    component: ProductDetailComponent
   },
   {
     path: 'about',
