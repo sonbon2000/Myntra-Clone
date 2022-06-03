@@ -11,6 +11,9 @@ export class CarouselComponent implements OnInit {
     '../../../.././../assets/images/carousel/men-2.jpg',
   ];
 
+  pauseOnHover = false;
+  pauseOnFocus = false;
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CartService } from 'src/app/shared/services/cart.service';
 import Swal from 'sweetalert2';
-
 @Component({
   selector: 'app-product-cart',
   templateUrl: './product-cart.component.html',

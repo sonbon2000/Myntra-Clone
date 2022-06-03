@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'primeng/carousel';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -69,6 +69,7 @@ import { ProductWishlistComponent } from './components/product-wishlist/product-
     FormsModule,
     ReactiveFormsModule,
     CountdownModule,
+    CarouselModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,8 +1,8 @@
 <ngx-spinner
   bdColor="rgba(0, 0, 0, 0.8)"
-  size="default"
+  size="medium"
   color="#fff"
-  type="ball-climbing-dot"
+  type="line-spin-clockwise-fade"
   [fullScreen]="true"
 >
   <p style="color: white">Loading...</p>
@@ -20,8 +20,11 @@
 </div>
 
 <div class="container">
-  <div class="row py-5" *ngIf="cartService.getCartQuantity() !== 0">
-    <div class="col-lg-8">
+  <div
+    class="row"
+    *ngIf="cartService.getCartQuantity() !== 0; else emptyQuantity"
+  >
+    <div class="col-lg-8 py-3">
       <table class="table mt-5">
         <thead>
           <tr>
@@ -50,7 +53,7 @@
       </table>
       <button class="btn btn-dark">< Continue Shopping</button>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4 mt-3">
       <div class="p-5 cart__checkout">
         <h5>CART TOTAL</h5>
         <div class="d-flex justify-content-between">
@@ -64,8 +67,8 @@
       </div>
     </div>
   </div>
-  <div class="row py-5" *ngIf="cartService.getCartQuantity() === 0">
-    <div class="cart__empty text-center">
+  <ng-template #emptyQuantity class="row">
+    <div class="cart__empty py-5 text-center">
       <img
         src="https://i5.walmartimages.com/dfw/63fd9f59-e0d6/65ab57af-59d6-423a-9500-1fa5ab36d1c7/v1/empty-cart.svg?odnHeight=240&odnWidth=200&odnBg=ffffff"
         alt=""
@@ -74,5 +77,5 @@
       <p class="cart__emtpy paragraph">Your cart is empty!</p>
       <button class="btn btn-dark">< Continue Shopping</button>
     </div>
-  </div>
+  </ng-template>
 </div>

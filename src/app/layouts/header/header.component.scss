@@ -73,7 +73,6 @@ $heading-color: #111111;
           visibility: visible;
       }
   }
-
   span {
       color: $white-color;
       font-size: 13px;
@@ -89,7 +88,6 @@ $heading-color: #111111;
           right: 2px;
       }
   }
-
   ul {
       background: $white-color;
       display: inline-block;
@@ -169,7 +167,6 @@ $heading-color: #111111;
               opacity: 0;
               visibility: hidden;
               @include transition(all, .3s);
-
               li {
                   display: block;
                   margin-right: 0;
@@ -187,7 +184,6 @@ $heading-color: #111111;
                   }
               }
           }
-
           a {
               font-size: 18px;
               color: $heading-color;
@@ -224,6 +220,7 @@ $heading-color: #111111;
       &:last-child {
         margin-right: 0;
       }
+      text-decoration: none;
   }
 
   .price {
@@ -234,6 +231,12 @@ $heading-color: #111111;
       margin-left: -20px;
       position: relative;
       top: 3px;
+  }
+
+  .cart-quantity {
+    position: relative;
+    top: -8px;
+    margin-left: 3px;
   }
 }
 
@@ -252,9 +255,4 @@ $heading-color: #111111;
     right: 0;
     left: auto;
   }
-}
-.cart-quantity {
-  position: relative;
-  top: -8px;
-  margin-left: 3px;
 }

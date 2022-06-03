@@ -1,1 +1,52 @@
-<p>product-wishlist works!</p>
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="line-spin-clockwise-fade"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="shopping__header">
+  <div class="container">
+    <h3>WishList</h3>
+    <div>
+      <a routerLink="/home">Home ></a>
+      <a routerLink="/shop" class="mx-2">Shop ></a>
+      <a class="text-muted">Shopping Cart</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row py-5">
+    <div class="col-lg-3" *ngFor="let wishList of wishListArr">
+      <div class="card_item rounded">
+        <div class="item-img text-center">
+          <img [src]="wishList.images" alt="" />
+        </div>
+        <div class="item-body px-3">
+          <h6 class="item-price mt-3">
+            {{ wishList.variant_price | currency: "USD" }}
+          </h6>
+          <p class="item-title">{{ wishList.title }}</p>
+        </div>
+        <div class="item-options text-center d-flex">
+          <button
+            class="btn btn-light btn-wishlist"
+            (click)="onRemoveItem(wishList)"
+          >
+            <i class="fas fa-times"></i> Remove
+          </button>
+          <button
+            class="btn btn-primary btn-cart"
+            (click)="addToCart(wishList)"
+          >
+            <i class="fas fa-shopping-cart mr-1"></i>Move to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

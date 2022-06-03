@@ -3,7 +3,10 @@
     <div class="card__img">
       <img [src]="prodTopSale.images" alt="" />
       <div class="icon_list">
-        <i class="fas fa-heart text-danger"></i>
+        <i
+          class="fas fa-heart text-danger"
+          (click)="onAddWishList(prodTopSale)"
+        ></i>
       </div>
     </div>
     <h5 class="card__title mt-3">{{ prodTopSale.title | summary: 30 }}</h5>

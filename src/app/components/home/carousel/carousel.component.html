@@ -1,4 +1,9 @@
-<ngb-carousel *ngIf="carouselImages" class="position-relative">
+<ngb-carousel
+  [interval]="2000"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  class="position-relative"
+>
   <ng-template ngbSlide *ngFor="let image of carouselImages">
     <div class="picsum-img-wrapper">
       <img [src]="image" />
