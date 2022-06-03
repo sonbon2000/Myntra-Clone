@@ -1,3 +1,5 @@
+import { ShopComponent } from './components/shop/shop.component';
+import { Product } from './shared/models/product.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CountdownModule } from 'ngx-countdown';
@@ -7,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'primeng/carousel';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -32,6 +35,7 @@ import { NoAccessComponent } from './components/no-access/no-access.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,7 @@ import { ProductWishlistComponent } from './components/product-wishlist/product-
     BlogComponent,
     ContactComponent,
     BlogDetailComponent,
+    ShopComponent,
     SignInComponent,
     MyProfileComponent,
     NoAccessComponent,
@@ -58,6 +63,7 @@ import { ProductWishlistComponent } from './components/product-wishlist/product-
     NewTrendComponent,
     ProductCartComponent,
     ProductWishlistComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +76,7 @@ import { ProductWishlistComponent } from './components/product-wishlist/product-
     ReactiveFormsModule,
     CountdownModule,
     CarouselModule,
+    NgxPaginationModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
