@@ -1,3 +1,5 @@
+import { AuthService } from './../../shared/services/auth.service';
+import { Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Mock } from 'protractor/built/driverProviders';
@@ -33,7 +35,9 @@ export class ShopComponent implements OnInit {
     private mockService: MockService,
     private productService: ProductService,
     public cartService: CartService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -56,12 +60,15 @@ export class ShopComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 1000);
+
+    window.scroll(0, 0);
   }
 
   searchProducts(value) {
     this.filteredProducts = this.allProducts.filter((item) =>
       item.title.toLowerCase().includes(value.trim().toLowerCase())
-    );2
+    );
+    2;
     this.paginationLength = this.filteredProducts.length;
     this.total_pages = Math.ceil(this.paginationLength / this.limit);
     this.currentPage = 1;
@@ -120,6 +127,14 @@ export class ShopComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 500); 
+    }, 500);
+  }
+
+  onAddProduct(prod) {
+    if (this.authService.isLoggedIn()) {
+      this.cartService.addItem(prod);
+    } else {
+      this.router.navigateByUrl('/sign-in');
+    }
   }
 }

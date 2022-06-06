@@ -1,0 +1,28 @@
+<div class="specifications py-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <img class="w-100" [src]="images[images.length - 1]" alt="" />
+      </div>
+      <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-6">
+                <h6>Information</h6>
+                <ul class="pl-3">
+                    <li class="mb-2" *ngFor="let item of specifications.slice(0, 8)">{{item}}</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6>Care Instructions </h6>
+                <ul class="pl-3">
+                    <li class="mb-2" *ngFor="let item of instructions">{{item}}</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6>Wearing </h6>
+                <p>{{product.size_fit}}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
