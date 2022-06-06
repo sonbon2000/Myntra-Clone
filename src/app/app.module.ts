@@ -36,7 +36,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import {CarouselModule} from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel';
 import { ProductTabsComponent } from './components/product-detail/product-tabs/product-tabs.component';
 import { RelatedProductsComponent } from './components/product-detail/related-products/related-products.component';
 import { ProductInformationComponent } from './components/product-detail/product-information/product-information.component';
@@ -44,6 +44,7 @@ import { AboutBrandComponent } from './components/product-detail/product-tabs/ab
 import { AboutProductComponent } from './components/product-detail/product-tabs/about-product/about-product.component';
 import { ReviewsComponent } from './components/product-detail/product-tabs/reviews/reviews.component';
 import { SpecificationsComponent } from './components/product-detail/product-tabs/specifications/specifications.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,7 +91,7 @@ import { SpecificationsComponent } from './components/product-detail/product-tab
     ReactiveFormsModule,
     CountdownModule,
     NgxPaginationModule,
-    CarouselModule
+    CarouselModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
