@@ -44,6 +44,7 @@ import { AboutBrandComponent } from './components/product-detail/product-tabs/ab
 import { AboutProductComponent } from './components/product-detail/product-tabs/about-product/about-product.component';
 import { ReviewsComponent } from './components/product-detail/product-tabs/reviews/reviews.component';
 import { SpecificationsComponent } from './components/product-detail/product-tabs/specifications/specifications.component';
+
 @NgModule({
   declarations: [
     AppComponent,

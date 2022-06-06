@@ -17,6 +17,10 @@ export class ShopComponent implements OnInit {
   public allProducts: Product[] = [];
   // public products: Product[] = [];
   public filteredProducts: Product[] = [];
+  showGender: boolean;
+  showProductType: boolean;
+  showPrice: boolean;
+  showColor: boolean;
 
   @ViewChild('search') searchInput: ElementRef;
 
