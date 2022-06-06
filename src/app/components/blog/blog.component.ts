@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Doc } from 'src/app/shared/models/blog.model';
+import { Doc, RootObject } from 'src/app/shared/models/blog.model';
 import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/shared/services/product.service';
 })
 export class BlogComponent implements OnInit {
   blogsArr: Doc[] = [];
-  imageURL = [];
+  imageURL: string[] = [];
 
   constructor(
     private productService: ProductService,
@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productService.getAllBlogs().subscribe((data) => {
+    this.productService.getAllBlogs().subscribe((data: RootObject) => {
       this.blogsArr = data.response.docs;
       this.blogsArr.pop();
       for (let blog of this.blogsArr) {

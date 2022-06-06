@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Product } from 'src/app/shared/models/product.model';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
@@ -15,14 +17,20 @@ export class ProductnewArrivalComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     public cartService: CartService,
-    public wishListService: WishListService
+    public wishListService: WishListService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {}
 
-  onAddProduct(prod) {
+  getPrice(price: string) {
+    let splitArr = price.split('.');
+    return splitArr[0];
+  }
+
+  onAddProduct(prod: Product) {
     if (this.authService.isLoggedIn()) {
-      Swal.fire('Success', 'You have added item to the cart', 'success');
+      this.toastr.success('You have added item in the cart!');
       this.cartService.addItem(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error');
@@ -30,9 +38,9 @@ export class ProductnewArrivalComponent implements OnInit {
     }
   }
 
-  onAddWishList(prod) {
+  onAddWishList(prod: Product) {
     if (this.authService.isLoggedIn()) {
-      Swal.fire('Success', 'You have added item to the wishlist', 'success');
+      this.toastr.success('You have added item in the wishlist!');
       this.wishListService.addWishList(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error');

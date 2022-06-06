@@ -192,7 +192,7 @@
               index as i
             "
           >
-            <div class="product__item">
+            <div class="product__item position-relative">
               <div
                 class="product__item__pic"
                 [routerLink]="['/shop', product.product_id]"
@@ -202,6 +202,12 @@
                   class="w-100"
                   alt=""
                 />
+              </div>
+              <div class="icon_list">
+                <i
+                  class="fas fa-heart text-danger icon__heart"
+                  (click)="onAddWishList(product)"
+                ></i>
               </div>
               <div
                 class="product__item__text d-flex flex-column justify-content-between"

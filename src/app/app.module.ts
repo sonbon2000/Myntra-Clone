@@ -1,5 +1,4 @@
 import { ShopComponent } from './components/shop/shop.component';
-import { Product } from './shared/models/product.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CountdownModule } from 'ngx-countdown';
@@ -7,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -36,6 +34,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ToastrModule } from 'ngx-toastr';
+// import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselModule } from 'primeng/carousel';
 import { ProductTabsComponent } from './components/product-detail/product-tabs/product-tabs.component';
 import { RelatedProductsComponent } from './components/product-detail/related-products/related-products.component';
@@ -90,6 +90,9 @@ import { SpecificationsComponent } from './components/product-detail/product-tab
     FormsModule,
     ReactiveFormsModule,
     CountdownModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+    }),
     NgxPaginationModule,
     CarouselModule,
   ],
