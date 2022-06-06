@@ -1,3 +1,10 @@
+span {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .ultilities {
   border-top: 1px solid #ccc;
   h4::selection,
@@ -12,4 +19,3 @@
     color: #777;
   }
 }
-
