@@ -32,10 +32,10 @@ export class CarouselComponent implements OnInit {
       400: {
         items: 1,
       },
-      940: {
+      740: {
         items: 1,
       },
-      1200: {
+      940: {
         items: 1,
       },
     },
