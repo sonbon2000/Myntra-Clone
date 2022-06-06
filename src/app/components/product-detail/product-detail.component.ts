@@ -16,12 +16,12 @@ export class ProductDetailComponent implements OnInit {
   public product: Product;
   public relatedProducts: Product[] = [];
   public responsiveOptions;
-  id;
+  id: string = '';
 
   constructor(
     private mockService: MockService,
     private route: ActivatedRoute,
-    private spinner: NgxSpinnerService,
+    private spinner: NgxSpinnerService
   ) {
     this.responsiveOptions = [
       {
@@ -44,10 +44,10 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     // let id = this.route.snapshot.params['id'];
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.id = params['id'];
-    })
-    this.product = this.mockService.getProductById(this.id);
+      this.product = this.mockService.getProductById(this.id);
+    });
     this.relatedProducts = this.mockService.getRelatedProducts(this.product);
 
     // Spinner

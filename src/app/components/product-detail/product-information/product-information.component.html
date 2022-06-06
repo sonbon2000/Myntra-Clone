@@ -58,7 +58,7 @@
           </button>
           <button
             class="add-cart-btn text-center text-white rounded py-2"
-            (click)="onAddProduct(product)"  
+            (click)="onAddProduct(product)"
             *ngIf="
               cartService.getItemQuantity(product) === 0;
               else updateQuantity
@@ -92,7 +92,9 @@
         </p>
         <div class="checkout mt-3 text-center px-5 py-3">
           <div class="mb-2">
-            <img src="../../../assets/images/details-payment.png" />
+            <img
+              src="../../../assets/images/product-detail/details-payment.png"
+            />
           </div>
           <p class="m-0">Guaranteed safe & secure checkout</p>
         </div>

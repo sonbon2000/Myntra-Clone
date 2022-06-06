@@ -8,6 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ToastrModule } from 'ngx-toastr';
+import { CarouselModule } from 'primeng/carousel';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule as CarouSlider } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -27,16 +31,12 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { NoAccessComponent } from './components/no-access/no-access.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
 import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ToastrModule } from 'ngx-toastr';
-// import { CarouselModule } from 'ngx-owl-carousel-o';
-import { CarouselModule } from 'primeng/carousel';
 import { ProductTabsComponent } from './components/product-detail/product-tabs/product-tabs.component';
 import { RelatedProductsComponent } from './components/product-detail/related-products/related-products.component';
 import { ProductInformationComponent } from './components/product-detail/product-information/product-information.component';
@@ -95,6 +95,7 @@ import { SpecificationsComponent } from './components/product-detail/product-tab
     }),
     NgxPaginationModule,
     CarouselModule,
+    CarouSlider,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

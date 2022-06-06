@@ -1,7 +1,15 @@
 <div class="item_list">
-  <div class="card" *ngFor="let prodTopSale of productsTopSale">
+  <div
+    class="card"
+    *ngFor="let prodTopSale of productsTopSale"
+    style="cursor: pointer"
+  >
     <div class="card__img">
-      <img [src]="prodTopSale.images" alt="" />
+      <img
+        [routerLink]="['/shop', prodTopSale.product_id]"
+        [src]="prodTopSale.images"
+        alt=""
+      />
       <div class="icon_list">
         <i
           class="fas fa-heart text-danger"

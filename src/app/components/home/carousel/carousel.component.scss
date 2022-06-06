@@ -16,3 +16,9 @@ img {
 .slider_btn {
   padding: 12px 32px;
 }
+
+@media (max-width: 576px) {
+  .owl-carousel-o {
+    display: none;
+  }
+}
