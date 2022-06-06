@@ -1,0 +1,10 @@
+.image-container {
+  background-color: #f7f7f7;
+  img {
+    height: calc(160px / 10 * 8);
+    width: calc(350px / 10 * 8);
+  }
+}
+a {
+  text-decoration: underline;
+}

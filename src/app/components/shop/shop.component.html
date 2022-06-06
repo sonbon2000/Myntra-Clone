@@ -218,7 +218,7 @@
                   <!-- Add button -->
                   <button
                     class="add-btn w-100 text-center text-white rounded py-2"
-                    (click)="cartService.addItem(product)"
+                    (click)="onAddProduct(product)"
                     *ngIf="
                       cartService.getItemQuantity(product) === 0;
                       else updateQuantity

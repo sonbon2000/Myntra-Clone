@@ -1,0 +1,24 @@
+h6 {
+    display: inline-block;
+}
+
+.product_ratting ul li {
+  display: inline-block;
+  a {
+    color: #ff6a28;
+    font-size: 12px;
+  }
+}
+
+.image-container {
+  background-image: url("../../../../../assets/images/product-detail/reviews/user1.jpeg");
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.time-review {
+  font-style: italic;
+  font-size: 12px;
+}
