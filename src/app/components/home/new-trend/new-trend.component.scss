@@ -31,15 +31,10 @@
   }
 }
 
-.blog__item__pic {
-  height: 100px;
-}
-
 .blog__item__text {
-  margin-top: 35px;
   background: white;
   transition: all, 0.3s;
-  width: 350px;
+
   padding: 30px 20px 25px;
   span {
     color: #3d3d3d;
@@ -47,11 +42,10 @@
     display: block;
     margin-bottom: 10px;
     img {
-      margin-right: 6px;
-      height: 300px;
+      height: 200px;
       width: 100%;
-      margin-bottom: 10px;
       object-fit: cover;
+      object-position: center 20%;
     }
   }
   h5 {
