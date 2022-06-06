@@ -1,0 +1,21 @@
+li {
+  color: #b7b7b7;
+  font-size: 18px;
+  font-weight: 400;
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 60px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    color: var(--heading-color);
+  }
+}
+
+.product__filter {
+  flex-basis: 1;
+}

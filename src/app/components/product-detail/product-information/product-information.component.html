@@ -1,0 +1,102 @@
+<div class="product-information">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <p-carousel
+          [value]="images"
+          [style]="{ 'max-width': '100%' }"
+          verticalViewPortHeight="330px"
+          [numVisible]="1"
+          [numScroll]="1"
+        >
+          <ng-template let-image pTemplate="item">
+            <div class="product-details">
+              <div class="p-grid">
+                <div class="p-col-auto">
+                  <img [src]="image" />
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+      <div class="col-lg-6">
+        <h2>{{ product.title }}</h2>
+        <div class="d-flex justify-content-between align-items-end mb-3">
+          <h4 class="font-weight-normal">₹{{ product.variant_price }}</h4>
+          <p>
+            <span *ngIf="status; else outOfStock" [style.color]="'#33cc33'">
+              <i class="fas fa-check-circle"></i>
+              <span class="ml-2">{{ product.is_in_stock }}</span>
+            </span>
+            <ng-template #outOfStock>
+              <span [style.color]="'red'">
+                <i class="fas fa-times-circle"></i>
+                <span class="ml-2">{{ product.is_in_stock }}</span>
+              </span>
+            </ng-template>
+          </p>
+        </div>
+        <p><span>Categories:</span> {{ product.product_type }}</p>
+        <p><span>Brand:</span> {{ product.brand }}</p>
+        <div class="d-flex align-items-center mb-3 color-container">
+          <p class="mr-3 mb-0 font-weight-bold">Colors:</p>
+          <span
+            *ngFor="let color of product.actual_color.split('|')"
+            [style.backgroundColor]="color"
+          ></span>
+        </div>
+        <p><span>Size:</span> {{ product.size }}</p>
+        <p><span>Material:</span> {{ product.dominant_material }}</p>
+        <p><span>SKU:</span> {{ product.variant_sku }}</p>
+        <div class="product-actions d-flex justify-content-between mb-4">
+          <button
+            class="add-wish-btn text-center text-white rounded py-2"
+            (click)="onAddWishList(product)"
+          >
+            Add To Wishlist <i class="fas fa-heart ml-2"></i>
+          </button>
+          <button
+            class="add-cart-btn text-center text-white rounded py-2"
+            (click)="onAddProduct(product)"  
+            *ngIf="
+              cartService.getItemQuantity(product) === 0;
+              else updateQuantity
+            "
+          >
+            Add To Cart <i class="fas fa-cart-plus ml-2"></i>
+          </button>
+          <ng-template #updateQuantity>
+            <div
+              class="update-quantity-btn d-flex justify-content-between align-items-center"
+            >
+              <button
+                class="btn btn-danger"
+                (click)="cartService.removeItem(product)"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <span>{{ cartService.getItemQuantity(product) }}</span>
+              <button
+                class="btn btn-primary"
+                (click)="cartService.addItem(product)"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </ng-template>
+        </div>
+        <p class="border-top pt-3">
+          <i class="fas fa-dolly mr-2"></i>
+          <span>Free Shipping & Returns:</span> On all orders over ₹1000
+        </p>
+        <div class="checkout mt-3 text-center px-5 py-3">
+          <div class="mb-2">
+            <img src="../../../assets/images/details-payment.png" />
+          </div>
+          <p class="m-0">Guaranteed safe & secure checkout</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
