@@ -1,1 +1,73 @@
-<p>product-wishlist works!</p>
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="line-spin-clockwise-fade"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="shopping__header">
+  <div class="container">
+    <h3>WishList</h3>
+    <div>
+      <a routerLink="/home">Home ></a>
+      <a routerLink="/shop" class="mx-2">Shop ></a>
+      <a class="text-muted">Shopping Cart</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div
+    class="row py-5"
+    *ngIf="wishListService.getWishListQuantity() !== 0; else noWishList"
+  >
+    <div class="col-lg-3 mb-4" *ngFor="let wishList of wishListArr">
+      <div class="card_item rounded">
+        <div class="item-img text-center">
+          <img [src]="wishList.images" alt="" />
+        </div>
+        <div class="item-body px-3">
+          <div
+            class="d-flex justify-content-between align-items-center mt-3 mb-2"
+          >
+            <h6 class="item-price m-0">
+              {{ getPrice(wishList.variant_price | currency: "USD") }}
+            </h6>
+            <p class="text-danger m-0">
+              {{ wishListService.getWishListItemQuantity(wishList) }}
+              <i class="fas fa-heart"></i>
+            </p>
+          </div>
+          <p class="item-title">{{ wishList.title }}</p>
+        </div>
+        <div class="item-options text-center d-flex">
+          <button
+            class="btn btn-light btn-wishlist"
+            (click)="onRemoveItem(wishList)"
+          >
+            <i class="fas fa-times"></i> Remove
+          </button>
+          <button
+            class="btn btn-primary btn-cart"
+            (click)="addToCart(wishList)"
+          >
+            <i class="fas fa-shopping-cart mr-1"></i>Move to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template class="row" #noWishList>
+    <div class="cart__empty py-5 text-center">
+      <img
+        src="https://media.istockphoto.com/vectors/broken-heart-vector-vector-id1063503426?k=20&m=1063503426&s=612x612&w=0&h=0JVTaDDY3j5gTakc0xO7cOwirD0ZeK3SrlwV9R1aNzM="
+        alt=""
+      />
+      <p class="font-weight-bold">There is no wishlist in your collection</p>
+      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
+    </div>
+  </ng-template>
+</div>

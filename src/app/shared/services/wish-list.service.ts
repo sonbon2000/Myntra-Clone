@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WishListService {
-  private wishList = [];
+  private wishList: any[] = [];
   constructor() {
     let savedWish = localStorage.getItem('wish');
     if (savedWish) {
@@ -48,6 +49,17 @@ export class WishListService {
     return this.wishList.reduce((accu, p) => {
       return accu + p.inventory;
     }, 0);
+  }
+
+  getWishListItemQuantity(prod: Product) {
+    let index = this.wishList.findIndex(
+      (c) => c.product_id === prod.product_id
+    );
+    if (index !== -1) {
+      return this.wishList[index].inventory;
+    }
+
+    return 0;
   }
 
   getWishListTotalPrice() {

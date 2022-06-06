@@ -1,13 +1,13 @@
 <ngx-spinner
   bdColor="rgba(0, 0, 0, 0.8)"
-  size="default"
+  size="medium"
   color="#fff"
-  type="ball-climbing-dot"
+  type="line-spin-clockwise-fade"
   [fullScreen]="true"
 >
   <p style="color: white">Loading...</p>
 </ngx-spinner>
-<div class="container my-3">
+<div class="container py-5">
   <h3 class="text-center mb-3">Admin Page</h3>
   <div class="clear-fix">
     <div class="float-right">
@@ -29,7 +29,6 @@
         <th scope="col">Price</th>
         <th scope="col">In Stock</th>
         <th></th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -47,18 +46,18 @@
         <td><img [src]="product.images" alt="" /></td>
         <td>{{ product.title }}</td>
         <td>{{ product.ideal_for }}</td>
-        <td>{{ product.variant_price | currency: "USD" }}</td>
+        <td>{{ getPrice(product.variant_price | currency: "USD") }}</td>
         <td>{{ product.is_in_stock }}</td>
-        <td><i class="fas fa-edit text-success"></i></td>
         <td>
           <i class="fas fa-trash text-danger" (click)="onDelete(product)"></i>
         </td>
       </tr>
     </tbody>
   </table>
-  
+
   <pagination-controls
     (pageChange)="page = $event"
     class="my-pagination"
+    (click)="backToTop()"
   ></pagination-controls>
 </div>

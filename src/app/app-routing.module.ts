@@ -9,6 +9,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { NoAccessComponent } from './components/no-access/no-access.component';
 import { ProductCartComponent } from './components/product-cart/product-cart.component';
+import { ProductWishlistComponent } from './components/product-wishlist/product-wishlist.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminGuard } from './shared/guards/admin.guard';
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: 'product-cart',
     component: ProductCartComponent,
+  },
+  {
+    path: 'product-wish-list',
+    component: ProductWishlistComponent,
   },
 ];
 
