@@ -1,9 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AuthService } from './../../shared/services/auth.service';
 import { Router } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
-import { AuthService } from 'src/app/shared/services/auth.service';
+
 import { CartService } from 'src/app/shared/services/cart.service';
 import { MockService } from 'src/app/shared/services/mock.service';
 import { ProductService } from 'src/app/shared/services/product.service';
@@ -16,6 +18,12 @@ import Swal from 'sweetalert2';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
+
+  showGender: boolean;
+  showProductType: boolean;
+  showPrice: boolean;
+  showColor: boolean;
+
   @ViewChild('search') searchInput: ElementRef;
   public allProducts: Product[] = [];
   public filteredProducts: Product[] = [];
@@ -64,12 +72,15 @@ export class ShopComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 1000);
+
+    window.scroll(0, 0);
   }
 
   searchProducts(value: string) {
     this.filteredProducts = this.allProducts.filter((item) =>
       item.title.toLowerCase().includes(value.trim().toLowerCase())
     );
+
     this.paginationLength = this.filteredProducts.length;
     this.total_pages = Math.ceil(this.paginationLength / this.limit);
     this.currentPage = 1;

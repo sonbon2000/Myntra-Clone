@@ -1,0 +1,15 @@
+.ultilities {
+  border-top: 1px solid #ccc;
+  h4::selection,
+  p::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  i {
+    font-size: 24px;
+  }
+  p {
+    color: #777;
+  }
+}
+

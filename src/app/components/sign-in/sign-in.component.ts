@@ -36,6 +36,8 @@ export class SignInComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 1000);
+
+    window.scroll(0, 0);
   }
 
   get email() {

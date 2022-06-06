@@ -9,4 +9,16 @@ export class MockService {
   getAllProducts() {
     return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }
+
+  getProductById(id) {
+    return products.find((item) => item.product_id == id);
+  }
+
+  getRelatedProducts(product) {
+    return products.filter(
+      (item) =>
+        item.product_type == product.product_type &&
+        item.product_id != product.product_id
+    );
+  }
 }

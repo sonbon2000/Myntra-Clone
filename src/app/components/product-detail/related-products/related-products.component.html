@@ -1,0 +1,32 @@
+<div class="related-products">
+  <div class="container">
+    <p-carousel
+      [value]="relatedProducts"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <p-header>
+        <h2 class="text-center mb-5">Related Products</h2>
+      </p-header>
+      <ng-template let-product pTemplate="item">
+        <div class="product-details">
+          <div
+            class="p-grid d-flex align-items-center flex-column"
+            [routerLink]="['/shop', product.product_id]">
+          >
+            <div class="p-col-auto">
+              <img [src]="product.images.split('|')[0]" />
+            </div>
+            <div class="p-col-auto pt-2 px-5">
+              <div class="product-title font-weight-bold">
+                {{ product.title }}
+              </div>
+              <div class="product-subtitle">₹{{ product.variant_price }}</div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>
