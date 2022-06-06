@@ -36,12 +36,11 @@
 }
 
 .blog__item__text {
-    // margin: 0 30px;
     margin-top: 35px;
     background: white;
     transition: all, .3s;
-    // text-align: center;
     width: 350px;
+    padding: 30px 20px 25px;
     span {
         color: #3d3d3d;
         font-size: 13px;
@@ -51,6 +50,7 @@
             margin-right: 6px;
             height: 300px;
             width: 100%;
+            margin-bottom: 10px;
         }
     }
     h5 {

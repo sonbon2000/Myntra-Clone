@@ -15,6 +15,10 @@ export class ShopComponent implements OnInit {
   public allProducts: Product[] = [];
   // public products: Product[] = [];
   public filteredProducts: Product[] = [];
+  showGender: boolean;
+  showProductType: boolean;
+  showPrice: boolean;
+  showColor: boolean;
 
   @ViewChild('search') searchInput: ElementRef;
 
@@ -61,7 +65,8 @@ export class ShopComponent implements OnInit {
   searchProducts(value) {
     this.filteredProducts = this.allProducts.filter((item) =>
       item.title.toLowerCase().includes(value.trim().toLowerCase())
-    );2
+    );
+    2;
     this.paginationLength = this.filteredProducts.length;
     this.total_pages = Math.ceil(this.paginationLength / this.limit);
     this.currentPage = 1;
@@ -120,6 +125,6 @@ export class ShopComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 500); 
+    }, 500);
   }
 }
