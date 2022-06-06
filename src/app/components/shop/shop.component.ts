@@ -1,3 +1,5 @@
+import { AuthService } from './../../shared/services/auth.service';
+import { Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Mock } from 'protractor/built/driverProviders';
@@ -37,7 +39,9 @@ export class ShopComponent implements OnInit {
     private mockService: MockService,
     private productService: ProductService,
     public cartService: CartService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -60,6 +64,8 @@ export class ShopComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 1000);
+
+    window.scroll(0, 0);
   }
 
   searchProducts(value) {
@@ -126,5 +132,13 @@ export class ShopComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 500);
+  }
+
+  onAddProduct(prod) {
+    if (this.authService.isLoggedIn()) {
+      this.cartService.addItem(prod);
+    } else {
+      this.router.navigateByUrl('/sign-in');
+    }
   }
 }

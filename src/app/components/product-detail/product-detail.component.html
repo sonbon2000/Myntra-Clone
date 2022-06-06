@@ -1,1 +1,73 @@
-<p>product-detail works!</p>
+<!-- Spinner -->
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="line-spin-clockwise-fade"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option bg-light p-5 mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h4>Shop</h4>
+          <div class="breadcrumb__links">
+            <a routerLink="/home" class="home_link">Home> </a>
+            <span class="text-muted">Shop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- Product information -->
+<app-product-information [data]="product"></app-product-information>
+
+<!-- Product Tabs -->
+<app-product-tabs [data]="product"></app-product-tabs>
+
+<!-- Related Products -->
+<app-related-products [data]="relatedProducts"></app-related-products>
+
+<!-- Utilities -->
+<div class="ultilities">
+  <div class="container-fluid py-5">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 d-flex align-items-center">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="pl-3">
+          <h4 class="m-0">Free Shipping</h4>
+          <p class="m-0">Free Shipping for orders over ₹1000</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 d-flex align-items-center">
+        <i class="fas fa-rupee-sign"></i>
+        <div class="pl-3">
+          <h4 class="m-0">Money Guarantee</h4>
+          <p class="m-0">Within 30 days for an exchange.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 d-flex align-items-center">
+        <i class="fas fa-headphones-alt"></i>
+        <div class="pl-3">
+          <h4 class="m-0">Online Support</h4>
+          <p class="m-0">24 hours a day, 7 days a week</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 d-flex align-items-center">
+        <i class="fas fa-credit-card"></i>
+        <div class="pl-3">
+          <h4 class="m-0">Flexible Payment</h4>
+          <p class="m-0">Pay with Multiple Credit Cards</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

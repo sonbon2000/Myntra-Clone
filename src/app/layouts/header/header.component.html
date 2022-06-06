@@ -75,7 +75,12 @@
           class="header__nav__option d-flex align-items-center justify-content-end"
         >
           <a routerLink="product-wish-list">
-            <i class="fas fa-heart" data-toggle="tooltip" title="Wish List"></i>
+            <i
+              class="fas fa-heart"
+              data-toggle="tooltip"
+              title="Wish List"
+              data-placement="top"
+            ></i>
             <span class="cart-quantity text-danger font-weight-bold">
               {{ wishList.getWishListQuantity() }}
             </span>

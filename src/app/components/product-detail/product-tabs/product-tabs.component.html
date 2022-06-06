@@ -1,0 +1,49 @@
+<div class="product-tabs mb-4">
+  <div class="container p-4">
+    <div class="row border-bottom">
+      <div class="col-lg-12 p-0">
+        <ul class="filter__controls pl-0">
+          <li
+            (click)="changeViewMode('about-product')"
+            [class.active]="viewMode == 'about-product'"
+          >
+            About Product
+          </li>
+          <li
+            (click)="changeViewMode('specifications')"
+            class="active"
+            [class.active]="viewMode == 'specifications'"
+          >
+            Specifications
+          </li>
+          <li
+            (click)="changeViewMode('about-brand')"
+            [class.active]="viewMode == 'about-brand'"
+          >
+            About Brand
+          </li>
+          <li
+            (click)="changeViewMode('reviews')"
+            [class.active]="viewMode == 'reviews'"
+          >
+            Reviews
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row product__filter">
+      <div class="col-lg-12 px-0">
+        <app-about-product
+          *ngIf="viewMode === 'about-product'"
+          [data]="product"
+        ></app-about-product>
+        <app-specifications
+          *ngIf="viewMode === 'specifications'"
+          [data]="product"
+        ></app-specifications>
+        <app-about-brand *ngIf="viewMode === 'about-brand'"></app-about-brand>
+        <app-reviews *ngIf="viewMode === 'reviews'"></app-reviews>
+      </div>
+    </div>
+  </div>
+</div>
