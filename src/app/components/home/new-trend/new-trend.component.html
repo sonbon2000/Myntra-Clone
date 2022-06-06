@@ -13,6 +13,7 @@
         *ngFor="let image of dataResponse"
         class="col-sm-4 p-0"
         [routerLink]="['/blog', image._id]"
+        style="cursor: pointer"
       >
         <div class="blog__item">
           <div class="blog__item__text">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 interface User {
@@ -22,13 +23,20 @@ export class MyProfileComponent implements OnInit {
   };
 
   originalUser: User;
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.authService.getUserInfo().subscribe((res: any) => {
       this.originalUser = { ...res.data };
       this.user = { ...this.originalUser };
     });
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000);
   }
 
   canExit = () => {

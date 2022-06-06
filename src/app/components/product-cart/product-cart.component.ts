@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { Product } from 'src/app/shared/models/product.model';
 import { CartService } from 'src/app/shared/services/cart.service';
 import Swal from 'sweetalert2';
-
 @Component({
   selector: 'app-product-cart',
   templateUrl: './product-cart.component.html',
   styleUrls: ['./product-cart.component.scss'],
 })
 export class ProductCartComponent implements OnInit {
-  cartArr = [];
+  cartArr: Product[] = [];
   constructor(
     public cartService: CartService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -23,9 +25,14 @@ export class ProductCartComponent implements OnInit {
     }, 1000);
   }
 
-  removeItem(prod) {
-    Swal.fire('Success', 'You have deleted item from the cart', 'success');
-    this.cartArr.splice(this.cartArr.indexOf(prod), 1);
+  getPrice(price: string) {
+    let splitArr = price.split('.');
+    return splitArr[0];
+  }
+
+  removeItem(prod: Product) {
+    this.toastr.success('You have deleted your item from the cart');
+    this.cartService.removeItem(prod);
   }
 
   onCheckOut() {

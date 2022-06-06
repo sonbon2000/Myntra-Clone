@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  private cart = [];
+  private cart: any[] = [];
   constructor() {
     let savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -18,6 +19,7 @@ export class CartService {
 
   getCartEmpty() {
     this.cart = [];
+    localStorage.setItem('cart', JSON.stringify(this.cart));
     return this.cart;
   }
 

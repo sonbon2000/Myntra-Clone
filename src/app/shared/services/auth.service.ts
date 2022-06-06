@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 import { map, tap } from 'rxjs/operators';
+import { UserLogin } from 'src/app/components/sign-in/sign-in.component';
 @Injectable({
   providedIn: 'root',
 })
@@ -11,7 +12,7 @@ export class AuthService {
   private savedTokenName = 'token';
   constructor(private http: HttpClient) {}
 
-  login(user) {
+  login(user: UserLogin) {
     return this.http.post(`${this.baseURL}/api/login`, user).pipe(
       map(
         (res) =>

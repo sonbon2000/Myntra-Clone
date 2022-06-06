@@ -29,7 +29,7 @@
             <div class="col-lg-3">
                 <div class="shop__sidebar">
                     <div class="shop__sidebar__search">
-                        <input class="w-100 px-2" type="text" placeholder="Search..." #search (keyup)="searchProducts(search.value)" />
+                        <input class="w-100 px-2 form-control" type="text" placeholder="Search..." #search (keyup)="searchProducts(search.value)" />
                     </div>
 
                     <div class="shop__sidebar__accordion">
@@ -181,6 +181,7 @@
                       totalItems: paginationLength
                     };
               index as i
+<<<<<<< HEAD
             ">
                         <div class="product__item">
                             <div class="product__item__pic" [routerLink]="['/shop', product.product_id]">
@@ -197,6 +198,44 @@
                                             <li class="product__item__color" *ngFor="let color of product.actual_color.split('|')" [style.backgroundColor]="color"></li>
                                         </ul>
                                     </div>
+=======
+            "
+          >
+            <div class="product__item position-relative">
+              <div
+                class="product__item__pic"
+                [routerLink]="['/shop', product.product_id]"
+              >
+                <img
+                  [src]="product.images.split('|')[0]"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div class="icon_list">
+                <i
+                  class="fas fa-heart text-danger icon__heart"
+                  (click)="onAddWishList(product)"
+                ></i>
+              </div>
+              <div
+                class="product__item__text d-flex flex-column justify-content-between"
+              >
+                <h6 [routerLink]="['/shop', product.product_id]">
+                  {{ product.title }}
+                </h6>
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <h5 class="m-0">₹{{ product.variant_price }}</h5>
+                    <ul class="mb-0">
+                      <li
+                        class="product__item__color"
+                        *ngFor="let color of product.actual_color.split('|')"
+                        [style.backgroundColor]="color"
+                      ></li>
+                    </ul>
+                  </div>
+>>>>>>> master
 
                                     <!-- Add button -->
                                     <button class="add-btn w-100 text-center text-white rounded py-2" (click)="onAddProduct(product)" *ngIf="

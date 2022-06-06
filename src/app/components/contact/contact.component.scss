@@ -15,8 +15,7 @@ $heading-color: #111111;
 
 // Contact
 
-.contact__text{
-
+.contact__text {
   .section-title {
     text-align: left;
     margin-bottom: 40px;
@@ -57,7 +56,6 @@ $heading-color: #111111;
 }
 
 .contact__form {
-
   input {
     height: 50px;
     width: 100%;
@@ -69,6 +67,9 @@ $heading-color: #111111;
 
     &::placeholder {
       color: #b7b7b7;
+    }
+    &:focus {
+      border: none;
     }
   }
 

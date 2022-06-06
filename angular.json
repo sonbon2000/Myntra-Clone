@@ -26,6 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng-lts/resources/themes/nova-light/theme.css",
               "node_modules/primeng-lts/resources/primeng.min.css"

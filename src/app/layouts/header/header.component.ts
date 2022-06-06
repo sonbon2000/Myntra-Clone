@@ -9,7 +9,7 @@ import { WishListService } from 'src/app/shared/services/wish-list.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  showDropDown = false;
+  showDropDown:boolean = false;
   show: boolean = false;
   constructor(
     public authService: AuthService,

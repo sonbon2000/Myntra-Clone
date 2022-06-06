@@ -250,6 +250,22 @@ $heading-color: #111111;
     }
 }
 
+@media (max-width: 576px) {
+  .header__nav,
+  .header__cart {
+    display: none;
+  }
+  img {
+    width: 100px;
+  }
+  .header__menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__bar {
+    display: block;
+  }
+}
 .cart-quantity {
     position: relative;
     top: -8px;

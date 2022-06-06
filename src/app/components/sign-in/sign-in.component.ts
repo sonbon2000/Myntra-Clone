@@ -4,13 +4,17 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
+export interface UserLogin {
+  email: string;
+  password: string;
+}
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
-  user = {
+  user: UserLogin = {
     email: '',
     password: '',
   };

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Doc, RootObject } from 'src/app/shared/models/blog.model';
 import { ProductService } from 'src/app/shared/services/product.service';
@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/shared/services/product.service';
 export class BlogDetailComponent implements OnInit {
   id: string = '';
   blog: Doc;
-  image;
+  image: string = '';
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -21,7 +21,7 @@ export class BlogDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe((params: Params) => {
       function backToTop() {
         window.scroll({ top: 50, left: 0, behavior: 'smooth' });
       }
@@ -36,10 +36,6 @@ export class BlogDetailComponent implements OnInit {
             this.image =
               'https://assets.teenvogue.com/photos/5b3cead4cd6b096ecd587a3a/4:3/w_824,h_618,c_limit/how-to-be-a-fashion-blogger-keiko-lynn-tout.jpg';
           } else {
-            // for (let i = 0; i < multimedia.length; i++) {
-            //   this.image = 'https://www.nytimes.com/' + multimedia[i].url;
-            //   break;
-            // }
             this.image = 'https://www.nytimes.com/' + multimedia[0].url;
           }
         });

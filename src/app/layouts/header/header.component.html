@@ -1,3 +1,4 @@
+<!-- Nav-->
 <div class="menu bg-dark text-white">
     <div class="container d-flex justify-content-between">
         <p class="m-0">Free shipping, 30-day return or refund guarantee.</p>
@@ -26,7 +27,7 @@
                 class="dropdown-item cursor-pointer"
                 (click)="goToAdminPage()"
                 *ngIf="authService.isAdmin()"
-                >Go to admin page</span
+                ><i class="fas fa-user-shield mr-1"></i>Go to admin page</span
               >
               <span class="dropdown-item cursor-pointer" (click)="logout()"
                 ><i class="fas fa-sign-out-alt mr-1"></i>Log out</span
@@ -38,22 +39,26 @@
     </ul>
   </div>
 </div>
+
+<!-- Header -->
 <header class="header border-bottom">
   <div class="container p-2">
-    <div class="row">
+    <div class="header__menu-list row">
       <div class="col-lg-3 col-md-3 header__logo__container">
-        <div
-          class="header__logo d-flex justify-content-center align-items-center"
-        >
-          <img
-            src="https://minimog.thememove.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png?fbclid=IwAR2HmBI5dzFc7fEG7xPtyQv_eddBVqCMDTA3ev-SKhp7AXENAPhYIFw0yew"
-            alt=""
-            routerLink="/home"
-            class="w-75"
-          />
-        </div>
+        <img
+          src="https://minimog.thememove.com/wp-content/themes/minimog/assets/images/logo/dark-logo.png?fbclid=IwAR2HmBI5dzFc7fEG7xPtyQv_eddBVqCMDTA3ev-SKhp7AXENAPhYIFw0yew"
+          alt=""
+          routerLink="/home"
+          class="w-75"
+          style="cursor: pointer"
+        />
       </div>
-      <div class="col-lg-6 col-md-6">
+
+      <div class="header__bar d-none">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="header__nav col-lg-6 col-md-6">
         <nav class="header__menu">
           <ul class="m-0 d-flex align-items-center">
             <li routerLinkActive="active">
@@ -62,15 +67,15 @@
             <li routerLinkActive="active"><a routerLink="/shop">Shop</a></li>
             <li routerLinkActive="active"><a routerLink="/blog">Blog</a></li>
             <li routerLinkActive="active">
-              <a routerLink="/contact">Contacts</a>
+              <a routerLink="/contact">Contact</a>
             </li>
             <li routerLinkActive="active">
-              <a routerLink="/about">About Us</a>
+              <a routerLink="/about">About</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="col-lg-3 col-md-3">
+      <div class="header__cart col-lg-3 col-md-3">
         <div
           class="header__nav__option d-flex align-items-center justify-content-end"
         >
