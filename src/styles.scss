@@ -17,3 +17,21 @@
   --fm-unna: "Unna", serif;
   --fm-nunito: "Nunito Sans", sans-serif;
 }
+
+.owl-next,
+.owl-prev {
+  background: rgba(255, 255, 255, 0.781);
+  color: #222;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  i {
+    font-size: 24px;
+  }
+}
+.owl-next {
+  right: 10px;
+}
+.owl-prev {
+  left: 10px;
+}

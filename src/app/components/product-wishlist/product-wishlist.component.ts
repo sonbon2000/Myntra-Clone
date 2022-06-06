@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { Product } from 'src/app/shared/models/product.model';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-wishlist',
@@ -10,11 +11,12 @@ import Swal from 'sweetalert2';
   styleUrls: ['./product-wishlist.component.scss'],
 })
 export class ProductWishlistComponent implements OnInit {
-  wishListArr = [];
+  wishListArr: Product[] = [];
   constructor(
     private spinner: NgxSpinnerService,
-    private wishListService: WishListService,
-    public cartService: CartService
+    public wishListService: WishListService,
+    public cartService: CartService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -25,14 +27,19 @@ export class ProductWishlistComponent implements OnInit {
     }, 1000);
   }
 
-  onRemoveItem(wishList) {
-    Swal.fire('Success', 'You have deleted item from the wishlist', 'success');
-    this.wishListArr.splice(this.wishListArr.indexOf(wishList), 1);
+  getPrice(price: string) {
+    let splitArr = price.split('.');
+    return splitArr[0];
   }
 
-  addToCart(wishList) {
-    Swal.fire('Success', 'You have add item to the cart', 'success');
+  onRemoveItem(wishList: Product) {
+    this.toastr.success('You have deleted item from the wish list');
+    this.wishListService.removeWishList(wishList);
+  }
+
+  addToCart(wishList: Product) {
+    this.toastr.success('You have moved item to the cart');
+    this.wishListService.removeWishList(wishList);
     this.cartService.addItem(wishList);
-    this.wishListArr.splice(this.wishListArr.indexOf(wishList), 1);
   }
 }

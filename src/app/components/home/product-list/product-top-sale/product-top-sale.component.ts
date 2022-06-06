@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
@@ -15,14 +16,20 @@ export class ProductTopSaleComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     public cartService: CartService,
-    private wishListService: WishListService
+    private wishListService: WishListService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {}
 
+  getPrice(price: string) {
+    let splitArr = price.split('.');
+    return splitArr[0];
+  }
+
   onAddItem(prod) {
     if (this.authService.isLoggedIn()) {
-      Swal.fire('Success', 'You have added item to the cart', 'success');
+      this.toastr.success('You have added item in the cart');
       this.cartService.addItem(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error');
@@ -32,7 +39,7 @@ export class ProductTopSaleComponent implements OnInit {
 
   onAddWishList(prod) {
     if (this.authService.isLoggedIn()) {
-      Swal.fire('Success', 'You have added item to the wishlist', 'success');
+      this.toastr.success('You have added item in the wishlist');
       this.wishListService.addWishList(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error');

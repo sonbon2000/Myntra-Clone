@@ -4,9 +4,6 @@ import products from '../../../assets/data/myntra-products';
   providedIn: 'root',
 })
 export class MockService {
-  // blogsArr: Doc[] = [];
-  // setProducts: Product[]
-
   constructor() {}
 
   getAllProducts() {

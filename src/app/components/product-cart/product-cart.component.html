@@ -19,13 +19,13 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container p-5">
   <div
     class="row"
     *ngIf="cartService.getCartQuantity() !== 0; else emptyQuantity"
   >
     <div class="col-lg-8 py-3">
-      <table class="table mt-5">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Images</th>
@@ -40,18 +40,26 @@
             <td><img [src]="cart.images" alt="" /></td>
             <td>{{ cart.title }}</td>
             <td class="text-center">
-              <span (click)="cartService.removeItem(cart)"><</span>
+              <button
+                class="btn_prev"
+                (click)="cartService.removeItem(cart)"
+                [disabled]="cartService.getItemQuantity(cart) === 1"
+              >
+                <
+              </button>
               <span class="mx-3">{{ cartService.getItemQuantity(cart) }}</span>
               <span (click)="cartService.addItem(cart)">></span>
             </td>
             <td class="text-center">
-              {{ getTotalItem(cart) | currency: "USD" }}
+              {{ getPrice(getTotalItem(cart) | currency: "USD") }}
             </td>
-            <td (click)="removeItem(cart)"><i class="fas fa-trash"></i></td>
+            <td (click)="removeItem(cart)">
+              <i class="fas fa-trash" style="cursor: pointer"></i>
+            </td>
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-dark">< Continue Shopping</button>
+      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
     </div>
     <div class="col-lg-4 mt-3">
       <div class="p-5 cart__checkout">
@@ -75,7 +83,7 @@
       />
       <p class="font-weight-bold">Time to start shopping</p>
       <p class="cart__emtpy paragraph">Your cart is empty!</p>
-      <button class="btn btn-dark"> < Continue Shopping</button>
+      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
     </div>
   </ng-template>
 </div>

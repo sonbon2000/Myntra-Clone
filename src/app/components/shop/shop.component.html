@@ -36,7 +36,7 @@
         <div class="shop__sidebar">
           <div class="shop__sidebar__search">
             <input
-              class="w-100 px-2"
+              class="form-control"
               type="text"
               placeholder="Search..."
               #search
@@ -105,22 +105,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="card">
-                <div class="card-heading">
-                  <a>Brands</a>
-                </div>
-                <div>
-                  <div class="card-body">
-                    <div class="shop__sidebar__brands">
-                      <ul>
-                        <li *ngFor="let brand of allBrands">
-                          <a href="#">{{ brand }}</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="card">
                 <div class="card-heading">
                   <a>Colors</a>
@@ -186,7 +170,7 @@
               index as i
             "
           >
-            <div class="product__item">
+            <div class="product__item position-relative">
               <div
                 class="product__item__pic"
                 [routerLink]="['/shop', product.product_id]"
@@ -196,6 +180,12 @@
                   class="w-100"
                   alt=""
                 />
+              </div>
+              <div class="icon_list">
+                <i
+                  class="fas fa-heart text-danger icon__heart"
+                  (click)="onAddWishList(product)"
+                ></i>
               </div>
               <div
                 class="product__item__text d-flex flex-column justify-content-between"
@@ -217,8 +207,8 @@
 
                   <!-- Add button -->
                   <button
-                    class="add-btn w-100 text-center text-white rounded py-2"
-                    (click)="cartService.addItem(product)"
+                    class="add-btn w-100 text-center text-white rounded py-2 mt-3"
+                    (click)="onAddProduct(product)"
                     *ngIf="
                       cartService.getItemQuantity(product) === 0;
                       else updateQuantity

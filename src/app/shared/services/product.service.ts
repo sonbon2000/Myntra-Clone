@@ -10,7 +10,6 @@ export class ProductService {
   private API_KEY = 'xDgMAhzQV1pf0klr5wIjkDanmC1H6r3u';
   private productApi = 'https://fakestoreapi.com/products';
   private getBlogs = `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22Fashion%22)&api-key=${this.API_KEY}`;
-
   public limit: number = 12;
 
   constructor(private http: HttpClient) {}
@@ -30,6 +29,6 @@ export class ProductService {
   }
 
   getProductsByPage(): Observable<any> {
-    return this.http.get<any>(this.productApi + `?limit=${this.limit}`)
+    return this.http.get<any>(this.productApi + `?limit=${this.limit}`);
   }
 }

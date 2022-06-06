@@ -1,10 +1,14 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Mock } from 'protractor/built/driverProviders';
+import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { MockService } from 'src/app/shared/services/mock.service';
 import { ProductService } from 'src/app/shared/services/product.service';
+import { WishListService } from 'src/app/shared/services/wish-list.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-shop',
@@ -12,17 +16,13 @@ import { ProductService } from 'src/app/shared/services/product.service';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
-  public allProducts: Product[] = [];
-  // public products: Product[] = [];
-  public filteredProducts: Product[] = [];
-
   @ViewChild('search') searchInput: ElementRef;
-
+  public allProducts: Product[] = [];
+  public filteredProducts: Product[] = [];
   public total_pages: number;
   public paginationLength: number;
   public currentPage: number = 1;
   public limit: number;
-
   public allGenders = new Set();
   public allProductTypes = new Set();
   public allColors = new Set();
@@ -33,10 +33,18 @@ export class ShopComponent implements OnInit {
     private mockService: MockService,
     private productService: ProductService,
     public cartService: CartService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private authService: AuthService,
+    private wishListService: WishListService,
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
+    function backToTop() {
+      window.scroll({ top: 50, left: 0, behavior: 'smooth' });
+    }
+    backToTop();
     this.limit = this.productService.limit;
     this.filteredProducts = this.allProducts =
       this.mockService.getAllProducts();
@@ -58,10 +66,10 @@ export class ShopComponent implements OnInit {
     }, 1000);
   }
 
-  searchProducts(value) {
+  searchProducts(value: string) {
     this.filteredProducts = this.allProducts.filter((item) =>
       item.title.toLowerCase().includes(value.trim().toLowerCase())
-    );2
+    );
     this.paginationLength = this.filteredProducts.length;
     this.total_pages = Math.ceil(this.paginationLength / this.limit);
     this.currentPage = 1;
@@ -120,6 +128,26 @@ export class ShopComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 500); 
+    }, 500);
+  }
+
+  onAddWishList(product: Product) {
+    if (this.authService.isLoggedIn()) {
+      this.toastr.success('You have added item in the wishlist');
+      this.wishListService.addWishList(product);
+    } else {
+      Swal.fire('Oops', 'You have to login first', 'error');
+      this.router.navigateByUrl('/sign-in');
+    }
+  }
+
+  onAddProduct(product: Product) {
+    if (this.authService.isLoggedIn()) {
+      this.toastr.success('You have added item in the cart');
+      this.cartService.addItem(product);
+    } else {
+      Swal.fire('Oops', 'You have to login first', 'error');
+      this.router.navigateByUrl('/sign-in');
+    }
   }
 }

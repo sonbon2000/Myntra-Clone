@@ -13,7 +13,7 @@
       {{ prodNewArr.title | summary: 30 }}
     </h5>
     <p class="card__price mt-4">
-      Price: {{ prodNewArr.variant_price | currency: "USD" }}
+      Price: {{ getPrice(prodNewArr.variant_price | currency: "USD") }}
     </p>
     <div class="card__action text-center">
       <button

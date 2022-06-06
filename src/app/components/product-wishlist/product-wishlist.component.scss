@@ -16,7 +16,7 @@
 }
 
 .item-body {
-  height: 100px;
+  height: 130px;
   .item-price {
     font-weight: 600;
   }
@@ -51,5 +51,18 @@
   .btn-cart {
     flex-grow: 1;
     border-radius: 0;
+  }
+}
+
+.cart__empty {
+  width: 600px;
+  margin: 0 auto;
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  &paragraph {
+    font-size: 12px;
   }
 }

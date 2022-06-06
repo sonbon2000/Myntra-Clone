@@ -25,8 +25,26 @@ select, li {
   cursor: pointer;
 }
 
-.product__item__pic {
-  cursor: pointer;
+.product__item {
+  .icon__heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    padding: 8px;
+    opacity: 0;
+	  visibility: hidden;
+	  transition: 0.5s;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.product__item:hover .icon__heart{
+  transition-delay: 0.2s;
+	opacity: 1;
+	visibility: visible;
 }
 
 .add-btn {
