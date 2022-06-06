@@ -1,42 +1,55 @@
 <!-- Spinner -->
-<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="line-spin-clockwise-fade" [fullScreen]="true">
-    <p style="color: white">Loading...</p>
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="line-spin-clockwise-fade"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
 </ngx-spinner>
 
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-option bg-light p-5 mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h4>Shop</h4>
-                    <div class="breadcrumb__links">
-                        <a routerLink="/home" class="home_link">Home> </a>
-                        <span class="text-muted">Shop</span>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h4>Shop</h4>
+          <div class="breadcrumb__links">
+            <a routerLink="/home" class="home_link">Home> </a>
+            <span class="text-muted">Shop</span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-- Breadcrumb Section End -->
 
 <!-- Shop Section Begin -->
 <section class="shop spad">
-    <div class="container">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3">
-                <div class="shop__sidebar">
-                    <div class="shop__sidebar__search">
-                        <input class="w-100 px-2 form-control" type="text" placeholder="Search..." #search (keyup)="searchProducts(search.value)" />
-                    </div>
+  <div class="container">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-lg-3">
+        <div class="shop__sidebar">
+          <div class="shop__sidebar__search">
+            <input
+              class="w-100 px-2 form-control"
+              type="text"
+              placeholder="Search..."
+              #search
+              (keyup)="searchProducts(search.value)"
+            />
+          </div>
 
-                    <div class="shop__sidebar__accordion">
-                        <div class="accordion">
-                            <div class="card">
-                                <div class="card-heading dropdown show">
-                                    <a class="dropdown-toggle" (click)="showGender = !showGender">Genders</a
+          <div class="shop__sidebar__accordion">
+            <div class="accordion">
+              <div class="card">
+                <div class="card-heading dropdown show">
+                  <a class="dropdown-toggle" (click)="showGender = !showGender"
+                    >Genders</a
                   >
                 </div>
                 <div *ngIf="showGender">
@@ -102,25 +115,11 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="card">
-                <div class="card-heading">
-                  <a>Brands</a>
-                                </div>
-                                <div>
-                                    <div class="card-body">
-                                        <div class="shop__sidebar__brands">
-                                            <ul>
-                                                <li *ngFor="let brand of allBrands">
-                                                    <a href="#">{{ brand }}</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="card">
-                                <div class="card-heading dropdown show">
-                                    <a class="dropdown-toggle" (click)="showColor = !showColor">Colors</a
+
+              <div class="card">
+                <div class="card-heading dropdown show">
+                  <a class="dropdown-toggle" (click)="showColor = !showColor"
+                    >Colors</a
                   >
                 </div>
                 <div *ngIf="showColor">

@@ -10,7 +10,7 @@ export class MockService {
     return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }
 
-  getProductById(id) {
+  getProductById(id: string) {
     return products.find((item) => item.product_id == id);
   }
 
