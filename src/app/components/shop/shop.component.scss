@@ -154,3 +154,8 @@ li {
 .my-pagination ::ng-deep .ngx-pagination .current {
     background: #343A40;
 }
+
+.active {
+    text-decoration: underline;
+    color: red;
+}
