@@ -11,6 +11,7 @@ import { MockService } from 'src/app/shared/services/mock.service';
 import { ProductService } from 'src/app/shared/services/product.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
 import Swal from 'sweetalert2';
+import { vi } from 'date-fns/locale';
 
 @Component({
   selector: 'app-shop',
@@ -18,12 +19,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
-
   showGender: boolean;
   showProductType: boolean;
   showPrice: boolean;
   showColor: boolean;
-
+  viewMode: string = '';
   @ViewChild('search') searchInput: ElementRef;
   public allProducts: Product[] = [];
   public filteredProducts: Product[] = [];
@@ -160,5 +160,8 @@ export class ShopComponent implements OnInit {
       Swal.fire('Oops', 'You have to login first', 'error');
       this.router.navigateByUrl('/sign-in');
     }
+  }
+  changeViewMode(viewMode: string) {
+    this.viewMode = viewMode;
   }
 }
