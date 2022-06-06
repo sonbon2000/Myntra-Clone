@@ -44,9 +44,11 @@
                     <div class="shop__sidebar__genders">
                       <ul>
                         <li
-                          class="dropdown-item"
+                          class="dropdown-item active"
                           *ngFor="let gender of allGenders"
                           (click)="getProductByCategory('ideal_for', gender)"
+                          (click)="changeViewMode(gender)"
+                          [class.active]="viewMode == gender"
                         >
                           {{ gender }}
                         </li>
@@ -73,6 +75,8 @@
                           (click)="
                             getProductByCategory('product_type', product)
                           "
+                          (click)="changeViewMode(product)"
+                          [class.active]="viewMode == product"
                         >
                           {{ product }}
                         </li>
@@ -93,10 +97,38 @@
                       <ul
                         (click)="getProductByCategory('variant_price', $event)"
                       >
-                        <li class="dropdown-item" id="1">₹300 - ₹500</li>
-                        <li class="dropdown-item" id="2">₹500 - ₹1000</li>
-                        <li class="dropdown-item" id="3">₹1000 - ₹5000</li>
-                        <li class="dropdown-item" id="4">5000+</li>
+                        <li
+                          (click)="changeViewMode('300')"
+                          [class.active]="viewMode == '300'"
+                          class="dropdown-item active"
+                          id="1"
+                        >
+                          ₹300 - ₹500
+                        </li>
+                        <li
+                          (click)="changeViewMode('500')"
+                          [class.active]="viewMode == '500'"
+                          class="dropdown-item active"
+                          id="2"
+                        >
+                          ₹500 - ₹1000
+                        </li>
+                        <li
+                          (click)="changeViewMode('1000')"
+                          [class.active]="viewMode == '1000'"
+                          class="dropdown-item active"
+                          id="3"
+                        >
+                          ₹1000 - ₹5000
+                        </li>
+                        <li
+                          (click)="changeViewMode('5000')"
+                          [class.active]="viewMode == '5000'"
+                          class="dropdown-item active"
+                          id="4"
+                        >
+                          5000+
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -128,7 +160,7 @@
                                             <ul>
                                                 <li class="color-option" *ngFor="let color of allColors" [style.backgroundColor]="color" (click)="
                             getProductByCategory('dominant_color', color)
-                          "></li>
+                          " data-toggle="tooltip" [title]="color" style="color: black"></li>
                                             </ul>
                                         </div>
                                     </div>

@@ -7,10 +7,10 @@
 }
 
 span {
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 html {
@@ -70,7 +70,7 @@ li {
     display: inline-block;
     margin-right: 4px;
     border-radius: 50%;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
 }
 
 .color-option {
@@ -146,13 +146,14 @@ li {
             font-weight: 700;
             text-transform: uppercase;
             display: block;
+            text-decoration: none;
         }
     }
 }
 
 .shop__sidebar__genders {
     ul {
-        height: 140px;
+        height: 160px;
         margin-bottom: 0;
         li {
             list-style: none;
@@ -161,6 +162,12 @@ li {
             line-height: 32px;
             &:hover {
                 color: var(--heading-color);
+            }
+            &.active {
+                text-decoration: none;
+                background-color: lightgray;
+                color: #000;
+                font-weight: bold
             }
         }
     }
