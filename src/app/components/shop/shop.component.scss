@@ -78,7 +78,8 @@ li {
 
 .add-btn {
   border: none;
-  background-color: #343a40;
+  background-color: #ffa500;
+  color: white;
 }
 
 .color-option,
@@ -209,7 +210,7 @@ li {
 }
 
 .my-pagination ::ng-deep .ngx-pagination .current {
-    background-color: #343a40;
+  background-color: #343a40;
 }
 
 @media (max-width: 576px) {
