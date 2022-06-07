@@ -46,9 +46,7 @@ export class CarouselComponent implements OnInit {
     nav: true,
   };
 
-  constructor() {
-   
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
