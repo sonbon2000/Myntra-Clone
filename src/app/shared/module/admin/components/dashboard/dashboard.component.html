@@ -29,6 +29,7 @@
         <th scope="col">Price</th>
         <th scope="col">In Stock</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -48,6 +49,7 @@
         <td>{{ product.ideal_for }}</td>
         <td>{{ getPrice(product.variant_price | currency: "USD") }}</td>
         <td>{{ product.is_in_stock }}</td>
+        <td><i class="fas fa-edit text-success"></i></td>
         <td>
           <i class="fas fa-trash text-danger" (click)="onDelete(product)"></i>
         </td>

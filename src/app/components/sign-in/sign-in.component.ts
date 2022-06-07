@@ -27,7 +27,7 @@ export class SignInComponent implements OnInit {
     password: new FormControl('', [Validators.required]),
   });
 
-  public returnUrl;
+  public returnUrl: string = ''
 
   constructor(
     private router: Router,
