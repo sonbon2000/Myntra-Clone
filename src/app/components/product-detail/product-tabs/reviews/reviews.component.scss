@@ -11,13 +11,19 @@ h6 {
 }
 
 .image-container {
-  background-image: url("../../../../../assets/images/product-detail/reviews/user1.jpeg");
   height: 60px;
   width: 60px;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+
+.first-container {
+  background-image: url("../../../../../assets/images/product-detail/reviews/user1.jpeg");
+}
+
+
+
 .time-review {
   font-style: italic;
   font-size: 12px;

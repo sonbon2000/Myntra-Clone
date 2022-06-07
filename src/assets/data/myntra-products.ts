@@ -336,7 +336,7 @@ export default [
       'BIBA Girls Purple & Pink Printed Anarkali Churidar Kurta with Dupatta',
     actual_color: 'Pink | Purple',
     dominant_color: 'Purple',
-    product_type: 'Anarkali Churidar Kurta with Dupatta',
+    product_type: 'Anarkali Churidar Kurta',
     images:
       'http://assets.myntassets.com/v1/assets/images/1436573/2016/8/3/11470207412429-Biba-Girls-Salwar-and-Dupatta-2371470207412665-1.jpg | http://assets.myntassets.com/v1/assets/images/1436573/2016/8/3/11470207412410-Biba-Girls-Salwar-and-Dupatta-2371470207412665-2.jpg | http://assets.myntassets.com/v1/assets/images/1436573/2016/8/3/11470207412378-Biba-Girls-Salwar-and-Dupatta-2371470207412665-3.jpg | http://assets.myntassets.com/v1/assets/images/1436573/2016/8/3/11470207412344-Biba-Girls-Salwar-and-Dupatta-2371470207412665-4.jpg',
     body: 'Purple and pink&nbsp;printed Anarkali churidar kurta with dupatta Purple printed Anarkali kurta, has a round neck, short sleeves, woven pattern on the bodice and sleeves&nbsp;and an attached lining A pair of&nbsp;pink churidar leggings, has an elasticated waistband Pink net dupatta with taping \r\nDupatta length: 1.6 metre Dupatta width: 0.53 metre \r\n48% cotton, 39% polyester and&nbsp;13% nylon Dry-clean only\r\nMake your little girl look her ethnic best in this trendy Anarkali churidar kurta with dupatta. Let her style it with mojaris and matching accessories for an adorable look.',
@@ -369,7 +369,7 @@ export default [
       'Biba Girls Purple & Pink Printed Anarkali Churidar Kurta with Dupatta',
     actual_color: 'Pink | Purple',
     dominant_color: 'Purple',
-    product_type: 'Anarkali Churidar Kurta with Dupatta',
+    product_type: 'Anarkali Churidar Kurta',
     images:
       'http://assets.myntassets.com/v1/assets/images/1436572/2016/8/3/11470207396694-Biba-Girls-Salwar-and-Dupatta-6741470207396437-1.jpg | http://assets.myntassets.com/v1/assets/images/1436572/2016/8/3/11470207396676-Biba-Girls-Salwar-and-Dupatta-6741470207396437-2.jpg | http://assets.myntassets.com/v1/assets/images/1436572/2016/8/3/11470207396617-Biba-Girls-Salwar-and-Dupatta-6741470207396437-3.jpg | http://assets.myntassets.com/v1/assets/images/1436572/2016/8/3/11470207396565-Biba-Girls-Salwar-and-Dupatta-6741470207396437-4.jpg',
     body: 'Purple and pink&nbsp;printed Anarkali churidar kurta with dupatta Purple printed Anarkali kurta, has a round neck, short sleeves, woven pattern on the bodice and sleeves&nbsp;and an attached lining A pair of&nbsp;pink churidar leggings, has an elasticated waistband Pink net dupatta with taping \r\nDupatta length: 1.6 metre Dupatta width: 0.53 metre \r\nMake your little girl look her ethnic best in this trendy Anarkali churidar kurta with dupatta. Let her style it with mojaris and matching accessories for an adorable look.\r\n48% cotton, 39% polyester and&nbsp;13% nylon Dry-clean only',
@@ -401,7 +401,7 @@ export default [
     title: 'Biba Girls Red Printed Anarkali Churidar Kurta with Dupatta',
     actual_color: 'Red',
     dominant_color: 'Red',
-    product_type: 'Anarkali Churidar Kurta with Dupatta',
+    product_type: 'Anarkali Churidar Kurta',
     images:
       'http://assets.myntassets.com/v1/assets/images/1596501/2016/11/15/11479205090492-Biba-Girls-Salwar-and-Dupatta-5661479205090246-1.jpg | http://assets.myntassets.com/v1/assets/images/1596501/2016/11/15/11479205090461-Biba-Girls-Salwar-and-Dupatta-5661479205090246-2.jpg | http://assets.myntassets.com/v1/assets/images/1596501/2016/11/15/11479205090440-Biba-Girls-Salwar-and-Dupatta-5661479205090246-3.jpg | http://assets.myntassets.com/v1/assets/images/1596501/2016/11/15/11479205090424-Biba-Girls-Salwar-and-Dupatta-5661479205090246-4.jpg | http://assets.myntassets.com/v1/assets/images/1596501/2016/11/15/11479205090401-Biba-Girls-Salwar-and-Dupatta-5661479205090246-5.jpg',
     body: 'Red Anarkali churidar kurta&nbsp;with&nbsp;dupatta Red bandhani print Anarkali kurta, has a notched round neck with sequinned and beaded detail, long sleeves, high-low hem&nbsp;and an attached lining Red knitted churidar&nbsp;leggings, has an elasticated waistband Green net dupatta with taping\r\nDupatta length: 1.7 metres Dupatta width: 0.45 metre\r\nMake your little girl look her ethnic best in this Anarkali churidar kurta with dupatta&nbsp;from Biba. Let her style it with embellished sandals and matching accessories for a cute and adorable look.\r\nShell: 100% polyester Lining: 100% cotton Dry-clean only',
@@ -433,7 +433,7 @@ export default [
     title: 'Biba Girls Coral Pink Tiered Anarkali Churidar Kurta with Dupatta',
     actual_color: 'Pink | Coral',
     dominant_color: 'Coral',
-    product_type: 'Anarkali Churidar Kurta with Dupatta',
+    product_type: 'Anarkali Churidar Kurta',
     images:
       'http://assets.myntassets.com/v1/assets/images/1596499/2016/11/3/11478160734024-Biba-Girls-Coral-Pink-Tiered-Anarkali-Churidar-Kurta-with-Dupatta-6961478160733711-1.jpg | http://assets.myntassets.com/v1/assets/images/1596499/2016/11/3/11478160733995-Biba-Girls-Coral-Pink-Tiered-Anarkali-Churidar-Kurta-with-Dupatta-6961478160733711-2.jpg | http://assets.myntassets.com/v1/assets/images/1596499/2016/11/3/11478160733966-Biba-Girls-Coral-Pink-Tiered-Anarkali-Churidar-Kurta-with-Dupatta-6961478160733711-3.jpg | http://assets.myntassets.com/v1/assets/images/1596499/2016/11/3/11478160733929-Biba-Girls-Coral-Pink-Tiered-Anarkali-Churidar-Kurta-with-Dupatta-6961478160733711-4.jpg | http://assets.myntassets.com/v1/assets/images/1596499/2016/11/3/11478160733890-Biba-Girls-Coral-Pink-Tiered-Anarkali-Churidar-Kurta-with-Dupatta-6961478160733711-5.jpg',
     body: 'Coral pink Anarkali&nbsp;churidar kurta with dupatta Coral pink&nbsp;ethnic&nbsp;print tiered Anarkali kurta with a net layer on the top and sequinned detail, has a notched round neck, long sleeves and an attached lining Coral pink knitted churidar leggings, has an elasticated waistband Coral&nbsp;pink net dupatta with taping\r\nDupatta length: 0.78 m Dupatta width: 0.47 m\r\nKurta fabric 1: 100% nylon Kurta fabric 2: 100% cotton Kurta lining: 100% cotton Churidar: cotton Dupatta: Net Dry-clean\r\nMake your little girl look her ethnic best in this Anarkali churidar kurta with dupatta&nbsp;from Biba&nbsp;Girls. Let her style it with embellished sandals and matching accessories for a cute and adorable look.',
@@ -466,7 +466,7 @@ export default [
       'Biba Girls Red & Off-White Patterned Anarkali Churidar Kurta with Dupatta',
     actual_color: 'Red',
     dominant_color: 'Red',
-    product_type: 'Anarkali Churidar Kurta with Dupatta',
+    product_type: 'Anarkali Churidar Kurta',
     images:
       'http://assets.myntassets.com/v1/assets/images/1874766/2017/5/4/11493882439073-Biba-Girls-Kurta-Sets-8241493882438913-1.jpg | http://assets.myntassets.com/v1/assets/images/1874766/2017/5/4/11493882439055-Biba-Girls-Kurta-Sets-8241493882438913-2.jpg | http://assets.myntassets.com/v1/assets/images/1874766/2017/5/4/11493882439038-Biba-Girls-Kurta-Sets-8241493882438913-3.jpg | http://assets.myntassets.com/v1/assets/images/1874766/2017/5/4/11493882439016-Biba-Girls-Kurta-Sets-8241493882438913-4.jpg | http://assets.myntassets.com/v1/assets/images/1874766/2017/5/4/11493882438994-Biba-Girls-Kurta-Sets-8241493882438913-5.jpg',
     body: "Red and off-white churidar Anarkali kurta with dupatta Red and off-white kurta with embroidery and woven pattern throughout, has a notched round neck with a short placket and button-and-loop closures on the front, cap sleeves, a concealed zip closure on one side, an attached lining Red churidar leggings, has an elasticated waistband Red dupatta, has taping and sequinned detail along the border\r\nDupatta length: 1.6 metre Dupatta width: 0.4 metre\r\nShell 1: 100% nylon Shell 2: Cotton and silk blend Lining: Polycotton Dry-clean only\r\nJazz up your little girl's ethnic wardrobe with this gorgeous Anarkali churidar kurta with dupatta. Style this with embellished sandals and minimal jewellery for an elegant look.",
@@ -2944,7 +2944,7 @@ export default [
       'KISAH Men Red & Cream-Coloured Self-Design Kurta with Churidar & Nehru Jacket',
     actual_color: 'Red',
     dominant_color: 'Red',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/2232141/2017/11/8/11510120649413-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-9541510120649265-1.jpg | http://assets.myntassets.com/v1/assets/images/2232141/2017/11/8/11510120649388-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-9541510120649265-2.jpg | http://assets.myntassets.com/v1/assets/images/2232141/2017/11/8/11510120649370-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-9541510120649265-3.jpg | http://assets.myntassets.com/v1/assets/images/2232141/2017/11/8/11510120649352-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-9541510120649265-4.jpg | http://assets.myntassets.com/v1/assets/images/2232141/2017/11/8/11510120649329-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-9541510120649265-5.jpg',
     body: "Cream-coloured and red self-design kurta with churidar and Nehru jacket Cream-coloured straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Red self-design Nehru jacket, has a mandarin collar, a full button placket, sleeveless, three welt pockets Cream-coloured solid churidar, drawstring closure\r\nThe model (height 6') is wearing a size M\r\nFlaunt your style with a kurta from KISAH. Achieve a comfortably chic look for your next dinner party or family outing when you team this cream-coloured piece with slim trousers and minimal flair.\r\nJacket Fabric-DupionSilk, Kurta Fabric-Dupion Silk, Churidar Fabric-DupionSilk Dry-Clean",
@@ -2977,7 +2977,7 @@ export default [
       'SOJANYA Men Grey & Blue Self Design Kurta with Churidar & Nehru Jacket',
     actual_color: 'Blue | Grey',
     dominant_color: 'Grey',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6518468/2018/5/23/c18ee8eb-06f6-4d10-8f4a-680ac10fccf21527055151093-Sojanya-Since-1958-Grey-Silk-Kurta-Pyjama--Blue-Printed-Nehru-Jacket-SET-4231527055150856-1.jpg | http://assets.myntassets.com/v1/assets/images/6518468/2018/5/23/f6d3d7cd-1acc-4e28-b8ee-29e5d9cec46c1527055151075-Sojanya-Since-1958-Grey-Silk-Kurta-Pyjama--Blue-Printed-Nehru-Jacket-SET-4231527055150856-2.jpg | http://assets.myntassets.com/v1/assets/images/6518468/2018/5/23/81b26584-a36d-414d-9653-195b978884141527055151039-Sojanya-Since-1958-Grey-Silk-Kurta-Pyjama--Blue-Printed-Nehru-Jacket-SET-4231527055150856-3.jpg | http://assets.myntassets.com/v1/assets/images/6518468/2018/5/23/83986b07-a78e-4999-b2bd-7bacbd5532411527055151001-Sojanya-Since-1958-Grey-Silk-Kurta-Pyjama--Blue-Printed-Nehru-Jacket-SET-4231527055150856-4.jpg | http://assets.myntassets.com/v1/assets/images/6518468/2018/5/23/46cc507a-1cb3-4084-9dcb-d03a286da20f1527055150970-Sojanya-Since-1958-Grey-Silk-Kurta-Pyjama--Blue-Printed-Nehru-Jacket-SET-4231527055150856-5.jpg',
     body: "Grey and blue self design kurta with churidar Grey and blue straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Grey solid churidar, drawstring closure Blue printed&nbsp;Nehru jacket\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Silk Blend Bottom fabric: Silk Blend Machine-wash\r\nComplete your look with this kurta from SOJANYA.  This grey piece is a great option for any evening event when combined with your favourite trousers or jeans.",
@@ -3010,7 +3010,7 @@ export default [
       'KISAH Men Olive Green & Off-White Solid Kurta with Churidar & Nehru Jacket',
     actual_color: 'Olive | Green',
     dominant_color: 'Olive',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6707476/2018/6/11/bb911086-241f-40db-9cce-5ed1c69e8fd21528722738163-KISAH-Men-Olive-Green--Off-White-Solid-Kurta-with-Churidar-1921528722737943-1.jpg | http://assets.myntassets.com/v1/assets/images/6707476/2018/6/11/f3842f14-4cf0-4894-92b3-8c2449eac8631528722738132-KISAH-Men-Olive-Green--Off-White-Solid-Kurta-with-Churidar-1921528722737943-2.jpg | http://assets.myntassets.com/v1/assets/images/6707476/2018/6/11/52dbd46d-29d9-41d0-b7b6-4079c4363f021528722738103-KISAH-Men-Olive-Green--Off-White-Solid-Kurta-with-Churidar-1921528722737943-3.jpg | http://assets.myntassets.com/v1/assets/images/6707476/2018/6/11/44f55e6e-c748-469b-9a49-57b1e89531ef1528722738068-KISAH-Men-Olive-Green--Off-White-Solid-Kurta-with-Churidar-1921528722737943-4.jpg | http://assets.myntassets.com/v1/assets/images/6707476/2018/6/11/bcc40807-8ed4-4b85-a50b-4ce58ad118a51528722738040-KISAH-Men-Olive-Green--Off-White-Solid-Kurta-with-Churidar-1921528722737943-5.jpg',
     body: "Olive Green and off-white solid kurta with churidar and Nehru Jacket Olive Green straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Off-white solid churidar, drawstring closure Brown solid jacket with mandarin collar, button closure, sleeveless, has 3 pockets\r\nThe model (height 6') is wearing a size M\r\nSport this classic kurta from KISAH this season.  Dress this olive piece up with your favourite accessories and head out to any family event in style.\r\nTop fabric: Silk Blend Bottom fabric: Silk Blend Dry-clean",
@@ -3043,7 +3043,7 @@ export default [
       'Manyavar Men Beige & Blue Self Design Kurta with Churidar & Nehru Jacket',
     actual_color: 'Beige | Blue',
     dominant_color: 'Beige',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/7251334/2018/8/30/bfd4e0f9-cffc-4d23-a439-23202bef8fda1535617581713-na-3891535617581513-1.jpg | http://assets.myntassets.com/v1/assets/images/7251334/2018/8/30/fe77bc21-8241-4555-b75d-8a0094363e421535617581689-na-3891535617581513-2.jpg | http://assets.myntassets.com/v1/assets/images/7251334/2018/8/30/76730811-2292-4e35-b644-b5b30201237d1535617581666-na-3891535617581513-3.jpg | http://assets.myntassets.com/v1/assets/images/7251334/2018/8/30/fbfa5710-4c15-4514-aee9-4be8e0f330d71535617581643-na-3891535617581513-4.jpg | http://assets.myntassets.com/v1/assets/images/7251334/2018/8/30/c362cb2e-1fd7-4adc-adcf-9805e6c1360f1535617581622-na-3891535617581513-5.jpg',
     body: "Beige and blue self design kurta with churidar Beige straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Beige solid churidar, drawstring closure Blue woven design&nbsp;nehru jacket, has a mandarin collar, a full button placket, sleeveless, one pocket No dupatta\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Silk Blend Bottom fabric: Silk Blend Dry-clean\r\nComplete your look with this kurta from Manyavar.  Dress this beige piece up with your favourite accessories and head out to any family event in style.",
@@ -3076,7 +3076,7 @@ export default [
       'TABARD Men Maroon & Golden-Colored Solid Kurta with Churidar & Nehru Jacket',
     actual_color: 'Maroon',
     dominant_color: 'Maroon',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/9542043/2019/5/7/1ff094ba-e1a8-4b0a-b3ca-bf3d27673d7c1557219150031-TABARD-Men-Maroon--Gold-Toned-Solid-Kurta-with-Churidar-3731-1.jpg | http://assets.myntassets.com/v1/assets/images/9542043/2019/5/7/76043740-9789-4496-9912-e04986aad3c91557219150006-TABARD-Men-Maroon--Gold-Toned-Solid-Kurta-with-Churidar-3731-2.jpg | http://assets.myntassets.com/v1/assets/images/9542043/2019/5/7/b6804f53-8826-4803-8f8f-10a7545d6f2a1557219149981-TABARD-Men-Maroon--Gold-Toned-Solid-Kurta-with-Churidar-3731-3.jpg | http://assets.myntassets.com/v1/assets/images/9542043/2019/5/7/60f9abdb-ae87-4bc9-80c5-c14f18530f2c1557219149957-TABARD-Men-Maroon--Gold-Toned-Solid-Kurta-with-Churidar-3731-4.jpg | http://assets.myntassets.com/v1/assets/images/9542043/2019/5/7/c2fb6c18-4f56-4ec1-9b0b-4f363f5bbcff1557219149926-TABARD-Men-Maroon--Gold-Toned-Solid-Kurta-with-Churidar-3731-5.jpg',
     body: "Maroon, golden-colored and black solid kurta with churidar &amp; nehru jacket Golden-colored straight knee length kurta, has a mandarin collar, long sleeves, straight hem Black solid churidar, drawstring closure Maroon solid nehru jacket, mandarin collar, full button placket, one pocket\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Pure Cotton Bottom fabric: Dupion Silk Dry-clean\r\nFlaunt your style with a kurta from TABARD.  You'll look dapper as ever in this maroon piece paired with slim jeans and sandals, ideal for any nice family gathering.",
@@ -3108,7 +3108,7 @@ export default [
     title: 'SOJANYA Men Blue & Grey Solid Kurta with Churidar & Nehru Jacket',
     actual_color: 'Blue | Grey',
     dominant_color: 'Blue',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6787982/2018/6/21/fa964de5-b292-4009-b75d-131e9e9a9c661529563328267-SOJANYA-Men-Blue--Grey-Printed-Kurta-with-Churidar-974152956-1.jpg | http://assets.myntassets.com/v1/assets/images/6787982/2018/6/21/2f0d1139-1a90-4f79-b9c4-1bc8298bebf91529563328234-SOJANYA-Men-Blue--Grey-Printed-Kurta-with-Churidar-974152956-2.jpg | http://assets.myntassets.com/v1/assets/images/6787982/2018/6/21/b9f403d7-5795-4dec-915f-014fe97ab23f1529563328203-SOJANYA-Men-Blue--Grey-Printed-Kurta-with-Churidar-974152956-3.jpg | http://assets.myntassets.com/v1/assets/images/6787982/2018/6/21/ec3be22f-c6bd-493e-a663-16f76e6063301529563328167-SOJANYA-Men-Blue--Grey-Printed-Kurta-with-Churidar-974152956-4.jpg | http://assets.myntassets.com/v1/assets/images/6787982/2018/6/21/b7ccae04-10b2-464c-a05c-0baf6e40cf8b1529563328109-SOJANYA-Men-Blue--Grey-Printed-Kurta-with-Churidar-974152956-5.jpg',
     body: "Grey solid kurta with churidar and Nehru jacket Grey straight above knee kurta, has a mandarin collar, long sleeves, straight hem, back slit Grey solid churidar, drawstring closure Blue and mustard yellow self design Nehru Jacket\r\nThe model (height 6') is wearing a size M\r\nFlaunt your style with a kurta from SOJANYA.  Dress this blue piece up with your favourite accessories and head out to any family event in style.\r\nTop fabric: Silk Blend Bottom fabric: Silk Blend Machine-wash",
@@ -3139,7 +3139,7 @@ export default [
     title: 'KISAH Men Blue Solid Banarasi Kurta with Churidar & Nehru Jacket',
     actual_color: 'Blue',
     dominant_color: 'Blue',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6611905/2018/6/2/beb82f91-8d15-4348-9b60-43b7ef36f5741527941712545-Kisah-Mens-Benarasi-Cotton-Silk-Blue---Jute-Look-Nehru-Jacket-with-Kurta-and-Churidar-Set-3031527941712329-1.jpg | http://assets.myntassets.com/v1/assets/images/6611905/2018/6/2/06830098-0d2d-4982-a852-3ae7d9bc8c971527941712515-Kisah-Mens-Benarasi-Cotton-Silk-Blue---Jute-Look-Nehru-Jacket-with-Kurta-and-Churidar-Set-3031527941712329-2.jpg | http://assets.myntassets.com/v1/assets/images/6611905/2018/6/2/9e9d088e-faf9-42d3-849d-c424998499741527941712489-Kisah-Mens-Benarasi-Cotton-Silk-Blue---Jute-Look-Nehru-Jacket-with-Kurta-and-Churidar-Set-3031527941712329-3.jpg | http://assets.myntassets.com/v1/assets/images/6611905/2018/6/2/f25fe470-d33d-42cc-b409-9e232d4cf89d1527941712462-Kisah-Mens-Benarasi-Cotton-Silk-Blue---Jute-Look-Nehru-Jacket-with-Kurta-and-Churidar-Set-3031527941712329-4.jpg | http://assets.myntassets.com/v1/assets/images/6611905/2018/6/2/82a2c5d1-854a-4f9a-b12d-e825bc7525df1527941712419-Kisah-Mens-Benarasi-Cotton-Silk-Blue---Jute-Look-Nehru-Jacket-with-Kurta-and-Churidar-Set-3031527941712329-5.jpg',
     body: "Blue kurta with churidar and Nehru jacket Blue straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Blue solid churidar, drawstring closure Blue solid Nehru jacket, has a mandarin collar, full button closure, sleeveless, three pockets\r\nThe model (height 6') is wearing a size M\r\nSport this classic kurta set from KISAH this season. This set is a great option for any evening event when combined with your favourite juttis.\r\nBanarasi cotton silk Dry-clean",
@@ -3171,7 +3171,7 @@ export default [
     title: 'DEYANN Men Maroon Striped Kurta with Churidar & Nehru Jacket',
     actual_color: 'Maroon',
     dominant_color: 'Maroon',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/7415502/2018/9/17/df229d47-ce81-4554-889c-82a73c1984b31537175166577-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-6691537175166398-1.jpg | http://assets.myntassets.com/v1/assets/images/7415502/2018/9/17/7920f480-4438-4f82-b0b8-2c10314434e81537175166549-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-6691537175166398-2.jpg | http://assets.myntassets.com/v1/assets/images/7415502/2018/9/17/70a7f76b-1a0f-414d-800e-20bf156a61531537175166524-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-6691537175166398-3.jpg | http://assets.myntassets.com/v1/assets/images/7415502/2018/9/17/e70fa81a-995d-48bd-aff0-0d2d2e0a910e1537175166503-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-6691537175166398-4.jpg | http://assets.myntassets.com/v1/assets/images/7415502/2018/9/17/d6c6aff3-6d11-4695-9a77-c68a0245c0991537175166483-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-6691537175166398-5.jpg',
     body: "Maroon striped kurta with churidar Maroon A-line knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Maroon solid churidar, drawstring closure Blue striped nehru jacket, has a mandarin collar, sleeveless\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Dupion Silk Bottom fabric: Dupion Silk Nehru Jacket : Jacquard Silk, Kurta, Churidar and Pocket Square : Dupion Silk. Dry Clean Only. Dry-clean\r\nComplete your look with this kurta from DEYANN.  Dress this maroon piece up with your favourite accessories and head out to any family event in style.",
@@ -3203,7 +3203,7 @@ export default [
     title: 'DEYANN Men Black Solid Kurta with Churidar & Nehru Jacket',
     actual_color: 'Black',
     dominant_color: 'Black',
-    product_type: 'Kurta with Churidar & Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/7415493/2018/9/17/cbceaafe-ba0c-4acb-b610-70484bf468ba1537175111273-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-8621537175111019-1.jpg | http://assets.myntassets.com/v1/assets/images/7415493/2018/9/17/717bacc5-36c3-48d6-9fe2-cf05d7c5702c1537175111248-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-8621537175111019-2.jpg | http://assets.myntassets.com/v1/assets/images/7415493/2018/9/17/dd34b61f-fb29-410c-a725-5136954bddf81537175111221-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-8621537175111019-3.jpg | http://assets.myntassets.com/v1/assets/images/7415493/2018/9/17/a4bfa6a2-6f0b-4540-8079-a2f01b42c7e21537175111182-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-8621537175111019-4.jpg | http://assets.myntassets.com/v1/assets/images/7415493/2018/9/17/ae79271c-4ee3-4e20-b089-25e27bd6d9091537175111105-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-8621537175111019-5.jpg',
     body: "Black solid kurta with churidar Black A-line knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Black solid churidar, drawstring closure Blue solid nehru jacket, has a mandarin collar, sleeveless\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Dupion Silk Bottom fabric: Dupion Silk Nehru Jacket : Cotton, Kurta, Churidar and Pocket Square : Dupion Silk. Dry Clean Only. Dry-clean\r\nThis in-style kurta from DEYANN is a must-have for any wardrobe.  When you need a stylish ensemble for your next family function or party, sport this black piece with a pair of fitted jeans.",
@@ -3492,7 +3492,7 @@ export default [
       'KISAH Men Brown & Peach-Coloured Solid Kurta with Churidar and Nehru Jacket',
     actual_color: 'Brown',
     dominant_color: 'Brown',
-    product_type: 'Kurta with Churidar and Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/productimage/2019/7/18/9f3b38ba-2629-4c67-acd6-8b683789d6711563473066622-1.jpg | http://assets.myntassets.com/v1/assets/images/productimage/2019/7/18/57c922c8-807c-4c02-8d80-1b0da7af94d61563473066644-2.jpg | http://assets.myntassets.com/v1/assets/images/productimage/2019/7/18/d8c67e29-da92-4c5a-bb9e-4df4248f63d71563473066673-3.jpg | http://assets.myntassets.com/v1/assets/images/productimage/2019/7/18/9ce0606d-a7f5-42dc-95ae-e30c8b5ede1f1563473066700-4.jpg | http://assets.myntassets.com/v1/assets/images/productimage/2019/7/18/5d7bbd2e-e934-4a4f-baa1-79054c69c96a1563473066728-5.jpg',
     body: "Brown and peach-coloured solid kurta with churidar Peach-coloured straight knee length kurta, has a round neck, long sleeves, straight hem Off-white solid churidar, drawstring closure Brown woven design nehru jacket, has a full button placekt, asymmetric hem, one welt pocket\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Silk Blend Bottom fabric: Silk Blend Dry-clean\r\nSport this classic kurta from KISAH this season.  You'll look dapper as ever in this brown piece paired with slim jeans and sandals, ideal for any nice family gathering.",
@@ -3525,7 +3525,7 @@ export default [
       'SOJANYA Men Grey & Green Self-Design Kurta with Churidar and Nehru Jacket',
     actual_color: 'Grey | Green',
     dominant_color: 'Grey',
-    product_type: 'Kurta with Churidar and Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/2418519/2018/1/22/11516607164078-Sojanya-Since-1958-Dupion-Silk-Kurta-Pyjama-and-Nehru-Jacket-set-5171516607163959-1.jpg | http://assets.myntassets.com/v1/assets/images/2418519/2018/1/22/11516607164057-Sojanya-Since-1958-Dupion-Silk-Kurta-Pyjama-and-Nehru-Jacket-set-5171516607163959-2.jpg | http://assets.myntassets.com/v1/assets/images/2418519/2018/1/22/11516607164036-Sojanya-Since-1958-Dupion-Silk-Kurta-Pyjama-and-Nehru-Jacket-set-5171516607163959-3.jpg | http://assets.myntassets.com/v1/assets/images/2418519/2018/1/22/11516607164011-Sojanya-Since-1958-Dupion-Silk-Kurta-Pyjama-and-Nehru-Jacket-set-5171516607163959-4.jpg | http://assets.myntassets.com/v1/assets/images/2418519/2018/1/22/11516607163988-Sojanya-Since-1958-Dupion-Silk-Kurta-Pyjama-and-Nehru-Jacket-set-5171516607163959-5.jpg',
     body: "Grey and green self design kurta with churidar Grey straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Grey self design churidar, drawstring closure Green solid Nehru jacket, has a mandarin collar, full button placket, sleeveless, three welt pockets\r\nThe model (height 6') is wearing a size M\r\nThis in-style kurta from SOJANYA is a must-have for any wardrobe.  When you need a stylish ensemble for your next family function or party, sport this grey piece with a pair of fitted jeans.\r\nTop fabric: Dupion Silk Bottom fabric: Dupion Silk Machine-wash",
@@ -3557,7 +3557,7 @@ export default [
     title: 'KISAH Men Black & Brown Solid Kurta with Churidar and Nehru Jacket',
     actual_color: 'Brown | Black',
     dominant_color: 'Black',
-    product_type: 'Kurta with Churidar and Nehru Jacket',
+    product_type: 'Kurta with Churidar & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/2232138/2017/11/8/11510120784081-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-6851510120783855-1.jpg | http://assets.myntassets.com/v1/assets/images/2232138/2017/11/8/11510120784064-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-6851510120783855-2.jpg | http://assets.myntassets.com/v1/assets/images/2232138/2017/11/8/11510120784040-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-6851510120783855-3.jpg | http://assets.myntassets.com/v1/assets/images/2232138/2017/11/8/11510120784019-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-6851510120783855-4.jpg | http://assets.myntassets.com/v1/assets/images/2232138/2017/11/8/11510120783994-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-6851510120783855-5.jpg',
     body: "Black and brown solid kurta with churidar and Nehru jacket Black knee-length kurta, has a mandarin collar, long sleeves, straight hem, side slits Black solid churidar, drawstring closure Brown self-design Nehru jacket, has a mandarin collar, full button placket, sleeveless, three welt pockets\r\nThe model (height 6') is wearing a size M\r\nJacket Fabric-Benarasi Jaquard CottonSilk, Kurta Fabric-Benarasi Cotton Silk, Churidar Fabric-CottonSilk Dry-Clean\r\nComplete your look with this kurta from KISAH.  You'll look dapper as ever in this black piece paired with slim jeans and sandals, ideal for any nice family gathering.",
@@ -4779,7 +4779,7 @@ export default [
     title: 'DEYANN Men Navy Blue Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Blue | Navy',
     dominant_color: 'Navy',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/9108319/2019/3/27/b32256e6-9770-4043-8485-61cf5792eed31553678077471-Deyann-Nehru-Jaket-Kurta-Set-3531553678074873-1.jpg | http://assets.myntassets.com/v1/assets/images/9108319/2019/3/27/a76d516e-23af-495f-b407-2b5bb0987e5c1553678077444-Deyann-Nehru-Jaket-Kurta-Set-3531553678074873-2.jpg | http://assets.myntassets.com/v1/assets/images/9108319/2019/3/27/5fa31c99-59ed-4502-939b-84c5095514df1553678077414-Deyann-Nehru-Jaket-Kurta-Set-3531553678074873-3.jpg | http://assets.myntassets.com/v1/assets/images/9108319/2019/3/27/d341599b-8b33-4fc0-ad5d-7097df0198ce1553678077390-Deyann-Nehru-Jaket-Kurta-Set-3531553678074873-4.jpg | http://assets.myntassets.com/v1/assets/images/9108319/2019/3/27/6256fb15-64a0-4ede-88cf-ff588201cfba1553678077365-Deyann-Nehru-Jaket-Kurta-Set-3531553678074873-5.jpg',
     body: "Navy solid kurta with pyjamas and Nehru jacket Navy solid straight knee length kurta, has a mandarin collar, long sleeves, straight hem Navy solid pyjamas, drawstring closure Peach-coloured woven design Nehru jacket, has a mandarin collar, sleeveless, button closures, three pockets\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Dupion silk Bottom fabric: Dupion silk Nehru Jacket: Jacquard silk Dry-clean\r\nThis in-style kurta from DEYANN is a must-have for any wardrobe.  Dress this navy blue piece up with your favourite accessories and head out to any family event in style.",
@@ -4812,7 +4812,7 @@ export default [
       'DEYANN Men Navy & Off-White Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Navy',
     dominant_color: 'Navy',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6401463/2018/5/19/545fc8f3-fa82-4965-b4a3-8e0f9dac95c41526709673174-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1771526709672981-1.jpg | http://assets.myntassets.com/v1/assets/images/6401463/2018/5/19/0576e6ba-1825-41c0-93aa-aa4bb3f0d3201526709673150-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1771526709672981-2.jpg | http://assets.myntassets.com/v1/assets/images/6401463/2018/5/19/96b9d72d-8d26-41b5-92fa-5c533d8800f81526709673116-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1771526709672981-3.jpg | http://assets.myntassets.com/v1/assets/images/6401463/2018/5/19/a8509557-0dc7-4d3e-8ce5-b40242a08d831526709673085-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1771526709672981-4.jpg | http://assets.myntassets.com/v1/assets/images/6401463/2018/5/19/06e25d1e-a190-47b1-8a64-e63cd2ed43a01526709673057-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1771526709672981-5.jpg',
     body: "Navy blue and off-white solid kurta with pyjamas, Nehru jacket and pocket square Off-white straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Off-white solid pyjamas, drawstring closure Navy blue Nehru jacket, has a mandarin collar, a full button closure, sleeveless three welt pockets Comes with a matching pocket square\r\nThe model (height 6') is wearing a size M\r\nComplete your look with this kurta set from DEYANN.  Dress this set up with your favourite accessories and head out to any family event in style.\r\nTop fabric: Dupion silk Bottom fabric: Dupion silk Dry-clean",
@@ -4844,7 +4844,7 @@ export default [
       'DEYANN Men Off-White & Maroon Solid Jacquard Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Maroon',
     dominant_color: 'Maroon',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/5965148/2018/5/16/11d87a49-a0d0-4589-8704-d5e5f80044511526454925591-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1791526454925347-1.jpg | http://assets.myntassets.com/v1/assets/images/5965148/2018/5/16/15b7ccf9-d8d0-433e-b090-60dc771844d11526454925566-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1791526454925347-2.jpg | http://assets.myntassets.com/v1/assets/images/5965148/2018/5/16/efdda3d7-235d-4e16-9e22-210cbdcefd211526454925544-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1791526454925347-3.jpg | http://assets.myntassets.com/v1/assets/images/5965148/2018/5/16/cb586d3b-433a-4860-9323-eb44560d48591526454925504-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1791526454925347-4.jpg | http://assets.myntassets.com/v1/assets/images/5965148/2018/5/16/98754f97-55c1-4e94-9b90-591c0f40a51d1526454925481-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-1791526454925347-5.jpg',
     body: "Off-white and maroon solid kurta with pyjamas Maroon straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Maroon solid pyjamas, drawstring closure Off-white Nehru jacket, has a mandarin collar, full button placket, sleeveless, three welt pockets Comes with a matching pocket square\r\nThe model (height 6') is wearing a size M\r\nDupion silk Jacquard Dry-clean\r\nComplete your look with this kurta set from DEYANN. Dress this set up with your favourite accessories and head out to any family event in style.",
@@ -4876,7 +4876,7 @@ export default [
     title: 'DEYANN Men Black & Red Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Red | Black',
     dominant_color: 'Black',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/9108429/2019/3/27/6d37727f-7494-47d2-8716-d49f53f1ca2c1553679403419-Deyann-Nehru-Jaket-Kurta-Set-8681553679402223-1.jpg | http://assets.myntassets.com/v1/assets/images/9108429/2019/3/27/0ac9dcf5-923e-468a-85eb-6381ced5e0be1553679403390-Deyann-Nehru-Jaket-Kurta-Set-8681553679402223-2.jpg | http://assets.myntassets.com/v1/assets/images/9108429/2019/3/27/fa355557-7294-4a32-8418-d4e3d116b6d51553679403362-Deyann-Nehru-Jaket-Kurta-Set-8681553679402223-3.jpg | http://assets.myntassets.com/v1/assets/images/9108429/2019/3/27/c314758c-3167-4af4-86c0-7c643a5be93f1553679403324-Deyann-Nehru-Jaket-Kurta-Set-8681553679402223-4.jpg | http://assets.myntassets.com/v1/assets/images/9108429/2019/3/27/d7f58308-ba76-4558-bfdf-983ffbb6804d1553679403293-Deyann-Nehru-Jaket-Kurta-Set-8681553679402223-5.jpg',
     body: "Black and red solid kurta with pyjamas and Nehru jacket Black solid straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits&nbsp; Comes with a red printed Nehru jacket, has a mandarin collar, button closure, sleeveless, three pockets&nbsp; Black solid pyjamas, drawstring closure\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Linen Bottom fabric: Dupion Silk Dry-clean\r\nThis in-style kurta from DEYANN is a must-have for any wardrobe.  This black piece is a great option for any evening event when combined with your favourite trousers or jeans.",
@@ -4908,7 +4908,7 @@ export default [
     title: 'DEYANN Men White Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'White',
     dominant_color: 'White',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/9108307/2019/3/27/7f6f2aca-ca29-4f80-8896-0995618956c11553678028229-Deyann-Nehru-Jaket-Kurta-Set-1461553678026516-1.jpg | http://assets.myntassets.com/v1/assets/images/9108307/2019/3/27/0837aaf6-738d-43fb-bd23-93c9fb2c77431553678028200-Deyann-Nehru-Jaket-Kurta-Set-1461553678026516-2.jpg | http://assets.myntassets.com/v1/assets/images/9108307/2019/3/27/dd85878c-3e38-403e-946c-91824fa1ac4d1553678028170-Deyann-Nehru-Jaket-Kurta-Set-1461553678026516-3.jpg | http://assets.myntassets.com/v1/assets/images/9108307/2019/3/27/e1be6ba0-cbe5-4b08-9508-b00ca405c3e91553678028145-Deyann-Nehru-Jaket-Kurta-Set-1461553678026516-4.jpg | http://assets.myntassets.com/v1/assets/images/9108307/2019/3/27/a35d0208-cadd-433c-b86c-0931c3a89b681553678028124-Deyann-Nehru-Jaket-Kurta-Set-1461553678026516-5.jpg',
     body: "White solid kurta with pyjamas and Nehru jacket White solid straight knee length kurta, has a mandarin collar, long sleeves, straight hem White solid pyjamas, drawstring closure Navy and golden woven design Nehru jacket, has a mandarin collar, sleeveless, button closures, three pockets Disclaimer: Our stylist has paired this kurta set with a pocket square&nbsp; This kurta set does not come with a pocket square\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Dupion Silk Bottom fabric: Dupion Silk Nehru Jacket: Jacquard Silk Dry-clean\r\nFrom DEYANN, this kurta set is a great way to show off your style. This white piece is a great option for any evening event when combined with your favourite sandals.",
@@ -4940,7 +4940,7 @@ export default [
     title: 'DEYANN Men Grey & Cream Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Cream | Grey',
     dominant_color: 'Grey',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/6401421/2018/5/19/246e6fad-cbd8-4297-9418-1573d2aa51ca1526709661399-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-7931526709661211-1.jpg | http://assets.myntassets.com/v1/assets/images/6401421/2018/5/19/985c38ad-4782-483e-8709-cfaf1c7655db1526709661373-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-7931526709661211-2.jpg | http://assets.myntassets.com/v1/assets/images/6401421/2018/5/19/4b9d889c-f922-4b0f-a51e-fe7f2747da7b1526709661344-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-7931526709661211-3.jpg | http://assets.myntassets.com/v1/assets/images/6401421/2018/5/19/1bda5076-034d-4a03-b139-5f8dcae4dd8f1526709661321-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-7931526709661211-4.jpg | http://assets.myntassets.com/v1/assets/images/6401421/2018/5/19/a852e449-4fc8-4054-9219-11c0308eff021526709661288-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-7931526709661211-5.jpg',
     body: "Grey and cream solid kurta with pyjamas, Nehru jacket and pocket square Cream straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Cream solid pyjamas, drawstring closure Grey Nehru jacket, has a mandarin collar, a full button closure, sleeveless three welt pockets Comes with a matching pocket square\r\nThe model (height 6') is wearing a size M\r\nTop fabric: Dupion silk Bottom fabric: Dupion silk Dry-clean\r\nComplete your look with this kurta set from DEYANN.  Dress this set up with your favourite accessories and head out to any family event in style.",
@@ -4973,7 +4973,7 @@ export default [
       'KISAH Men Yellow & Cream-Coloured Solid Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Yellow',
     dominant_color: 'Yellow',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/2232199/2017/11/8/11510120563585-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-3511510120563420-1.jpg | http://assets.myntassets.com/v1/assets/images/2232199/2017/11/8/11510120563565-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-3511510120563420-2.jpg | http://assets.myntassets.com/v1/assets/images/2232199/2017/11/8/11510120563544-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-3511510120563420-3.jpg | http://assets.myntassets.com/v1/assets/images/2232199/2017/11/8/11510120563522-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-3511510120563420-4.jpg | http://assets.myntassets.com/v1/assets/images/2232199/2017/11/8/11510120563497-Kisah-Mens-Kurta-Waistcoat-Churidar-Set-3511510120563420-5.jpg',
     body: "Yellow and cream-coloured solid kurta with Pyjamas &amp; Nehru jacket. Yellow and cream-coloured straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Maroon-coloured solid Nehru-Jacket, with a mandarin collar, a full button placket, sleeveless, three welt pockets&nbsp; Cream solid Pyjamas, drawstring closure.\r\nThe model (height 6') is wearing a size M\r\nJacket Fabric-Velvet, Kurta Fabric-Benarasi Cotton Silk, Churidar Fabric-CottonSilk Dry-Clean\r\nFlaunt your style with a kurta from KISAH.  You'll look dapper as ever in this yellow piece paired with slim jeans and sandals, ideal for any nice family gathering.",
@@ -5005,7 +5005,7 @@ export default [
       'DEYANN Men Maroon & Brown Solid Jacquard Kurta with Pyjamas & Nehru Jacket',
     actual_color: 'Brown | Maroon',
     dominant_color: 'Maroon',
-    product_type: 'Kurta with Pyjamas & Nehru Jacket',
+    product_type: 'Kurta with Pyjamas & Jacket',
     images:
       'http://assets.myntassets.com/v1/assets/images/5965147/2018/5/16/3a873bc1-8e7e-41e2-b19e-5010bdb2ac3c1526454918410-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-4091526454918214-1.jpg | http://assets.myntassets.com/v1/assets/images/5965147/2018/5/16/53e9410a-81a6-49b2-9ca0-f6bbaf9a6c011526454918386-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-4091526454918214-2.jpg | http://assets.myntassets.com/v1/assets/images/5965147/2018/5/16/31d4708a-b63a-4380-9cd4-9d376498e7e41526454918361-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-4091526454918214-3.jpg | http://assets.myntassets.com/v1/assets/images/5965147/2018/5/16/1a2fea05-3431-4521-8352-d787105a4f2a1526454918334-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-4091526454918214-4.jpg | http://assets.myntassets.com/v1/assets/images/5965147/2018/5/16/90537e17-1540-49a8-a9ef-33e921cf747d1526454918307-Deyann-Nehru-Jacket-Kurta-and-Payjama-Set-4091526454918214-5.jpg',
     body: "Maroon and brown solid kurta with pyjamas Maroon straight knee length kurta, has a mandarin collar, long sleeves, straight hem, side slits Maroon solid pyjamas, drawstring closure Brown Nehru jacket, has a mandarin collar, full button placket, sleeveless, three welt pockets Comes with a matching pocket square\r\nThe model (height 6') is wearing a size M\r\nDupion silk Jacquard Dry-clean\r\nComplete your look with this kurta set from DEYANN. Dress this set up with your favourite accessories and head out to any family event in style.",
