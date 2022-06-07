@@ -17,10 +17,10 @@
     </ul>
   </div>
   <div class="product__filter">
-    <app-productnew-arrival
+    <app-product-new-arrival
       *ngIf="viewMode === 'newArrival'"
       [productsNewArrival]="productsNewArrival"
-    ></app-productnew-arrival>
+    ></app-product-new-arrival>
 
     <app-product-top-sale
       *ngIf="viewMode === 'topSeller'"
