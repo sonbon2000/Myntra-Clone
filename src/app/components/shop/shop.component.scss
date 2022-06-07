@@ -58,6 +58,15 @@ li {
 .product__item__pic {
   cursor: pointer;
 }
+
+.product__item__pic {
+  transition: 0.5s;
+  &:hover {
+    margin-top: -10px;
+    transition-delay: 0.1s;
+  }
+}
+
 .shop__product__option__right {
   display: flex;
   justify-content: flex-end;
@@ -119,6 +128,10 @@ li {
   line-height: 20px;
 }
 
+.dropdown-item {
+  padding-left: 0;
+  padding-right: 0;
+}
 .shop__sidebar__search {
   margin-bottom: 40px;
 }
@@ -190,14 +203,6 @@ li {
     height: auto;
   }
 }
-
-// .my-pagination ::ng-deep .ngx-pagination .current {
-//     background-color: #343a40;
-// }
-// .active {
-//     text-decoration: underline;
-//     color: red;
-// }
 
 @media (max-width: 576px) {
   .shop__product__option__left {

@@ -21,16 +21,16 @@
     font-weight: 600;
   }
   .item-title {
-      color:#7367f0
+    color: #7367f0;
   }
 }
 .card_item {
-  background-color: #FFF;
-  border: 1px solid rgba(34,41,47,.125);
+  background-color: #fff;
+  border: 1px solid rgba(34, 41, 47, 0.125);
   transition: 0.5s;
   &:hover {
     margin-top: -10px;
-	  transition-delay: 0.1s;
+    transition-delay: 0.1s;
   }
 }
 
@@ -41,12 +41,12 @@
   }
   .btn-light {
     color: black;
-    background-color: #F6F6F6;
-    border-color: #F6F6F6
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
   }
   .btn-primary {
     color: #fff;
-    background-color: #7367F0
+    background-color: #7367f0;
   }
   .btn-cart {
     flex-grow: 1;
@@ -64,5 +64,11 @@
   }
   &paragraph {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart__empty {
+    width: 300px;
   }
 }

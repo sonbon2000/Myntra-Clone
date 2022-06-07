@@ -9,7 +9,6 @@ $primary-color: #e53637;
   float: left;
   height: 261px;
   background-position: center center;
-
 }
 
 .instagram__text {
@@ -28,5 +27,14 @@ $primary-color: #e53637;
   h3 {
     color: $primary-color;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 576px) {
+  .instagram__pic__item {
+    width: 50%;
+  }
+  .instagram__text {
+    padding-top: 50px;
   }
 }

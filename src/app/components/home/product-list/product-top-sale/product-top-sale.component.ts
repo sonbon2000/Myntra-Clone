@@ -32,8 +32,11 @@ export class ProductTopSaleComponent implements OnInit {
       this.toastr.success('You have added item in the cart');
       this.cartService.addItem(prod);
     } else {
-      Swal.fire('Oops', 'You have to login first', 'error');
-      this.router.navigateByUrl('/sign-in');
+      Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
+        if (results.isConfirmed) {
+          this.router.navigateByUrl('/sign-in');
+        }
+      });
     }
   }
 
@@ -42,8 +45,11 @@ export class ProductTopSaleComponent implements OnInit {
       this.toastr.success('You have added item in the wishlist');
       this.wishListService.addWishList(prod);
     } else {
-      Swal.fire('Oops', 'You have to login first', 'error');
-      this.router.navigateByUrl('/sign-in');
+      Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
+        if (results.isConfirmed) {
+          this.router.navigateByUrl('/sign-in');
+        }
+      });
     }
   }
 }
