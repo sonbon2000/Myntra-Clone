@@ -6,12 +6,13 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
 import Swal from 'sweetalert2';
+
 @Component({
-  selector: 'app-productnew-arrival',
-  templateUrl: './productnew-arrival.component.html',
-  styleUrls: ['./productnew-arrival.component.scss'],
+  selector: 'app-product-new-arrival',
+  templateUrl: './product-new-arrival.component.html',
+  styleUrls: ['./product-new-arrival.component.scss'],
 })
-export class ProductnewArrivalComponent implements OnInit {
+export class ProductNewArrivalComponent implements OnInit {
   @Input() productsNewArrival;
   constructor(
     private authService: AuthService,
