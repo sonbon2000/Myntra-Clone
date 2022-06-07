@@ -38,18 +38,4 @@ export class MyProfileComponent implements OnInit {
       this.spinner.hide();
     }, 1000);
   }
-
-  canExit = () => {
-    if (JSON.stringify(this.user) !== JSON.stringify(this.originalUser)) {
-      let result = confirm(
-        'You havent saved your editing yet, are you sure want to navigate away'
-      );
-      return result;
-    }
-    return true;
-  };
-
-  onSave() {
-    this.originalUser = { ...this.user };
-  }
 }

@@ -1,11 +1,9 @@
 import { AuthService } from './../../shared/services/auth.service';
 import { Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
-
 import { CartService } from 'src/app/shared/services/cart.service';
 import { MockService } from 'src/app/shared/services/mock.service';
 import { ProductService } from 'src/app/shared/services/product.service';
