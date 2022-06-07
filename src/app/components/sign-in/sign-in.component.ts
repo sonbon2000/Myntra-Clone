@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
@@ -28,7 +28,8 @@ export class SignInComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -58,7 +59,7 @@ export class SignInComponent implements OnInit {
   onLogin() {
     this.authService.login(this.user).subscribe((res) => {
       if (res) {
-        this.router.navigate(['/home']);
+        this.router.navigateByUrl('/home');
       }
     });
   }

@@ -29,11 +29,11 @@ const routes: Routes = [
   },
   {
     path: 'shop',
-    component: ShopComponent
+    component: ShopComponent,
   },
   {
     path: 'shop/:id',
-    component: ProductDetailComponent
+    component: ProductDetailComponent,
   },
   {
     path: 'about',
