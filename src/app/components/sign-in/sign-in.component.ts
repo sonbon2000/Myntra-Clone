@@ -37,12 +37,9 @@ export class SignInComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(queryParams => {
+    this.route.queryParams.subscribe((queryParams) => {
       this.returnUrl = queryParams.returnUrl;
-    })
-    // console.log(this.route.queryParams);
-    
-
+    });
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
@@ -69,7 +66,11 @@ export class SignInComponent implements OnInit {
   onLogin() {
     this.authService.login(this.user).subscribe((res) => {
       if (res) {
-        this.router.navigate([this.returnUrl]);
+        if (!this.returnUrl) {
+          this.router.navigateByUrl('/home');
+        } else {
+          this.router.navigate([this.returnUrl]);
+        }
       }
     });
   }
