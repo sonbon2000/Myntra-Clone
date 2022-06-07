@@ -24,10 +24,18 @@
     class="row py-5"
     *ngIf="wishListService.getWishListQuantity() !== 0; else noWishList"
   >
-    <div class="col-lg-3 mb-4" *ngFor="let wishList of wishListArr">
+    <div
+      class="col-lg-3 mb-4"
+      *ngFor="let wishList of wishListArr"
+      style="cursor: pointer"
+    >
       <div class="card_item rounded">
         <div class="item-img text-center">
-          <img [src]="wishList.images" alt="" />
+          <img
+            [src]="wishList.images"
+            alt=""
+            [routerLink]="['/shop', wishList.product_id]"
+          />
         </div>
         <div class="item-body px-3">
           <div

@@ -1,4 +1,32 @@
 .form__sign-in {
   width: 600px;
-  margin:  50px auto
+  margin: 50px auto;
+}
+.login__form {
+  padding: 50px 80px;
+}
+.sign__in-card {
+  height: 550px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.demo__link {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.btn__submit {
+  color: white;
+  background-color: #ffa500;
+}
+
+@media (max-width: 576px) {
+  .form__sign-in {
+    width: 400px;
+  }
 }

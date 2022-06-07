@@ -4,23 +4,27 @@ h5 {
 $heading-color: #111111;
 
 .filter__controls {
+  padding: 0;
+  display: flex;
   li {
     color: #b7b7b7;
+    margin-right: 40px;
     font-size: 24px;
     font-weight: 700;
     list-style: none;
-    display: inline-block;
-    margin-right: 88px;
     cursor: pointer;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
+    text-align: center;
     &.active {
       color: $heading-color;
     }
   }
+  li:last-child {
+    margin-right: 0;
+  }
 }
 
-
+@media (max-width: 576px) {
+  .filter__controls {
+    text-align: center;
+  }
+}

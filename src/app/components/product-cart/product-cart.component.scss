@@ -13,7 +13,7 @@ img {
   }
 }
 .cart__checkout {
-  background-color: #f3f2ee
+  background-color: #f3f2ee;
 }
 
 .cart__empty {
@@ -43,6 +43,29 @@ table {
 
 .btn_prev {
   padding: 0;
-  border: 0;
+  border: 1px solid black;
+  width: 20px;
+  line-height: 20px;
+  height: 100%;
   background-color: transparent;
+}
+.btn_next {
+  padding: 0;
+  border: 1px solid black;
+  width: 20px;
+  line-height: 20px;
+  height: 100%;
+  background-color: transparent;
+}
+.btn__submit {
+  background-color: #ffa500;
+  color: white;
+}
+i {
+  color: #ffa500;
+}
+@media (max-width: 576px) {
+  .cart__empty {
+    width: 300px;
+  }
 }

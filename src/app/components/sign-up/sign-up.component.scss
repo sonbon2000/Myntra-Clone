@@ -1,9 +1,14 @@
 .form__sign-up {
   width: 600px;
-  margin: 50px auto
+  margin: 50px auto;
 }
-
 
 .alert {
   margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  .form__sign-up {
+    width: 400px;
+  }
 }
