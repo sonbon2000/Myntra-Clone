@@ -11,6 +11,7 @@ export class CarouselComponent implements OnInit {
     '../../../.././../assets/images/carousel/men-1.jpg',
     '../../../.././../assets/images/carousel/men-2.jpg',
   ];
+
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -42,7 +43,9 @@ export class CarouselComponent implements OnInit {
     nav: true,
   };
 
-  constructor() {}
+  constructor() {
+   
+  }
 
   ngOnInit(): void {}
 }

@@ -32,7 +32,7 @@
   <div class="container">
     <div class="row">
       <!-- Sidebar -->
-      <div class="col-lg-3">
+      <div class="col-lg-3 pl-0">
         <div class="shop__sidebar">
           <div class="shop__sidebar__search">
             <input
@@ -57,7 +57,7 @@
                     <div class="shop__sidebar__genders">
                       <ul>
                         <li
-                          class="dropdown-item active"
+                          class="dropdown-item"
                           *ngFor="let gender of allGenders"
                           (click)="getProductByCategory('ideal_for', gender)"
                           (click)="changeViewMode(gender)"

@@ -6,6 +6,10 @@
   transition: $args;
 }
 
+.dropdown-item {
+  padding-left: 5px;
+}
+
 span {
   cursor: pointer;
   &:hover {
@@ -96,7 +100,7 @@ li {
 }
 
 .shop__sidebar {
-  padding-right: 20px;
+  // padding-right: 20px;
   ul {
     padding-left: 0;
     overflow: auto;
@@ -191,9 +195,10 @@ li {
   }
 }
 
-// .my-pagination ::ng-deep .ngx-pagination .current {
-//     background-color: #343a40;
-// }
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background-color: #343a40;
+}
+
 // .active {
 //     text-decoration: underline;
 //     color: red;
