@@ -1,16 +1,9 @@
 {
   "targets": {
-<<<<<<< HEAD
-    "myntra-clone-hn22-angular-01": {
+    "sonthongdung-hnangular01": {
       "hosting": {
         "Myntra-Clone": [
-          "myntra-clone-hn22-angular-01"
-=======
-    "sonthongdung-hn22-fr-angular01": {
-      "hosting": {
-        "Myntra-Clone": [
-          "sonthongdung-hn22-fr-angular01"
->>>>>>> master
+          "sonthongdung-hnangular01"
         ]
       }
     }

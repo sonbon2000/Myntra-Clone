@@ -15,11 +15,6 @@ $heading-color: #111111;
   text-align: center;
   padding: 130px 150px 175px;
 
-  span {
-    color: #e53637;
-    font-size: 72px;
-  }
-
   p {
     color: $heading-color;
     font-size: 20px;
@@ -154,5 +149,8 @@ $heading-color: #111111;
   text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 576px) {
+  .testimonial__text {
+    padding: 100px 40px;
+  }
 }

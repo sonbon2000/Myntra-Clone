@@ -39,16 +39,20 @@
           <tr *ngFor="let cart of cartArr">
             <td><img [src]="cart.images" alt="" /></td>
             <td>{{ cart.title }}</td>
-            <td class="text-center">
+            <td class="text-center d-flex">
               <button
-                class="btn_prev"
+                class="btn_prev d-flex align-items-center justify-content-center"
                 (click)="cartService.removeItem(cart)"
                 [disabled]="cartService.getItemQuantity(cart) === 1"
               >
-                <
+                -
               </button>
               <span class="mx-3">{{ cartService.getItemQuantity(cart) }}</span>
-              <span (click)="cartService.addItem(cart)">></span>
+              <span
+                class="btn_next d-flex align-items-center justify-content-center"
+                (click)="cartService.addItem(cart)"
+                >+</span
+              >
             </td>
             <td class="text-center">
               {{ getPrice(getTotalItem(cart) | currency: "USD") }}
@@ -59,7 +63,9 @@
           </tr>
         </tbody>
       </table>
-      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
+      <button class="btn btn__submit" routerLink="/shop">
+        Continue Shopping
+      </button>
     </div>
     <div class="col-lg-4 mt-3">
       <div class="p-5 cart__checkout">
@@ -69,7 +75,7 @@
           <p>{{ cartService.getCartTotalPrice() | currency: "USD" }}</p>
         </div>
 
-        <button class="btn btn-dark" (click)="onCheckOut()">
+        <button class="btn btn__submit" (click)="onCheckOut()">
           Proceed to checkout
         </button>
       </div>
@@ -83,7 +89,9 @@
       />
       <p class="font-weight-bold">Time to start shopping</p>
       <p class="cart__emtpy paragraph">Your cart is empty!</p>
-      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
+      <button class="btn btn__submit" routerLink="/shop">
+        Continue Shopping
+      </button>
     </div>
   </ng-template>
 </div>
