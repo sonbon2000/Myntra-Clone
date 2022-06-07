@@ -21,7 +21,6 @@ import { HomeComponent } from './components/home/home.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { ProductListComponent } from './components/home/product-list/product-list.component';
 import { AboutComponent } from './components/about/about.component';
-import { ProductnewArrivalComponent } from './components/home/product-list/productnew-arrival/productnew-arrival.component';
 import { ProductTopSaleComponent } from './components/home/product-list/product-top-sale/product-top-sale.component';
 import { CategoriesComponent } from './components/home/categories/categories.component';
 import { InstagramComponent } from './components/home/instagram/instagram.component';
@@ -44,6 +43,7 @@ import { AboutBrandComponent } from './components/product-detail/product-tabs/ab
 import { AboutProductComponent } from './components/product-detail/product-tabs/about-product/about-product.component';
 import { ReviewsComponent } from './components/product-detail/product-tabs/reviews/reviews.component';
 import { SpecificationsComponent } from './components/product-detail/product-tabs/specifications/specifications.component';
+import { ProductNewArrivalComponent } from './components/home/product-list/product-new-arrival/product-new-arrival.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import { SpecificationsComponent } from './components/product-detail/product-tab
     FooterComponent,
     CarouselComponent,
     ProductListComponent,
-    ProductnewArrivalComponent,
     ProductTopSaleComponent,
     CategoriesComponent,
     InstagramComponent,
@@ -79,6 +78,7 @@ import { SpecificationsComponent } from './components/product-detail/product-tab
     AboutProductComponent,
     ReviewsComponent,
     SpecificationsComponent,
+    ProductNewArrivalComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,12 +19,12 @@ import { vi } from 'date-fns/locale';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
-  showGender: boolean;
-  showProductType: boolean;
-  showPrice: boolean;
-  showColor: boolean;
+  showGender: boolean = true;
+  showProductType: boolean = true;
+  showPrice: boolean = true;
   viewMode: string = '';
   @ViewChild('search') searchInput: ElementRef;
+
   public allProducts: Product[] = [];
   public filteredProducts: Product[] = [];
   public total_pages: number;
@@ -49,10 +49,6 @@ export class ShopComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    function backToTop() {
-      window.scroll({ top: 50, left: 0, behavior: 'smooth' });
-    }
-    backToTop();
     this.limit = this.productService.limit;
     this.filteredProducts = this.allProducts =
       this.mockService.getAllProducts();
@@ -149,7 +145,9 @@ export class ShopComponent implements OnInit {
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          this.router.navigateByUrl('/sign-in', {});
+          this.router.navigate(['/sign-in'], {
+            queryParams: { returnUrl: '/shop' },
+          });
         }
       });
     }
@@ -162,7 +160,10 @@ export class ShopComponent implements OnInit {
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          this.router.navigateByUrl('/sign-in');
+          // this.router.navigateByUrl('/sign-in');
+          this.router.navigate(['/sign-in'], {
+            queryParams: { returnUrl: '/shop' },
+          });
         }
       });
     }

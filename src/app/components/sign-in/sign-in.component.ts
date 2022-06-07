@@ -18,6 +18,7 @@ export class SignInComponent implements OnInit {
     email: '',
     password: '',
   };
+
   signInForm = new FormGroup({
     email: new FormControl('', [
       Validators.required,
@@ -25,6 +26,9 @@ export class SignInComponent implements OnInit {
     ]),
     password: new FormControl('', [Validators.required]),
   });
+
+  public returnUrl;
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -33,6 +37,11 @@ export class SignInComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe((queryParams) => {
+      this.returnUrl = queryParams.returnUrl;
+    });
+    // console.log(this.route.queryParams);
+
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
@@ -59,7 +68,7 @@ export class SignInComponent implements OnInit {
   onLogin() {
     this.authService.login(this.user).subscribe((res) => {
       if (res) {
-        this.router.navigateByUrl('/home');
+        this.router.navigate([this.returnUrl]);
       }
     });
   }

@@ -6,6 +6,10 @@
   transition: $args;
 }
 
+.dropdown-item {
+  padding-left: 5px;
+}
+
 span {
   cursor: pointer;
   &:hover {
@@ -105,7 +109,7 @@ li {
 }
 
 .shop__sidebar {
-  padding-right: 20px;
+  // padding-right: 20px;
   ul {
     padding-left: 0;
     overflow: auto;
@@ -202,6 +206,10 @@ li {
   ul {
     height: auto;
   }
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background-color: #343a40;
 }
 
 @media (max-width: 576px) {

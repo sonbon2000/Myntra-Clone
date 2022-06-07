@@ -5,6 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SummaryPipe implements PipeTransform {
   transform(value: string, limit: number) {
-    return value.substring(0, limit);
+    if (value.length > 20) {
+      return value.substring(0, limit) + ' ...';
+    } else {
+      return value
+    }
   }
 }
