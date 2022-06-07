@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
@@ -11,6 +11,8 @@ import { WishListService } from 'src/app/shared/services/wish-list.service';
 export class HeaderComponent implements OnInit {
   showDropDown:boolean = false;
   show: boolean = false;
+  @ViewChild('#header') header;
+
   constructor(
     public authService: AuthService,
     private router: Router,
