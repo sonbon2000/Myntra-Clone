@@ -6,7 +6,6 @@ import products from '../../../assets/data/myntra-products';
 })
 export class MockService {
   constructor(private http: HttpClient) {}
-
   getAllProducts() {
     return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }

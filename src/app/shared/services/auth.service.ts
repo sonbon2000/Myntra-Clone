@@ -10,7 +10,14 @@ export class AuthService {
   private baseURL = 'https://reqres.in';
   public user = null;
   private savedTokenName = 'token';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    let token = localStorage.getItem(this.savedTokenName);
+    if (token) {
+      let decoded = jwtDecode(token);
+      this.user = decoded;
+      this.user.token = token;
+    }
+  }
 
   login(user: UserLogin) {
     return this.http.post(`${this.baseURL}/api/login`, user).pipe(
