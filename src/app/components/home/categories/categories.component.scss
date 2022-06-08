@@ -123,5 +123,14 @@ $primary-color: #e53637;
   }
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .categories__deal__countdown {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
+  .categories__deal__countdown {
+    display: none;
+  }
 }

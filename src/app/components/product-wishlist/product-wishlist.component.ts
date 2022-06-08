@@ -34,12 +34,12 @@ export class ProductWishlistComponent implements OnInit {
 
   onRemoveItem(wishList: Product) {
     this.toastr.success('You have deleted item from the wish list');
-    this.wishListService.removeWishList(wishList);
+    this.wishListService.deleteWishList(wishList);
   }
 
   addToCart(wishList: Product) {
     this.toastr.success('You have moved item to the cart');
-    this.wishListService.removeWishList(wishList);
+    this.wishListService.deleteWishList(wishList);
     this.cartService.addItem(wishList);
   }
 }
