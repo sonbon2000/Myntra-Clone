@@ -71,9 +71,9 @@ export class WishListService {
     return 0;
   }
 
-  getWishListTotalPrice() {
-    return this.wishList.reduce((accu, p) => {
-      return accu + p.inventory * p.variant_price;
-    }, 0);
-  }
+  // getWishListTotalPrice() {
+  //   return this.wishList.reduce((accu, p) => {
+  //     return accu + p.inventory * p.variant_price;
+  //   }, 0);
+  // }
 }
