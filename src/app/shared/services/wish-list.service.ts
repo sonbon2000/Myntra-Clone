@@ -45,6 +45,15 @@ export class WishListService {
     localStorage.setItem('wish', JSON.stringify(this.wishList));
   }
 
+  deleteWishList(prod) {
+    let index = this.wishList.findIndex(
+      (c) => c.product_id === prod.product_id
+    );
+    this.wishList[index].inventory == 0;
+    this.wishList.splice(index, 1);
+    localStorage.setItem('wish', JSON.stringify(this.wishList));
+  }
+
   getWishListQuantity() {
     return this.wishList.reduce((accu, p) => {
       return accu + p.inventory;

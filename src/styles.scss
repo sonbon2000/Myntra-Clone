@@ -36,3 +36,9 @@
   left: 10px;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .owl-next i,
+  .owl-prev i {
+    display: none;
+  }
+}

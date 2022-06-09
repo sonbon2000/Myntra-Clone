@@ -47,6 +47,13 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
+  deleteItem(prod) {
+    let index = this.cart.findIndex((c) => c.product_id === prod.product_id);
+    this.cart[index].inventory == 0;
+    this.cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(this.cart));
+  }
+
   getCartQuantity() {
     return this.cart.reduce((accu, p) => {
       return accu + p.inventory;

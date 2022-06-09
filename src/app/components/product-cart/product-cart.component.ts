@@ -32,7 +32,7 @@ export class ProductCartComponent implements OnInit {
 
   removeItem(prod: Product) {
     this.toastr.success('You have deleted your item from the cart');
-    this.cartService.removeItem(prod);
+    this.cartService.deleteItem(prod);
   }
 
   onCheckOut() {
