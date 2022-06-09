@@ -19,3 +19,20 @@ li {
 .product__filter {
   flex-basis: 1;
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .filter__controls {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter__controls {
+    display: flex;
+    flex-direction: column;
+    li:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
