@@ -27,7 +27,7 @@ export class SignInComponent implements OnInit {
     password: new FormControl('', [Validators.required]),
   });
 
-  public returnUrl: string = ''
+  public returnUrl: string = '';
 
   constructor(
     private router: Router,
@@ -40,6 +40,9 @@ export class SignInComponent implements OnInit {
     this.route.queryParams.subscribe((queryParams) => {
       this.returnUrl = queryParams.returnUrl;
     });
+
+
+    // Spinner
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
