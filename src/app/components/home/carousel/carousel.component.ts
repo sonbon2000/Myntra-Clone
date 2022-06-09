@@ -8,9 +8,18 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class CarouselComponent implements OnInit {
   public carouselImages = [
-    '../../../.././../assets/images/carousel/men-1.jpg',
-    '../../../.././../assets/images/carousel/men-2.jpg',
-    '../../../.././../assets/images/carousel/carousel-3.jpg'
+    {
+      id: '1',
+      src: '../../../.././../assets/images/carousel/men-1.jpg',
+    },
+    {
+      id: '2',
+      src: '../../../.././../assets/images/carousel/men-2.jpg',
+    },
+    {
+      id: '3',
+      src: '../../../.././../assets/images/carousel/carousel-3.jpg',
+    },
   ];
 
   customOptions: OwlOptions = {
