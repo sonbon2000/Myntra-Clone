@@ -1,11 +1,8 @@
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { WishListService } from './../../shared/services/wish-list.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Product } from 'src/app/shared/models/product.model';
-import { CartService } from 'src/app/shared/services/cart.service';
-import { MockService } from 'src/app/shared/services/mock.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -19,7 +16,7 @@ export class ProductDetailComponent implements OnInit {
   id: string = '';
 
   constructor(
-    private mockService: MockService,
+    private productService: ProductService,
     private route: ActivatedRoute,
     private spinner: NgxSpinnerService
   ) {
@@ -46,9 +43,9 @@ export class ProductDetailComponent implements OnInit {
     // let id = this.route.snapshot.params['id'];
     this.route.params.subscribe((params) => {
       this.id = params['id'];
-      this.product = this.mockService.getProductById(this.id);
+      this.product = this.productService.getProductById(this.id);
     });
-    this.relatedProducts = this.mockService.getRelatedProducts(this.product);
+    this.relatedProducts = this.productService.getRelatedProducts(this.product);
 
     // Spinner
     this.spinner.show();

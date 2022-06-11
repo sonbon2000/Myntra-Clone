@@ -1,25 +1,23 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { RootObject } from '../models/blog.model';
-
+import products from '../../../assets/data/myntra-products';
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  private API_KEY = 'xDgMAhzQV1pf0klr5wIjkDanmC1H6r3u';
-  private getBlogs = `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22Fashion%22)&api-key=${this.API_KEY}`;
-  public limit: number = 12;
-
-  constructor(private http: HttpClient) {}
-
-  getAllBlogs(): Observable<RootObject> {
-    return this.http.get<RootObject>(this.getBlogs);
+  constructor() {}
+  getAllProducts() {
+    return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }
 
-  getSingleBlog(id: string): Observable<RootObject> {
-    return this.http.get<RootObject>(
-      `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=xDgMAhzQV1pf0klr5wIjkDanmC1H6r3u&fq=_id:(%22${id}%22)`
+  getProductById(id: string) {
+    return products.find((item) => item.product_id == id);
+  }
+
+  getRelatedProducts(product) {
+    return products.filter(
+      (item) =>
+        item.product_type == product.product_type &&
+        item.product_id != product.product_id
     );
   }
 }

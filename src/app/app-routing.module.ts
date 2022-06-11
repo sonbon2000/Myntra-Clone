@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { AboutComponent } from './components/about/about.component';
-import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +15,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminGuard } from './shared/guards/admin.guard';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 
 const routes: Routes = [
   {

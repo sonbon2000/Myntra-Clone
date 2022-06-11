@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
@@ -9,10 +9,10 @@ import { WishListService } from 'src/app/shared/services/wish-list.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  showDropDown:boolean = false;
+  showDropDown: boolean = false;
   show: boolean = false;
-  @ViewChild('#header') header;
-
+  showMenu: boolean = false;
+  @ViewChild('headerMenu') headerMenu: ElementRef;
   constructor(
     public authService: AuthService,
     private router: Router,
@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.show = false;
     this.authService.logout();
-    this.router.navigateByUrl('/home');
   }
 
   goToMyProfile() {
@@ -35,5 +34,13 @@ export class HeaderComponent implements OnInit {
   goToAdminPage() {
     this.show = false;
     this.router.navigateByUrl('/admin');
+  }
+
+  onShowDropDown() {
+    this.showDropDown = !this.showDropDown;
+  }
+
+  onShowMenu() {
+    this.showDropDown = !this.showDropDown;
   }
 }

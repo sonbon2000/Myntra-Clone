@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/models/product.model';
-import { MockService } from 'src/app/shared/services/mock.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -12,10 +12,10 @@ export class ProductListComponent implements OnInit {
   productsNewArrival: Product[] = [];
   productsTopSale: Product[] = [];
   viewMode: string = 'newArrival';
-  constructor(private mockService: MockService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productsAll = this.mockService.getAllProducts();
+    this.productsAll = this.productService.getAllProducts();
     this.productsAll.sort(
       (a, b) => Date.parse(a.crawl_timestamp) - Date.parse(b.crawl_timestamp)
     );
