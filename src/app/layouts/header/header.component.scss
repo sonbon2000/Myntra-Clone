@@ -399,8 +399,7 @@ $heading-color: #111111;
     height: 100%;
     background-color: #fff;
     z-index: 99;
-    overflow-y: auto;
-    transition: all 0.5;
+    @include transition(all, 0.3s);
   }
   .header__nav-options {
     margin-top: 20px;

@@ -42,5 +42,7 @@ export class HeaderComponent implements OnInit {
 
   onShowMenu() {
     this.showDropDown = !this.showDropDown;
+    // const headerMenu = document.querySelector('.header__menu-items ');
+    // headerMenu.classList.add('slide-in ');
   }
 }

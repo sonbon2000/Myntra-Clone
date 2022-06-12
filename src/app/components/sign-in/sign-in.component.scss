@@ -1,7 +1,3 @@
-.form__sign-in {
-  width: 600px;
-  margin: 50px auto;
-}
 .login__form {
   padding: 50px 80px;
 }
@@ -26,7 +22,25 @@ img {
 }
 
 @media (max-width: 576px) {
-  .form__sign-in {
-    width: 400px;
+  .sign__in-card {
+    height: 600px;
+    img {
+      height: 200px;
+    }
+  }
+  .login__form {
+    padding: 30px 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sign__in-card {
+    height: 700px;
+    img {
+      height: 300px;
+    }
+  }
+  .login__form {
+    padding: 30px 40px;
   }
 }
