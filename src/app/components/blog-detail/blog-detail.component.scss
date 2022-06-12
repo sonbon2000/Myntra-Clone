@@ -211,5 +211,13 @@ $heading-color: #111111;
 }
 
 .btn_back {
+  color: white;
   background-color: #ffa500;
+}
+
+@media (max-width: 576px) {
+  .blog__details__tags {
+    text-align: left;
+    margin-top: 20px;
+  }
 }

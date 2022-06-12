@@ -25,11 +25,13 @@ $heading-color: #111111;
     line-height: 30px;
     padding-top: 12px;
     margin-bottom: 25px;
+    text-align: center;
   }
 }
 
 .testimonial__author {
   display: inline-block;
+  text-align: center;
 }
 
 .testimonial__author__pic {
@@ -110,10 +112,6 @@ $heading-color: #111111;
   }
 }
 
-// h4 {
-//   text-align: left;
-// }
-
 .team {
   padding-bottom: 70px;
 }
@@ -151,4 +149,10 @@ $heading-color: #111111;
   display: block;
   margin-bottom: 75px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .testimonial__text {
+    padding: 130px 50px 175px;
+  }
 }

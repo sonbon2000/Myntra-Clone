@@ -47,7 +47,7 @@
 </div>
 
 <!-- Header -->
-<header class="header #header border-bottom">  
+<header class="header #header border-bottom">
   <div class="container p-2">
     <div class="header__menu-list row">
       <div class="col-lg-3 col-md-3 col-sm-3 header__logo__container">
@@ -60,9 +60,73 @@
         />
       </div>
 
-      <div class="header__bar col-sm-9">
+      <!-- Menu -->
+      <div
+        class="header__bar col-sm-9"
+        (click)="onShowMenu()"
+        style="cursor: pointer"
+      >
         <i class="fas fa-bars"></i>
       </div>
+
+      <div
+        class="menu__overlay"
+        *ngIf="showDropDown"
+        (click)="showDropDown = !showDropDown"
+      ></div>
+      <div class="header__menu-items p-5" *ngIf="showDropDown" #headerMenu>
+        <div class="header__options">
+          <a routerLink="/sign-in" (click)="onShowDropDown()">SIGN IN</a>
+          <a routerLink="/sign-up" class="ml-3" (click)="onShowDropDown()"
+            >SIGN UP</a
+          >
+        </div>
+        <div class="header__nav-options">
+          <a routerLink="/product-wish-list" (click)="onShowDropDown()">
+            <i
+              class="fas fa-heart"
+              data-toggle="tooltip"
+              title="Wish List"
+              data-placement="top"
+            ></i>
+            <span class="cart-quantity text-danger font-weight-bold">
+              {{ wishList.getWishListQuantity() }}
+            </span>
+          </a>
+          <a routerLink="/product-cart" (click)="onShowDropDown()">
+            <i
+              class="fas fa-shopping-bag shopping__icon"
+              data-toggle="tooltip"
+              title="Cart"
+            ></i>
+            <span class="cart-quantity text-warning font-weight-bold">{{
+              cartService.getCartQuantity()
+            }}</span>
+          </a>
+        </div>
+        <div class="mobile__menu-wrap">
+          <div class="clearfix">
+            <a
+              class="float-right"
+              style="cursor: pointer"
+              (click)="showMenu = !showMenu"
+              >Menu <i class="fas fa-bars"></i
+            ></a>
+          </div>
+          <ul *ngIf="showMenu" class="mobile__dropdown">
+            <li routerLink="/home" (click)="onShowDropDown()">Home</li>
+            <li routerLink="/shop" (click)="onShowDropDown()">Shop</li>
+            <li routerLink="/blog" (click)="onShowDropDown()">Blogs</li>
+            <li routerLink="/contact" (click)="onShowDropDown()">Contact</li>
+            <li routerLink="/about" (click)="onShowDropDown()">About</li>
+          </ul>
+        </div>
+        <div class="mobile__menu-text text-left mt-3">
+          <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+      </div>
+
+      <!-- End menu -->
 
       <div class="header__nav col-lg-6 col-md-6">
         <nav class="header__menu">

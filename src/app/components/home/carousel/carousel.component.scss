@@ -19,4 +19,10 @@ img {
 }
 
 @media (max-width: 576px) {
+  img {
+    max-height: 250px;
+  }
+  .slider_content {
+    display: none;
+  }
 }

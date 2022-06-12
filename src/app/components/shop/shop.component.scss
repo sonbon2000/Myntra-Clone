@@ -214,6 +214,9 @@ li {
 }
 
 @media (max-width: 576px) {
+  .ngx-pagination {
+    padding-left: 0;
+  }
   .shop__product__option__left {
     margin-top: 20px;
   }
