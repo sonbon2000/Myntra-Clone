@@ -40,6 +40,9 @@ table {
     }
   }
 }
+.cart__mobile {
+  display: none;
+}
 
 .btn_prev {
   padding: 0;
@@ -67,5 +70,18 @@ i {
 @media (max-width: 576px) {
   .cart__empty {
     width: 300px;
+  }
+  .cart__mobile {
+    display: block;
+    text-align: center;
+  }
+  .btn__submit {
+    display: none;
+  }
+  .cart__checkout {
+    display: none;
+  }
+  table {
+    display: none;
   }
 }

@@ -10,3 +10,25 @@ img {
 i {
   cursor: pointer;
 }
+.admin__mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  table {
+    display: none;
+  }
+  input {
+    display: none;
+  }
+  h3 {
+    display: none;
+  }
+  .my-pagination {
+    display: none;
+  }
+  .admin__mobile {
+    display: block;
+    text-align: center;
+  }
+}

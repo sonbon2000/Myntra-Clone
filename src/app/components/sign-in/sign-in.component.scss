@@ -1,5 +1,8 @@
+.login__img {
+  padding: 0;
+}
 .login__form {
-  padding: 50px 80px;
+  padding: 0 30px;
 }
 .sign__in-card {
   height: 550px;
@@ -28,8 +31,8 @@ img {
       height: 200px;
     }
   }
-  .login__form {
-    padding: 30px 40px;
+  .login__img {
+    padding: 0 15px;
   }
 }
 
@@ -39,8 +42,5 @@ img {
     img {
       height: 300px;
     }
-  }
-  .login__form {
-    padding: 30px 40px;
   }
 }
