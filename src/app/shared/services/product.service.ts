@@ -8,7 +8,7 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  fakeAPI = 'https://fakestoreapi.com/products';
+  fakeAPI = 'https://dummyjson.com/products';
   constructor(private http: HttpClient, private spinner: NgxSpinnerService) {}
 
   getFake(): Observable<Product[]> {

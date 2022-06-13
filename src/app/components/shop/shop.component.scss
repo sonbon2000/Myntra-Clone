@@ -9,6 +9,11 @@
 .dropdown-item {
   padding-left: 5px;
 }
+.breadcrumb__links {
+  span {
+    text-decoration: none;
+  }
+}
 
 span {
   cursor: pointer;
