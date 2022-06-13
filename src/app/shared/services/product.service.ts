@@ -1,11 +1,22 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Observable } from 'rxjs';
 import products from '../../../assets/data/myntra-products';
+import { Product } from '../models/product.model';
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  constructor() {}
-  getAllProducts() {
+  fakeAPI = 'https://dummyjson.com/products';
+  constructor(private http: HttpClient, private spinner: NgxSpinnerService) {}
+
+  getFake(): Observable<Product[]> {
+    this.spinner.show();
+    return this.http.get<Product[]>(this.fakeAPI);
+  }
+
+  getAllProducts(): Product[] {
     return products.sort((a, b) => Number(a.product_id) - Number(b.product_id));
   }
 

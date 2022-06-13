@@ -47,25 +47,20 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.limit = this.blogService.limit;
-    this.filteredProducts = this.allProducts =
-      this.productService.getAllProducts();
-    this.paginationLength = this.filteredProducts.length;
-    this.total_pages = Math.ceil(this.paginationLength / this.limit);
-
-    this.allProducts.forEach((product) => {
-      this.allGenders.add(product.ideal_for);
-      this.allProductTypes.add(product.product_type);
-      this.allColors.add(product.dominant_color);
-      this.allPrices.add(product.variant_price);
-      this.allBrands.add(product.brand);
-    });
-
-    // Spinner
-    this.spinner.show();
-    setTimeout(() => {
+    this.productService.getFake().subscribe((p) => {
+      this.filteredProducts = this.allProducts =
+        this.productService.getAllProducts();
+      this.paginationLength = this.filteredProducts.length;
+      this.total_pages = Math.ceil(this.paginationLength / this.limit);
+      this.allProducts.forEach((product) => {
+        this.allGenders.add(product.ideal_for);
+        this.allProductTypes.add(product.product_type);
+        this.allColors.add(product.dominant_color);
+        this.allPrices.add(product.variant_price);
+        this.allBrands.add(product.brand);
+      });
       this.spinner.hide();
-    }, 1000);
-
+    });
     window.scroll(0, 0);
   }
 
