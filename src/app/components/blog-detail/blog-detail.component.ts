@@ -36,6 +36,7 @@ export class BlogDetailComponent implements OnInit {
         } else {
           this.image = 'https://www.nytimes.com/' + multimedia[0].url;
         }
+        this.spinner.hide();
       });
     });
     this.spinner.show();

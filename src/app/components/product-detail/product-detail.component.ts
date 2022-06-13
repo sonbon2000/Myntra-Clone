@@ -40,12 +40,13 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // let id = this.route.snapshot.params['id'];
     this.route.params.subscribe((params) => {
       this.id = params['id'];
       this.product = this.productService.getProductById(this.id);
+      this.relatedProducts = this.productService.getRelatedProducts(
+        this.product
+      );
     });
-    this.relatedProducts = this.productService.getRelatedProducts(this.product);
 
     // Spinner
     this.spinner.show();

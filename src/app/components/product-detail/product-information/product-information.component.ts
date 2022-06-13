@@ -16,8 +16,6 @@ export class ProductInformationComponent implements OnInit {
   public images = [];
   public status: boolean;
 
-  public responsiveOptions;
-
   constructor(
     public cartService: CartService,
     public wishListService: WishListService,
