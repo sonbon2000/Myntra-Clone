@@ -5,11 +5,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
 import { CartService } from 'src/app/shared/services/cart.service';
-import { MockService } from 'src/app/shared/services/mock.service';
-import { ProductService } from 'src/app/shared/services/product.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
 import Swal from 'sweetalert2';
-import { vi } from 'date-fns/locale';
+import { BlogService } from 'src/app/shared/services/blog.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-shop',
@@ -36,8 +35,8 @@ export class ShopComponent implements OnInit {
   public allBrands = new Set();
 
   constructor(
-    private mockService: MockService,
     private productService: ProductService,
+    private blogService: BlogService,
     public cartService: CartService,
     private spinner: NgxSpinnerService,
     private authService: AuthService,
@@ -47,26 +46,21 @@ export class ShopComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.limit = this.productService.limit;
-    this.filteredProducts = this.allProducts =
-      this.mockService.getAllProducts();
-    this.paginationLength = this.filteredProducts.length;
-    this.total_pages = Math.ceil(this.paginationLength / this.limit);
-
-    this.allProducts.forEach((product) => {
-      this.allGenders.add(product.ideal_for);
-      this.allProductTypes.add(product.product_type);
-      this.allColors.add(product.dominant_color);
-      this.allPrices.add(product.variant_price);
-      this.allBrands.add(product.brand);
-    });
-
-    // Spinner
-    this.spinner.show();
-    setTimeout(() => {
+    this.limit = this.blogService.limit;
+    this.productService.getFake().subscribe((p) => {
+      this.filteredProducts = this.allProducts =
+        this.productService.getAllProducts();
+      this.paginationLength = this.filteredProducts.length;
+      this.total_pages = Math.ceil(this.paginationLength / this.limit);
+      this.allProducts.forEach((product) => {
+        this.allGenders.add(product.ideal_for);
+        this.allProductTypes.add(product.product_type);
+        this.allColors.add(product.dominant_color);
+        this.allPrices.add(product.variant_price);
+        this.allBrands.add(product.brand);
+      });
       this.spinner.hide();
-    }, 1000);
-
+    });
     window.scroll(0, 0);
   }
 

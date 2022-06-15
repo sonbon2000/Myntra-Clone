@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { MockService } from 'src/app/shared/services/mock.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +10,9 @@ export class HomeComponent implements OnInit {
   constructor(private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 1000);
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // }, 1000);
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
-import { MockService } from 'src/app/shared/services/mock.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,13 +15,14 @@ export class DashboardComponent implements OnInit {
   page: number = 1;
 
   constructor(
-    private mockService: MockService,
+    private productService: ProductService,
     private spinner: NgxSpinnerService,
     private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
-    this.allProducts = this.filterProducts = this.mockService.getAllProducts();
+    this.allProducts = this.filterProducts =
+      this.productService.getAllProducts();
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();

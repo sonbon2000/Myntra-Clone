@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MockService } from 'src/app/shared/services/mock.service';
+
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,10 +10,10 @@ import { MockService } from 'src/app/shared/services/mock.service';
 export class FooterComponent implements OnInit {
   public allGenders = new Set();
 
-  constructor(private mockService: MockService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.mockService.getAllProducts().forEach((product) => {
+    this.productService.getAllProducts().forEach((product) => {
       this.allGenders.add(product.ideal_for);
     });
   }

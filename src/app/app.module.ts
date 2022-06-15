@@ -4,7 +4,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CountdownModule } from 'ngx-countdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -28,7 +28,7 @@ import { InterleavedBannerComponent } from './components/home/interleaved-banner
 import { NewTrendComponent } from './components/home/new-trend/new-trend.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BlogDetailComponent } from './components/blog/blog-detail/blog-detail.component';
+
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { NoAccessComponent } from './components/no-access/no-access.component';
@@ -44,6 +44,7 @@ import { AboutProductComponent } from './components/product-detail/product-tabs/
 import { ReviewsComponent } from './components/product-detail/product-tabs/reviews/reviews.component';
 import { SpecificationsComponent } from './components/product-detail/product-tabs/specifications/specifications.component';
 import { ProductNewArrivalComponent } from './components/home/product-list/product-new-arrival/product-new-arrival.component';
+import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
