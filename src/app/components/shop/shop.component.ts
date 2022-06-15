@@ -159,7 +159,7 @@ export class ShopComponent implements OnInit {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
           this.router.navigate(['/sign-in'], {
-            queryParams: { returnUrl: '/shop' },
+            queryParams: { returnUrl: '/shop',  },
           });
         }
       });
