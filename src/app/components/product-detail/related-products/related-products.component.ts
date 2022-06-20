@@ -29,5 +29,6 @@ export class RelatedProductsComponent implements OnInit {
       },
     ];
   }
+  
   ngOnInit(): void {}
 }

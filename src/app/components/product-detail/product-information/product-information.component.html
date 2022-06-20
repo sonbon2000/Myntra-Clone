@@ -1,4 +1,4 @@
-<div class="product-information">
+<div class="product-information" *ngIf="product">
   <div class="container my-5">
     <div class="row">
       <div class="col-lg-6">
@@ -49,15 +49,15 @@
         <p><span>Size:</span> {{ product.size }}</p>
         <p><span>Material:</span> {{ product.dominant_material }}</p>
         <p><span>SKU:</span> {{ product.variant_sku }}</p>
-        <div class="product-actions d-flex justify-content-between mb-4">
+        <div class="product-actions mb-4 text-center">
           <button
-            class="add-wish-btn text-center text-white rounded py-2"
+            class="add-wish-btn text-center text-white rounded py-2 w-75 mb-2"
             (click)="onAddWishList(product)"
           >
             Add To Wishlist <i class="fas fa-heart ml-2"></i>
           </button>
           <button
-            class="add-cart-btn text-center text-white rounded py-2"
+            class="add-cart-btn text-center text-white rounded py-2 w-75"
             (click)="onAddProduct(product)"
             *ngIf="
               cartService.getItemQuantity(product) === 0;

@@ -1,4 +1,4 @@
-<div class="related-products">
+<div class="related-products" *ngIf="relatedProducts">
   <div class="container">
     <p-carousel
       [value]="relatedProducts"
@@ -6,9 +6,7 @@
       [numScroll]="1"
       [responsiveOptions]="responsiveOptions"
     >
-      <p-header>
-        <h2 class="text-center mb-5">Related Products</h2>
-      </p-header>
+      <p-header> <h2 class="text-center mb-5">Related Products</h2> </p-header>
       <ng-template let-product pTemplate="item">
         <div class="product-details">
           <div class="p-grid d-flex align-items-center flex-column">

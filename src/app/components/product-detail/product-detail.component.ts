@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { tap } from 'rxjs/operators';
 import { Product } from 'src/app/shared/models/product.model';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -42,11 +43,17 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.id = params['id'];
-      this.product = this.productService.getProductById(this.id);
-      this.relatedProducts = this.productService.getRelatedProducts(
-        this.product
-      );
     });
+
+    this.productService
+      .getFakeByID(this.id)
+      // .pipe(tap((data) => console.log(data)))
+      .subscribe((data) => {
+        this.product = this.productService.getProductById(this.id);
+        this.relatedProducts = this.productService.getRelatedProducts(
+          this.product
+        );
+      });
 
     // Spinner
     this.spinner.show();

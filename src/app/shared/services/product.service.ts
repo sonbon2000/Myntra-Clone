@@ -8,12 +8,18 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  fakeAPI = 'https://dummyjson.com/products';
+  private fakeAPI = 'https://dummyjson.com/products';
+  public limit: number = 12;
+
   constructor(private http: HttpClient, private spinner: NgxSpinnerService) {}
 
   getFake(): Observable<Product[]> {
     this.spinner.show();
     return this.http.get<Product[]>(this.fakeAPI);
+  }
+
+  getFakeByID(productID: string): Observable<Product> {
+    return this.http.get<Product>(this.fakeAPI + '/1');
   }
 
   getAllProducts(): Product[] {

@@ -33,6 +33,7 @@ export class MyProfileComponent implements OnInit {
       this.originalUser = { ...res.data };
       this.user = { ...this.originalUser };
     });
+    
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
