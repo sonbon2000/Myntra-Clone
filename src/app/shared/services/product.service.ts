@@ -19,6 +19,7 @@ export class ProductService {
   }
 
   getFakeByID(productID: string): Observable<Product> {
+    this.spinner.show();
     return this.http.get<Product>(this.fakeAPI + '/1');
   }
 
