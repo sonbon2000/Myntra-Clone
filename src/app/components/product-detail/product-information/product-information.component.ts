@@ -48,9 +48,10 @@ export class ProductInformationComponent implements OnInit, OnChanges {
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          this.router.navigate(['/sign-in'], {
-            queryParams: { returnUrl: `/shop/${this.product.product_id}` },
-          });
+          // this.router.navigate(['/sign-in'], {
+          //   queryParams: { returnUrl: `/shop/${this.product.product_id}` },
+          // });
+          this.router.navigate(['/sign-in']);
         }
       });
     }
@@ -63,9 +64,10 @@ export class ProductInformationComponent implements OnInit, OnChanges {
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          this.router.navigate(['/sign-in'], {
-            queryParams: { returnUrl: `/shop/${this.product.product_id}` },
-          });
+          // this.router.navigate(['/sign-in'], {
+          //   queryParams: { returnUrl: `/shop/${this.product.product_id}` },
+          // });
+          this.router.navigate(['/sign-in']);
         }
       });
     }
