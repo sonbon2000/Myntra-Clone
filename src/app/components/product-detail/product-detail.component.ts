@@ -45,21 +45,19 @@ export class ProductDetailComponent implements OnInit {
       this.id = params['id'];
     });
 
-    this.productService
-      .getFakeByID(this.id)
-      // .pipe(tap((data) => console.log(data)))
-      .subscribe((data) => {
-        this.product = this.productService.getProductById(this.id);
-        this.relatedProducts = this.productService.getRelatedProducts(
-          this.product
-        );
-      });
+    this.productService.getFakeByID(this.id).subscribe((data) => {
+      this.product = this.productService.getProductById(this.id);
+      this.relatedProducts = this.productService.getRelatedProducts(
+        this.product
+      );
+      this.spinner.hide();
+    });
 
     // Spinner
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 1000);
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // }, 1000);
 
     window.scroll(0, 0);
   }
