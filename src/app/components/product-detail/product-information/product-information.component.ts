@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   templateUrl: './product-information.component.html',
   styleUrls: ['./product-information.component.scss'],
 })
-export class ProductInformationComponent implements OnInit {
+export class ProductInformationComponent implements OnInit, OnChanges {
   @Input('data') product;
   public images = [];
   public status: boolean;
@@ -24,16 +24,22 @@ export class ProductInformationComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
-  ngOnInit(): void {
-    this.product.images.split('|').forEach((image) => {
-      this.images.push(image.trim());
-    });
-    if (this.product.is_in_stock == 'In Stock') {
-      this.status = true;
-    } else {
-      this.status = false;
+  ngOnChanges() {
+    // console.log('Receive input');
+    
+    if (this.product) {
+      this.product.images.split('|').forEach((image) => {
+        this.images.push(image.trim());
+      });
+      if (this.product.is_in_stock == 'In Stock') {
+        this.status = true;
+      } else {
+        this.status = false;
+      }
     }
   }
+
+  ngOnInit(): void {}
 
   onAddWishList(prod) {
     if (this.authService.isLoggedIn()) {

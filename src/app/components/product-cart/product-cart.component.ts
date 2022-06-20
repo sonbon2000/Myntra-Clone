@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class ProductCartComponent implements OnInit {
   cartArr: Product[] = [];
+  
   constructor(
     public cartService: CartService,
     private spinner: NgxSpinnerService,
