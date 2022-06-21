@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Doc, RootObject } from 'src/app/shared/models/blog.model';
 import { BlogService } from 'src/app/shared/services/blog.service';
@@ -14,7 +15,7 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private blogService: BlogService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
   ) {}
 
   ngOnInit(): void {

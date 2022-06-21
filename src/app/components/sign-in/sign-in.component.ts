@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -33,7 +34,8 @@ export class SignInComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private spinner: NgxSpinnerService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -69,11 +71,12 @@ export class SignInComponent implements OnInit {
   onLogin() {
     this.authService.login(this.user).subscribe((res) => {
       if (res) {
-        if (!this.returnUrl) {
-          this.router.navigateByUrl('/home');
-        } else {
-          this.router.navigate([this.returnUrl]);
-        }
+        // if (!this.returnUrl) {
+        //   this.router.navigateByUrl('/home');
+        // } else {
+        //   this.router.navigate([this.returnUrl]);
+        // }
+        this.location.back();
       }
     });
   }
