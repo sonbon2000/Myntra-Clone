@@ -45,6 +45,8 @@ import { ReviewsComponent } from './components/product-detail/product-tabs/revie
 import { SpecificationsComponent } from './components/product-detail/product-tabs/specifications/specifications.component';
 import { ProductNewArrivalComponent } from './components/home/product-list/product-new-arrival/product-new-arrival.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
+import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
+import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [

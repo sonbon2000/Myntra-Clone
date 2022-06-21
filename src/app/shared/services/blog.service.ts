@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
 import { RootObject } from '../models/blog.model';
@@ -10,8 +11,13 @@ import { RootObject } from '../models/blog.model';
 export class BlogService {
   private API_KEY = '0kvVtWM9vMApQ2vcby0Q9UBhAEV8HmOp';
   private getBlogs = `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22Fashion%22)&api-key=${this.API_KEY}`;
-  public limit: number = 12;
-  constructor(private http: HttpClient, private spinner: NgxSpinnerService) {}
+  private blogAPI: SafeResourceUrl;
+
+  constructor(
+    private sanitizer: DomSanitizer,
+    private http: HttpClient,
+    private spinner: NgxSpinnerService
+  ) {}
 
   getAllBlogs(): Observable<RootObject> {
     this.spinner.show();
