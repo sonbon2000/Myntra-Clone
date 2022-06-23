@@ -65,8 +65,11 @@ export class SignUpComponent implements OnInit {
           'Success!',
           'Your information has been saved successfully',
           'success'
-        );
-        this.router.navigateByUrl('/sign-in');
+        ).then((result2) => {
+          if (result2.isConfirmed) {
+            this.router.navigateByUrl('/sign-in');
+          }
+        });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire('Cancelled', 'Your information has not been saved)', 'error');
       }
