@@ -20,81 +20,93 @@
 </div>
 
 <div class="container p-5">
-  <div
-    class="row"
-    *ngIf="cartService.getCartQuantity() !== 0; else emptyQuantity"
-  >
-    <div class="col-lg-8 py-3">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Images</th>
-            <th scope="col">Product</th>
-            <th scope="col" class="text-center">Quantity</th>
-            <th scope="col" class="text-center">Total</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let cart of cartArr">
-            <td><img [src]="cart.images" alt="" /></td>
-            <td>{{ cart.title }}</td>
-            <td class="text-center d-flex">
-              <button
-                class="btn_prev d-flex align-items-center justify-content-center"
-                (click)="cartService.removeItem(cart)"
-                [disabled]="cartService.getItemQuantity(cart) === 1"
-              >
-                -
-              </button>
-              <span class="mx-3">{{ cartService.getItemQuantity(cart) }}</span>
-              <span
-                class="btn_next d-flex align-items-center justify-content-center"
-                (click)="cartService.addItem(cart)"
-                >+</span
-              >
-            </td>
-            <td class="text-center">
-              {{ getPrice(getTotalItem(cart) | currency: "USD") }}
-            </td>
-            <td (click)="removeItem(cart)">
-              <i class="fas fa-trash" style="cursor: pointer"></i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button class="btn btn__submit" routerLink="/shop">
-        Continue Shopping
-      </button>
-    </div>
-    <div class="col-lg-4 mt-3">
-      <div class="p-5 cart__checkout">
-        <h5>CART TOTAL</h5>
-        <div class="d-flex justify-content-between">
-          <p>Total</p>
-          <p>{{ cartService.getCartTotalPrice() | currency: "USD" }}</p>
-        </div>
-
-        <button class="btn btn__submit" (click)="onCheckOut()">
-          Proceed to checkout
+  <ng-container *ngIf="authService.isLoggedIn(); else noLogin">
+    <div
+      class="row"
+      *ngIf="cartService.getCartQuantity() !== 0; else emptyQuantity"
+    >
+      <div class="col-lg-8 py-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Images</th>
+              <th scope="col">Product</th>
+              <th scope="col" class="text-center">Quantity</th>
+              <th scope="col" class="text-center">Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cart of cartArr">
+              <td><img [src]="cart.images" alt="" /></td>
+              <td>{{ cart.title }}</td>
+              <td class="text-center d-flex">
+                <button
+                  class="btn_prev d-flex align-items-center justify-content-center"
+                  (click)="cartService.removeItem(cart)"
+                  [disabled]="cartService.getItemQuantity(cart) === 1"
+                >
+                  -
+                </button>
+                <span class="mx-3">{{
+                  cartService.getItemQuantity(cart)
+                }}</span>
+                <span
+                  class="btn_next d-flex align-items-center justify-content-center"
+                  (click)="cartService.addItem(cart)"
+                  >+</span
+                >
+              </td>
+              <td class="text-center">
+                {{ getPrice(getTotalItem(cart) | currency: "USD") }}
+              </td>
+              <td (click)="removeItem(cart)">
+                <i class="fas fa-trash" style="cursor: pointer"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn__submit" routerLink="/shop">
+          Continue Shopping
         </button>
       </div>
+      <div class="col-lg-4 mt-3">
+        <div class="p-5 cart__checkout">
+          <h5>CART TOTAL</h5>
+          <div class="d-flex justify-content-between">
+            <p>Total</p>
+            <p>{{ cartService.getCartTotalPrice() | currency: "USD" }}</p>
+          </div>
+
+          <button class="btn btn__submit" (click)="onCheckOut()">
+            Proceed to checkout
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-  <ng-template #emptyQuantity class="row">
-    <div class="cart__empty py-5 text-center">
-      <img
-        src="https://i5.walmartimages.com/dfw/63fd9f59-e0d6/65ab57af-59d6-423a-9500-1fa5ab36d1c7/v1/empty-cart.svg?odnHeight=240&odnWidth=200&odnBg=ffffff"
-        alt=""
-      />
-      <p class="font-weight-bold">Time to start shopping</p>
-      <p class="cart__emtpy paragraph">Your cart is empty!</p>
-      <button class="btn btn__submit" routerLink="/shop">
-        Continue Shopping
-      </button>
+    <ng-template #emptyQuantity class="row">
+      <div class="cart__empty py-5 text-center">
+        <img
+          src="https://i5.walmartimages.com/dfw/63fd9f59-e0d6/65ab57af-59d6-423a-9500-1fa5ab36d1c7/v1/empty-cart.svg?odnHeight=240&odnWidth=200&odnBg=ffffff"
+          alt=""
+        />
+        <p class="font-weight-bold">Time to start shopping</p>
+        <p class="cart__emtpy paragraph">Your cart is empty!</p>
+        <button class="btn btn__submit" routerLink="/shop">
+          Continue Shopping
+        </button>
+      </div>
+    </ng-template>
+    <div class="cart__mobile">
+      <h4>Please switch to larger screen to see more detail</h4>
+    </div>
+  </ng-container>
+  <ng-template #noLogin>
+    <div class="text-center mt-5">
+      <i class="fas fa-lock text-danger no-access-icon"></i>
+      <h3>You have to login to see the page</h3>
+      <p>Sorry, you are not allowed to see this.</p>
+      <p><a class="text-info" routerLink="/sign-in">LOGIN NOW !</a></p>
     </div>
   </ng-template>
-  <div class="cart__mobile">
-    <h4>Please switch to larger screen to see more detail</h4>
-  </div>
 </div>

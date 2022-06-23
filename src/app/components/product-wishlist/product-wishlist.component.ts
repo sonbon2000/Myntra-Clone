@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/shared/models/product.model';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { WishListService } from 'src/app/shared/services/wish-list.service';
 
@@ -16,6 +17,7 @@ export class ProductWishlistComponent implements OnInit {
     private spinner: NgxSpinnerService,
     public wishListService: WishListService,
     public cartService: CartService,
+    public authService: AuthService,
     private toastr: ToastrService
   ) {}
 
