@@ -5,7 +5,7 @@
     <ul class="menu__list d-flex m-0 pr-0">
       <li *ngIf="!authService.isLoggedIn(); else avatar">
         <a routerLink="/sign-in" class="mr-3">Sign In</a>
-        <a routerLink="/sign-up">Sign up</a>
+        <a routerLink="/sign-up">Sign Up</a>
       </li>
 
       <ng-template #avatar>
@@ -72,15 +72,53 @@
       <div
         class="menu__overlay"
         *ngIf="showDropDown"
-        (click)="showDropDown = !showDropDown"
+        (click)="onShowDropDown()"
       ></div>
       <div class="header__menu-items p-5" *ngIf="showDropDown" #headerMenu>
-        <div class="header__options">
+        <div
+          class="header__options"
+          *ngIf="!authService.isLoggedIn(); else avatarMenu"
+        >
           <a routerLink="/sign-in" (click)="onShowDropDown()">SIGN IN</a>
           <a routerLink="/sign-up" class="ml-3" (click)="onShowDropDown()"
             >SIGN UP</a
           >
         </div>
+
+        <ng-template #avatarMenu>
+          <li>
+            <div class="dropdown user-dropdown">
+              <span
+                class="dropdown-toggle cursor-pointer d-inline-block"
+                (click)="show = !show"
+              >
+                <img
+                  [src]="authService.user.avatar"
+                  alt="User avatar"
+                  class="user-avatar"
+                />
+                Hi, {{ authService.user.name }}
+              </span>
+
+              <div class="dropdown-menu" [class.show]="show">
+                <span
+                  class="dropdown-item cursor-pointer"
+                  (click)="goToMyProfile()"
+                  ><i class="fas fa-user mr-1"></i>My profile</span
+                >
+                <span
+                  class="dropdown-item cursor-pointer"
+                  (click)="goToAdminPage()"
+                  *ngIf="authService.isAdmin()"
+                  ><i class="fas fa-user-shield mr-1"></i>Go to admin page</span
+                >
+                <span class="dropdown-item cursor-pointer" (click)="logout()"
+                  ><i class="fas fa-sign-out-alt mr-1"></i>Log out</span
+                >
+              </div>
+            </div>
+          </li>
+        </ng-template>
         <div class="header__nav-options">
           <a routerLink="/product-wish-list" (click)="onShowDropDown()">
             <i

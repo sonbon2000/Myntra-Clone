@@ -20,59 +20,74 @@
 </div>
 
 <div class="container">
-  <div
-    class="row py-5"
-    *ngIf="wishListService.getWishListQuantity() !== 0; else noWishList"
-  >
+  <ng-container *ngIf="authService.isLoggedIn(); else noLogin">
     <div
-      class="col-lg-3 col-md-6 col-sm-12 mb-4"
-      *ngFor="let wishList of wishListArr"
-      style="cursor: pointer"
+      class="row py-5"
+      *ngIf="wishListService.getWishListQuantity() !== 0; else noWishList"
     >
-      <div class="card_item rounded">
-        <div class="item-img text-center">
-          <img
-            [src]="wishList.images"
-            alt=""
-            [routerLink]="['/shop', wishList.product_id]"
-          />
-        </div>
-        <div class="item-body px-3">
-          <div
-            class="d-flex justify-content-between align-items-center mt-3 mb-2"
-          >
-            <h6 class="item-price m-0">
-              {{ getPrice(wishList.variant_price | currency: "USD") }}
-            </h6>
-            <p class="text-danger m-0">
-              {{ wishListService.getWishListItemQuantity(wishList) }}
-              <i class="fas fa-heart"></i>
-            </p>
+      <div
+        class="col-lg-3 col-md-6 col-sm-12 mb-4"
+        *ngFor="let wishList of wishListArr"
+        style="cursor: pointer"
+      >
+        <div class="card_item rounded">
+          <div class="item-img text-center">
+            <img
+              [src]="wishList.images"
+              alt=""
+              [routerLink]="['/shop', wishList.product_id]"
+            />
           </div>
-          <p class="item-title">{{ wishList.title }}</p>
-        </div>
-        <div class="item-options text-center d-flex">
-          <button
-            class="btn btn-light btn-wishlist"
-            (click)="onRemoveItem(wishList)"
-          >
-            <i class="fas fa-times"></i> Remove
-          </button>
-          <button class="btn btn__move btn-cart" (click)="addToCart(wishList)">
-            <i class="fas fa-shopping-cart mr-1"></i>Move to cart
-          </button>
+          <div class="item-body px-3">
+            <div
+              class="d-flex justify-content-between align-items-center mt-3 mb-2"
+            >
+              <h6 class="item-price m-0">
+                {{ getPrice(wishList.variant_price | currency: "USD") }}
+              </h6>
+              <p class="text-danger m-0">
+                {{ wishListService.getWishListItemQuantity(wishList) }}
+                <i class="fas fa-heart"></i>
+              </p>
+            </div>
+            <p class="item-title">{{ wishList.title }}</p>
+          </div>
+          <div class="item-options text-center d-flex">
+            <button
+              class="btn btn-light btn-wishlist"
+              (click)="onRemoveItem(wishList)"
+            >
+              <i class="fas fa-times"></i> Remove
+            </button>
+            <button
+              class="btn btn__move btn-cart"
+              (click)="addToCart(wishList)"
+            >
+              <i class="fas fa-shopping-cart mr-1"></i>Move to cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <ng-template class="row" #noWishList>
-    <div class="cart__empty py-5 text-center">
-      <img
-        src="https://media.istockphoto.com/vectors/broken-heart-vector-vector-id1063503426?k=20&m=1063503426&s=612x612&w=0&h=0JVTaDDY3j5gTakc0xO7cOwirD0ZeK3SrlwV9R1aNzM="
-        alt=""
-      />
-      <p class="font-weight-bold">There is no wishlist in your collection</p>
-      <button class="btn btn-dark" routerLink="/shop">Continue Shopping</button>
+    <ng-template class="row" #noWishList>
+      <div class="cart__empty py-5 text-center">
+        <img
+          src="https://media.istockphoto.com/vectors/broken-heart-vector-vector-id1063503426?k=20&m=1063503426&s=612x612&w=0&h=0JVTaDDY3j5gTakc0xO7cOwirD0ZeK3SrlwV9R1aNzM="
+          alt=""
+        />
+        <p class="font-weight-bold">There is no wishlist in your collection</p>
+        <button class="btn btn-dark" routerLink="/shop">
+          Continue Shopping
+        </button>
+      </div>
+    </ng-template>
+  </ng-container>
+  <ng-template #noLogin>
+    <div class="text-center mt-5 py-5">
+      <i class="fas fa-lock text-danger no-access-icon"></i>
+      <h3>You have to login to see the page</h3>
+      <p>Sorry, you are not allowed to see this.</p>
+      <p><a class="text-info" routerLink="/sign-in">LOGIN NOW !</a></p>
     </div>
   </ng-template>
 </div>

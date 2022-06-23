@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.show = false;
     this.authService.logout();
+    this.router.navigateByUrl('/home');
   }
 
   goToMyProfile() {
@@ -42,7 +43,5 @@ export class HeaderComponent implements OnInit {
 
   onShowMenu() {
     this.showDropDown = !this.showDropDown;
-    // const headerMenu = document.querySelector('.header__menu-items ');
-    // headerMenu.classList.add('slide-in ');
   }
 }
