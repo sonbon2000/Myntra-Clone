@@ -22,6 +22,6 @@ export interface Product {
   variant_compare_at_price: string;
   ideal_for: string;
   is_in_stock: string;
-  inventory: string;
+  inventory?: string;
   specifications: string;
 }

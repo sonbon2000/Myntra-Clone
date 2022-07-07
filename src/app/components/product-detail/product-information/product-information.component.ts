@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/shared/services/auth.service';
@@ -16,6 +23,8 @@ export class ProductInformationComponent implements OnInit, OnChanges {
   public images = [];
   public status: boolean;
 
+  @ViewChild('addCartBtn') addCartBtn: ElementRef;
+
   constructor(
     public cartService: CartService,
     public wishListService: WishListService,
@@ -25,8 +34,6 @@ export class ProductInformationComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnChanges() {
-    // console.log('Receive input');
-    
     if (this.product) {
       this.product.images.split('|').forEach((image) => {
         this.images.push(image.trim());
@@ -43,14 +50,13 @@ export class ProductInformationComponent implements OnInit, OnChanges {
 
   onAddWishList(prod) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the wishlist');
       this.wishListService.addWishList(prod);
+      if (this.wishListService.getWishList().includes(prod)) {
+        console.log(this.addCartBtn);
+      }
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          // this.router.navigate(['/sign-in'], {
-          //   queryParams: { returnUrl: `/shop/${this.product.product_id}` },
-          // });
           this.router.navigate(['/sign-in']);
         }
       });
@@ -59,14 +65,10 @@ export class ProductInformationComponent implements OnInit, OnChanges {
 
   onAddProduct(prod) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the cart');
       this.cartService.addItem(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          // this.router.navigate(['/sign-in'], {
-          //   queryParams: { returnUrl: `/shop/${this.product.product_id}` },
-          // });
           this.router.navigate(['/sign-in']);
         }
       });

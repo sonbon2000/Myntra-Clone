@@ -1,4 +1,12 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterContentChecked,
+  AfterViewChecked,
+  Component,
+  DoCheck,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { CartService } from 'src/app/shared/services/cart.service';
@@ -8,7 +16,9 @@ import { WishListService } from 'src/app/shared/services/wish-list.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent
+  implements OnInit
+{
   showDropDown: boolean = false;
   show: boolean = false;
   showMenu: boolean = false;
@@ -19,6 +29,23 @@ export class HeaderComponent implements OnInit {
     public cartService: CartService,
     public wishList: WishListService
   ) {}
+
+  // ngDoCheck() {
+  //   console.log('Header');
+  //   console.log('ngDoCheck is running');
+  // }
+
+  // ngAfterContentChecked() {
+  //   console.log('Header');
+
+  //   console.log('ngAfterContentCheck is running');
+  // }
+
+  // ngAfterViewChecked() {
+  //   console.log('Header');
+
+  //   console.log('ngAfterViewCheck is running');
+  // }
 
   ngOnInit(): void {}
 

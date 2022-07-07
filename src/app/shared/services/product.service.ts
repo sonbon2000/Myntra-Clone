@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import products from '../../../assets/data/myntra-products';
 import { Product } from '../models/product.model';
 @Injectable({

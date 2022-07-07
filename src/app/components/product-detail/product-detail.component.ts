@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { tap } from 'rxjs/operators';
@@ -11,6 +11,7 @@ import { ProductService } from 'src/app/shared/services/product.service';
   styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
+
   public product: Product;
   public relatedProducts: Product[] = [];
   public responsiveOptions;
@@ -52,12 +53,6 @@ export class ProductDetailComponent implements OnInit {
       );
       this.spinner.hide();
     });
-
-    // Spinner
-    // this.spinner.show();
-    // setTimeout(() => {
-    //   this.spinner.hide();
-    // }, 1000);
 
     window.scroll(0, 0);
   }
