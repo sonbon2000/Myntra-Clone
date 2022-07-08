@@ -29,7 +29,6 @@ export class ProductTopSaleComponent implements OnInit {
 
   onAddItem(prod) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the cart');
       this.cartService.addItem(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
@@ -42,7 +41,6 @@ export class ProductTopSaleComponent implements OnInit {
 
   onAddWishList(prod) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the wishlist');
       this.wishListService.addWishList(prod);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {

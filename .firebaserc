@@ -1,16 +1,12 @@
 {
+  "projects": {
+    "default": "myntra-clone-hn22-angular"
+  },
   "targets": {
-    "sonthongdung-hnangular01": {
+    "minimog-hn22": {
       "hosting": {
         "Myntra-Clone": [
-          "sonthongdung-hnangular01"
-        ]
-      }
-    },
-    "myntra-clone-hn22-angular-01": {
-      "hosting": {
-        "Myntra-Clone": [
-          "myntra-clone-hn22-angular-01"
+          "minimog-hn22"
         ]
       }
     }

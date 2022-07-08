@@ -10,6 +10,7 @@ export class AuthService {
   private baseURL = 'https://reqres.in';
   public user = null;
   private savedTokenName = 'token';
+  
   constructor(private http: HttpClient) {
     let token = localStorage.getItem(this.savedTokenName);
     if (token) {

@@ -137,14 +137,10 @@ export class ShopComponent implements OnInit {
 
   onAddWishList(product: Product) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the wishlist');
       this.wishListService.addWishList(product);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          // this.router.navigate(['/sign-in'], {
-          //   queryParams: { returnUrl: '/shop' },
-          // });
           this.router.navigate(['/sign-in']);
         }
       });
@@ -153,14 +149,10 @@ export class ShopComponent implements OnInit {
 
   onAddProduct(product: Product) {
     if (this.authService.isLoggedIn()) {
-      this.toastr.success('You have added item in the cart');
       this.cartService.addItem(product);
     } else {
       Swal.fire('Oops', 'You have to login first', 'error').then((results) => {
         if (results.isConfirmed) {
-          // this.router.navigate(['/sign-in'], {
-          //   queryParams: { returnUrl: '/shop' },
-          // });
           this.router.navigate(['/sign-in']);
         }
       });

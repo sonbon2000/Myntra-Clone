@@ -34,14 +34,14 @@ export class ProductWishlistComponent implements OnInit {
     return splitArr[0];
   }
 
-  onRemoveItem(wishList: Product) {
-    this.toastr.success('You have deleted item from the wish list');
-    this.wishListService.deleteWishList(wishList);
-  }
+  // onRemoveItem(wishList: Product) {
+  //   this.toastr.success('You have deleted item from the wish list');
+  //   this.wishListService.deleteItem(wishList);
+  // }
 
   addToCart(wishList: Product) {
-    this.toastr.success('You have moved item to the cart');
-    this.wishListService.deleteWishList(wishList);
+    this.toastr.success('Moved item to the cart');
+    this.wishListService.deleteItem(wishList);
     this.cartService.addItem(wishList);
   }
 }

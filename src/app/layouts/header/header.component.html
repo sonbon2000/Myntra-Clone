@@ -75,7 +75,7 @@
         (click)="onShowDropDown()"
       ></div>
       <div class="header__menu-items p-5" *ngIf="showDropDown" #headerMenu>
-        <div
+        <!-- <div
           class="header__options"
           *ngIf="!authService.isLoggedIn(); else avatarMenu"
         >
@@ -118,7 +118,7 @@
               </div>
             </div>
           </li>
-        </ng-template>
+        </ng-template> -->
         <div class="header__nav-options">
           <a routerLink="/product-wish-list" (click)="onShowDropDown()">
             <i
